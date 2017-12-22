@@ -1,4 +1,8 @@
 .babelrc
 .storybook
 lib
+node_modules
+.gitignore
+yarn.lock
+stories
 CODE_OF_CONDUCT.md

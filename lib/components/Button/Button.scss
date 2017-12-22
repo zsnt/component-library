@@ -1,10 +1,22 @@
 @import '../../styles/themify';
 
-.button
-{
-    display: inline-block;
+.button {
+  display: inline-block;
 
-    padding: 15px 32px;
+  padding: 15px 32px;
+
+  cursor: pointer;
+  transition: color 0.1s, border-color 0.1s, background-color 0.1s;
+
+  border-radius: 5px;
+
+  @include themify($themes) {
+    text-transform: themed('buttonTextTransform');
+
+    color: themed('buttonTextColor');
+    border: themed('buttonBorder');
+    border-color: themed('buttonTextColor');
+    background-color: themed('buttonColor');
 
     cursor: pointer;
     transition: color .1s, border-color .1s, background-color .1s;
@@ -27,4 +39,6 @@
             background-color: themed('buttonHoverColor');
         }
     }
+  }
+
 }
