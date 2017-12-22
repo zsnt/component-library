@@ -1,6 +1,6 @@
 {
-  "name": "gsy-component-library",
-  "version": "0.1.1",
+  "name": "component-library",
+  "version": "0.1.2",
   "description": "reusable components from grid singularity",
   "main": "index.js",
   "scripts": {
