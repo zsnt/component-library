@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '../lib';
+import { Button } from '../build';
 
-storiesOf('Button/ThemeLight', module)
+storiesOf('ThemeLight/Button', module)
   .add(
     'this shows the light theme',
     () => (
@@ -14,7 +14,7 @@ storiesOf('Button/ThemeLight', module)
         />
       </div>
     ));
-storiesOf('Button/ThemeDark', module)
+storiesOf('ThemeDark/Button', module)
   .add('this shows the dark theme',
     () => (
       <div class="theme-dark">
