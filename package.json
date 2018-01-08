@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass ./lib/components/**/*.scss -o ./build/components/**/",
+    "build-css": "node-sass -r ./lib/components/ -o ./build/components/",
     "build-js": "babel lib -d build",
     "build": "npm run build-css && npm run build-js",
     "lint-es": "eslint . --ext js --ext jsx",
@@ -54,6 +54,7 @@
     "sass-lint": "^1.12.1"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "node-sass": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
