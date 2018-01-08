@@ -1,26 +1,29 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '../build';
+import { ThemeProvider, Button } from '../build';
 
 storiesOf('ThemeLight/Button', module)
   .add(
     'this shows the light theme',
     () => (
-      <div class="theme-light">
+      <ThemeProvider className="theme-light">
         <Button
           label="foobar"
           onClick={action('clicked')}
         />
-      </div>
-    ));
+      </ThemeProvider>
+    )
+  );
 storiesOf('ThemeDark/Button', module)
-  .add('this shows the dark theme',
+  .add(
+    'this shows the dark theme',
     () => (
-      <div class="theme-dark">
+      <ThemeProvider className="theme-dark">
         <Button
-          label="baz"
+          label="berry"
           onClick={action('clicked')}
         />
-      </div>
-  ));
+      </ThemeProvider>
+    )
+  );
