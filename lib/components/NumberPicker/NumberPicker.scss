@@ -1,0 +1,44 @@
+@import '../../styles/themify';
+
+.number-picker {
+  display: flex;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 100%;
+
+  &__trigger {
+    flex: 1;
+    padding: 20px 0;
+    border: none;
+    font-size: 150%;
+    font-weight: 700;
+    color: hsl(169, 100%, 34%);
+    background: hsl(199, 21%, 17%);
+    cursor: pointer;
+  }
+
+  &__amount-and-label {
+    flex: 3;
+    padding: 10px 0;
+    color: #fff;
+    background: hsl(201, 37%, 7%);
+  }
+
+  &__amount {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 175%;
+    font-weight: 300;
+    color: inherit;
+    text-align: center;
+  }
+
+  &__label {
+    font-size: 95%;
+    font-weight: 300;
+    text-align: center;
+  }
+}
