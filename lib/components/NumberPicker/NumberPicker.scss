@@ -19,6 +19,9 @@
   }
 
   &__amount-and-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 3;
     padding: 10px 0;
     color: #fff;
