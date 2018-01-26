@@ -40,4 +40,12 @@ storiesOf('NumberPicker', module)
         step={0.01}
       />
     ))
+  )
+  .add(
+    'With disabled state',
+    withInfo()(() => (
+      <NumberPicker
+        disabled={true}
+      />
+    ))
   );

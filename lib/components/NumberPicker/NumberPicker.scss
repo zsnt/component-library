@@ -5,13 +5,16 @@
   border-radius: 5px;
   overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  color: #fff;
-  background: hsl(201, 37%, 7%);
 }
 
 .rc-input-number {
   display: flex;
-  max-width: 100%;
+  background: hsl(201, 37%, 7%);
+  transition: 0.1s opacity;
+
+  &-disabled {
+    opacity: 0.75;
+  }
 }
 
 .rc-input-number-handler {
@@ -106,10 +109,12 @@
 }
 
 .number-picker-label {
+  position: relative;
   margin-top: -1.5rem;
   margin-bottom: 0.5rem;
   line-height: 1;
   font-size: 95%;
   font-weight: 300;
+  color: #fff;
   text-align: center;
 }
