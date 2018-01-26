@@ -18,7 +18,7 @@ storiesOf('NumberPicker', module)
     'With decimal digits, currency symbol & text label',
     withInfo()(() => (
       <NumberPicker
-        defaultValue={2.33}
+        defaultValue={2}
         label="Einkauf"
         currencySymbol="€"
         min={-10}
