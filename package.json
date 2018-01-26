@@ -1,6 +1,6 @@
 {
   "name": "gsy-component-library",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "reusable components from grid singularity",
   "main": "index.js",
   "scripts": {
@@ -64,8 +64,6 @@
     "rc-input-number": "^4.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
     "sass-loader": "^6.0.6"
   }
 }
