@@ -9,48 +9,20 @@
   background: hsl(201, 37%, 7%);
 }
 
-.number-picker,
 .rc-input-number {
   display: flex;
   max-width: 100%;
+}
 
-  &__trigger,
-  .rc-input-number-handler {
-    flex: 1;
-    padding: 20px 0;
-    border: none;
-    font-size: 150%;
-    font-weight: 700;
-    color: hsl(169, 100%, 34%);
-    background: hsl(199, 21%, 17%);
-    cursor: pointer;
-  }
-
-  &__amount-and-label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 3;
-    padding: 10px 0;
-  }
-
-  &__amount,
-  .rc-input-number-input {
-    width: 100%;
-    padding: 0;
-    border: none;
-    background: transparent;
-    font-size: 175%;
-    font-weight: 300;
-    color: inherit;
-    text-align: center;
-  }
-
-  &__label {
-    font-size: 95%;
-    font-weight: 300;
-    text-align: center;
-  }
+.rc-input-number-handler {
+  flex: 1;
+  padding: 20px 0;
+  border: none;
+  font-size: 150%;
+  font-weight: 700;
+  color: hsl(169, 100%, 34%);
+  background: hsl(199, 21%, 17%);
+  cursor: pointer;
 }
 
 .rc-input-number {
@@ -92,6 +64,18 @@
   }
 }
 
+.rc-input-number-input {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 175%;
+  font-weight: 300;
+  color: inherit;
+  text-align: center;
+  outline: none;
+}
+
 .rc-input-number-handler-up-inner,
 .rc-input-number-handler-down-inner {
   position: relative;
@@ -121,8 +105,11 @@
   }
 }
 
-.rc-input-number__label {
+.number-picker-label {
   margin-top: -1.5rem;
   margin-bottom: 0.5rem;
   line-height: 1;
+  font-size: 95%;
+  font-weight: 300;
+  text-align: center;
 }

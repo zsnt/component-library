@@ -4,80 +4,40 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { NumberPicker } from '../build';
 
-import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
-
-const counterReducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + action.step;
-
-    case 'DECREMENT':
-      return state - action.step;
-
-    case 'UPDATE_AMOUNT':
-      return action.value;
-
-    default:
-      return state;
-  }
-};
-
-const rootReducer = combineReducers({
-  amount: counterReducer
-});
-
-const store = createStore(rootReducer);
-
 storiesOf('NumberPicker', module)
   .add(
-    'Default',
+    'With default props',
     withInfo()(() => (
-      <Provider store={store}>
-        <NumberPicker
-          step={1}
-        />
-      </Provider>
+      <NumberPicker
+        defaultValue={24}
+        max={48}
+      />
     ))
   )
   .add(
-    'With text label',
+    'With decimal digits, currency symbol & text label',
     withInfo()(() => (
-      <Provider store={store}>
-        <NumberPicker
-          step={1}
-          label="Einkauf"
-        />
-      </Provider>
+      <NumberPicker
+        defaultValue={2.33}
+        label="Einkauf"
+        currencySymbol="€"
+        min={-10}
+        max={10}
+        precision={2}
+      />
     ))
   )
   .add(
-    'With text label & currency symbol',
+    'With decimal digits, currency symbol, text label & custom steps',
     withInfo()(() => (
-      <Provider store={store}>
-        <NumberPicker
-          step={2}
-          label="Einkauf"
-          currencySymbol="€"
-          min={-10}
-          max={10}
-          precision={2}
-        />
-      </Provider>
-    ))
-  )
-  .add(
-    'With text label, currency symbol & custom steps',
-    withInfo()(() => (
-      <Provider store={store}>
-        <NumberPicker
-          step={0.01}
-          label="Verkauf"
-          currencySymbol="€"
-          min={-10}
-          max={10}
-          precision={2}
-        />
-      </Provider>
+      <NumberPicker
+        defaultValue={2.64}
+        label="Verkauf"
+        currencySymbol="€"
+        min={-10}
+        max={10}
+        precision={2}
+        step={0.01}
+      />
     ))
   );
