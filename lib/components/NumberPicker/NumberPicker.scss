@@ -1,11 +1,17 @@
 @import '../../styles/themify';
 
+.number-picker-wrapper {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  background: hsl(201, 37%, 7%);
+}
+
 .number-picker,
 .rc-input-number {
   display: flex;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  border-radius: 5px;
-  overflow: hidden;
   max-width: 100%;
 
   &__trigger,
@@ -26,8 +32,6 @@
     justify-content: center;
     flex: 3;
     padding: 10px 0;
-    color: #fff;
-    background: hsl(201, 37%, 7%);
   }
 
   &__amount,
@@ -66,6 +70,14 @@
   flex: 0 0 20%;
 }
 
+.rc-input-number-handler-up {
+  order: 2;
+}
+
+.rc-input-number-handler-down {
+  order: 1;
+}
+
 .rc-input-number-input-wrap {
   display: flex;
   width: 60%;
@@ -74,7 +86,10 @@
   left: 50%;
   transform: translate(-50%, 0);
   color: #fff;
-  background: hsl(201, 37%, 7%);
+
+  .has-input-label & {
+    margin-top: -0.5rem;
+  }
 }
 
 .rc-input-number-handler-up-inner,
@@ -104,4 +119,10 @@
   &:after {
     content: "–";
   }
+}
+
+.rc-input-number__label {
+  margin-top: -1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
 }

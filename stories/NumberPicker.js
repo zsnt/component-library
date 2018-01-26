@@ -56,9 +56,27 @@ storiesOf('NumberPicker', module)
     withInfo()(() => (
       <Provider store={store}>
         <NumberPicker
-          step={1}
+          step={2}
           label="Einkauf"
           currencySymbol="€"
+          min={-10}
+          max={10}
+          precision={2}
+        />
+      </Provider>
+    ))
+  )
+  .add(
+    'With text label, currency symbol & custom steps',
+    withInfo()(() => (
+      <Provider store={store}>
+        <NumberPicker
+          step={0.01}
+          label="Verkauf"
+          currencySymbol="€"
+          min={-10}
+          max={10}
+          precision={2}
         />
       </Provider>
     ))
