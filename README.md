@@ -37,10 +37,6 @@ npm install
 
 `npm run storybook`
 
-#### Start watcher for developing components
-
-`npm run start-watch`
-
 The demo will reload if you make edits.
 You will see the build errors and lint warnings in the console
 

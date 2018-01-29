@@ -1,6 +1,6 @@
 {
   "name": "gsy-component-library",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "reusable components from grid singularity",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "npm run build-css && npm run build-js",
     "lint-es": "eslint . --ext js --ext jsx",
     "lint-sass": "sass-lint -c .sass-lint.yml './lib/**/*.scss' -v -q",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c .storybook",
     "watch-css": "nodemon -e scss -x npm run build-css",
     "watch-js": "nodemon -e js -x npm run build-js",
     "start-watch": "npm-run-all --parallel watch-js watch-css",

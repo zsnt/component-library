@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import { ThemeProvider, SliderComp } from '../build';
+import { ThemeProvider, SliderComp } from '../lib';
 
 storiesOf('Verbund/Slider', module)
   .add(
