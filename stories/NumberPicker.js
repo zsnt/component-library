@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
-import { NumberPicker } from '../build';
+import { NumberPicker } from '../lib';
 
-storiesOf('NumberPicker', module)
+storiesOf('Verbund/NumberPicker', module)
   .add(
     'With default props',
     withInfo()(() => (
