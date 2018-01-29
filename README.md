@@ -54,7 +54,7 @@ When writing scss for your component you should use these variables so the compo
 
 ### Publish new version
 
-run `npm run prepublish`
+Run `npm run prepublish`
 
 Update the version number in `/package.json` inside your working branch.
 
@@ -62,4 +62,4 @@ Create a pull request, get a review and merge your changes to master.
 
 Check out the updated master version.
 Create release on GitHub and explain what is content of the new release.
-Run `npm run publish` to push the latest version to npm package server.
+Run `npm publish` to push the latest version to npm package server.
