@@ -60,10 +60,11 @@
     "classnames": "^2.2.5",
     "node-sass": "^4.7.2",
     "prop-types": "^15.6.0",
-    "rc-slider": "^8.6.0",
     "rc-input-number": "^4.0.2",
+    "rc-slider": "^8.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
     "sass-loader": "^6.0.6"
   }
 }
