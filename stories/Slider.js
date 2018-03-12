@@ -15,7 +15,7 @@ storiesOf('Verbund/Slider', module)
       ~~~
 
     `)(() => (
-      <ThemeProvider className="theme-light">
+      <ThemeProvider>
         <SliderComp
           min={0}
           max={50}

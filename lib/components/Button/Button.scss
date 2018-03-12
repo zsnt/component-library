@@ -2,43 +2,32 @@
 
 .button {
   display: inline-block;
-
-  padding: 15px 32px;
-
+  padding: 12px 22px;
   cursor: pointer;
-  transition: color 0.1s, border-color 0.1s, background-color 0.1s;
-
-  border-radius: 5px;
+  transition: color 0.1s, background-color 0.1s;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
 
   @include themify($themes) {
-    text-transform: themed('buttonTextTransform');
+    font-family: themed('fontFamily');
+    font-size: 10px;
+    color: themed('dark');
+    background-color: themed('primary');
 
-    color: themed('buttonTextColor');
-    border: themed('buttonBorder');
-    border-color: themed('buttonTextColor');
-    background-color: themed('buttonColor');
-
-    cursor: pointer;
-    transition: color .1s, border-color .1s, background-color .1s;
-
-    border-radius: 5px;
-
-    @include themify($themes)
-    {
-        text-transform: themed('buttonTextTransform');
-
-        color: themed('buttonTextColor');
-        border: themed('buttonBorder');
-        border-color: themed('buttonTextColor');
-        background-color: themed('buttonColor');
-
-        &:hover
-        {
-            color: themed('buttonTextHoverColor');
-            border-color: themed('buttonTextHoverColor');
-            background-color: themed('buttonHoverColor');
-        }
+    &:hover {
+      color: themed('light');
     }
   }
 
+  &.secondary {
+    @include themify($themes) {
+      color: themed('light');
+      background-color: themed('secondary');
+
+      &:hover {
+        color: themed('primary');
+      }
+    }
+  }
 }
