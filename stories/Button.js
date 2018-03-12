@@ -4,34 +4,31 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider, Button } from '../lib';
 
-storiesOf('ThemeLight/Button', module)
+storiesOf('D3A/Button', module)
   .add(
-    'this shows the light theme',
+    'primary',
     withInfo(`
-      description or documentation about my component, supports markdown
-
-      ~~~js
-      <Button>Click Here</Button>
-      ~~~
-
+      <Button />
     `)(() => (
-      <ThemeProvider className="theme-light">
+      <ThemeProvider className="theme-d3a">
         <Button
-          label="foobar"
+          label="primary"
           onClick={action('clicked')}
         />
       </ThemeProvider>
     )),
-  );
-storiesOf('ThemeDark/Button', module)
+  )
   .add(
-    'this shows the dark theme',
-    () => (
-      <ThemeProvider className="theme-dark">
+    'secondary',
+    withInfo(`
+      <Button type="secondary"/>
+    `)(() => (
+      <ThemeProvider className="theme-d3a">
         <Button
-          label="berry"
+          label="reconfigure"
+          type="secondary"
           onClick={action('clicked')}
         />
       </ThemeProvider>
-    ),
+    )),
   );

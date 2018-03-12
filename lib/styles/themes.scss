@@ -1,20 +1,14 @@
 $themes: (
-  light: (
-    backgroundColor: #fff,
-    textColor: #408bbd,
-    buttonTextColor: #408bbd,
-    buttonTextTransform: none,
-    buttonTextHoverColor: #61b0e7,
-    buttonColor: #fff,
-    buttonBorder: 2px solid #fff,
-  ),
-  dark: (
-    backgroundColor: #222,
-    textColor: #ddd,
-    buttonTextColor: #aaa,
-    buttonTextTransform: uppercase,
-    buttonTextHoverColor: #ddd,
-    buttonColor: #333,
-    buttonBorder: 1px solid #aaa,
+  d3a: (
+    fontFamily: 'Arimo',
+    light: #fff,
+    primary: #00ceea,
+    secondary: #0e5e7a,
+    bg: #003950,
+    link: #003950,
+    dark: #00171f,
+    warning: #fde74c,
+    positive: #9bc53d,
+    negative: #d90429,
   ),
 );
