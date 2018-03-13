@@ -21,7 +21,7 @@ storiesOf('D3A/Layouts', module)
 
     `)(() => (
       <ThemeProvider theme="d3a">
-        <Layout layout="layout-wrapper">
+        <Layout layout="wrapper">
           <div className="header">
             Logo
 

@@ -1,19 +1,15 @@
 @import '../../styles/themify';
 @import '../../styles/base';
 
-.layout-wrapper {
-  @include themify($themes) {
-    background: themed('bgColor');
-    color: themed('light');
-  }
+.wrapper {
+  @extend %base;
 
   img {
     max-width: 100%;
   }
 }
-
 @supports not (display: grid) {
-  .layout-wrapper {
+  .wrapper {
     max-width: 50em;
     margin: 0 auto;
   }
@@ -21,7 +17,7 @@
 
 @media screen and (min-width: 600px) {
   @supports (display: grid) {
-    .layout-wrapper {
+    .wrapper {
       display: grid;
       grid-column-gap: 10px;
       grid-row-gap: 15px;
