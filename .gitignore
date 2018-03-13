@@ -3,6 +3,4 @@ build
 node_modules
 *.log
 
-package-lock\.json
-
 yarn\.lock
