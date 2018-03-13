@@ -1,4 +1,5 @@
 @import '../../styles/themify';
+@import '../../styles/base';
 
 .layout-wrapper {
   @include themify($themes) {
@@ -45,4 +46,5 @@
   }
 }
 
-@import '../../styles/layouts/results.scss';
+//different layouts
+@import '../../styles/layouts/results';

@@ -1,0 +1,31 @@
+@import '../../styles/themify';
+
+.layout-wrapper {
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+    font-size: themed('body');
+    font-weight: 300;
+  }
+
+  a {
+    color: themed('link');
+    text-decoration: none;
+    font-size: themed('small');
+
+    &:hover {
+      color: themed('primary');
+    }
+  }
+
+  .small {
+    font-size: themed('small');
+  }
+
+  .bigNumbers {
+    font-size: themed('bigText');
+  }
+
+  table {
+    font-weight: 300;
+  }
+}
