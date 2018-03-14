@@ -1,4 +1,3 @@
-@import '../../styles/themify';
 @import '../../styles/base';
 
 .wrapper {
@@ -18,6 +17,10 @@
 @media screen and (min-width: 600px) {
   @supports (display: grid) {
     .wrapper {
+      padding-top: 50px;
+      @media all and (min-width: 600px) {
+        padding-top: 100px;
+      }
       display: grid;
       grid-column-gap: 10px;
       grid-row-gap: 15px;
