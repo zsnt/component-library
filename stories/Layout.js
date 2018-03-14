@@ -1,8 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { ThemeProvider, Layout } from '../lib';
+import { ThemeProvider, Layout, Header } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
+import logo from './img/Logo.png';
+
 
 const image = {
   src: imageFile,
@@ -22,10 +24,11 @@ storiesOf('D3A/Layouts', module)
     `)(() => (
       <ThemeProvider theme="d3a">
         <Layout layout="wrapper">
-          <div className="header">
-            Logo
-
-          </div>
+          <Header
+            logoUrl={logo}
+            logoLink="/"
+            logoAlt="D3ASIM"
+          />
           <Layout layout="results" className="content">
             <div className="hero">
               <h1>Hallo world</h1>

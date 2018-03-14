@@ -1,0 +1,9 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.header {
+  @include themify($themes) {
+    height: themed('headerHeight');
+    border-bottom: themed('border');
+  }
+}
