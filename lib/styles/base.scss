@@ -1,4 +1,4 @@
-@import '../../styles/themify';
+@import './themify';
 
 %base {
   @include themify($themes) {
