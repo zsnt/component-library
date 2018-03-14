@@ -4,13 +4,13 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider, Button } from '../lib';
 
-storiesOf('D3A/Button', module)
+storiesOf('D3A/Atoms/Button', module)
   .add(
     'primary',
     withInfo(`
       <Button />
     `)(() => (
-      <ThemeProvider className="theme-d3a">
+      <ThemeProvider theme="d3a">
         <Button
           label="primary"
           onClick={action('clicked')}
@@ -23,7 +23,7 @@ storiesOf('D3A/Button', module)
     withInfo(`
       <Button type="secondary"/>
     `)(() => (
-      <ThemeProvider className="theme-d3a">
+      <ThemeProvider theme="d3a">
         <Button
           label="reconfigure"
           type="secondary"

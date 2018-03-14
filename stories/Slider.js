@@ -2,9 +2,9 @@ import React from 'react';
 import { action, storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import { ThemeProvider, SliderComp } from '../lib';
+import { SliderComp } from '../lib';
 
-storiesOf('Verbund/Slider', module)
+storiesOf('Organisms/Slider', module)
   .add(
     'this shows the slider',
     withInfo(`
@@ -15,16 +15,14 @@ storiesOf('Verbund/Slider', module)
       ~~~
 
     `)(() => (
-      <ThemeProvider>
-        <SliderComp
-          min={0}
-          max={50}
-          markerDistance={5}
-          unit="kWh"
-          onBeforeChange={action('onBeforeChange')}
-          onAfterChange={action('onAfterChange')}
-          onChange={action('onChange')}
-        />
-      </ThemeProvider>
+      <SliderComp
+        min={0}
+        max={50}
+        markerDistance={5}
+        unit="kWh"
+        onBeforeChange={action('onBeforeChange')}
+        onAfterChange={action('onAfterChange')}
+        onChange={action('onChange')}
+      />
     )),
   );

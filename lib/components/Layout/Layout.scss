@@ -1,0 +1,46 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.wrapper {
+  @extend %base;
+
+  img {
+    max-width: 100%;
+  }
+}
+@supports not (display: grid) {
+  .wrapper {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @supports (display: grid) {
+    .wrapper {
+      display: grid;
+      grid-column-gap: 10px;
+      grid-row-gap: 15px;
+      grid-template-columns: auto repeat(12, minmax(auto, 5em)) auto;
+      grid-template-areas:
+      '. hd hd hd hd hd hd hd hd hd hd hd hd .'
+      '. ct ct ct ct ct ct ct ct ct ct ct ct .'
+      '. ft ft ft ft ft ft ft ft ft ft ft ft .';
+    }
+  }
+
+  .header {
+    grid-area: hd;
+  }
+
+  .content {
+    grid-area: ct;
+  }
+
+  .footer {
+    grid-area: ft;
+  }
+}
+
+//different layouts
+@import '../../styles/layouts/results';

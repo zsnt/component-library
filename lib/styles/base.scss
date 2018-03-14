@@ -1,0 +1,39 @@
+@import './themify';
+
+%base {
+  @include themify($themes) {
+    background: themed('bgColor');
+    color: themed('light');
+    font-family: themed('fontFamily');
+    font-size: themed('body');
+    font-weight: 300;
+  }
+}
+
+.base {
+  @extend %base;
+}
+
+a {
+  @include themify($themes) {
+    color: themed('link');
+    font-size: themed('small');
+
+    &:hover {
+      color: themed('primary');
+    }
+  }
+  text-decoration: none;
+}
+
+.small {
+  @include themify($themes) {
+    font-size: themed('small');
+  }
+}
+
+.bigNumbers {
+  @include themify($themes) {
+    font-size: themed('bigText');
+  }
+}
