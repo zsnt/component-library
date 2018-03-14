@@ -1,0 +1,28 @@
+@import '../../styles/themify';
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  .tableHeaderCell {
+    font-weight: 400;
+    @include themify($themes) {
+      font-size: themed('small');
+      color: themed('textSubColor');
+    }
+  }
+
+  .tableCell {
+    font-weight: 700;
+  }
+
+  .tableHeaderCell,
+  .tableCell {
+    text-align: left;
+    padding: 15px;
+    @include themify($themes) {
+      border-bottom: themed('border');
+
+    }
+  }
+}
