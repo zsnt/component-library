@@ -11,8 +11,8 @@
 
   @include themify($themes) {
     font-family: themed('fontFamily');
-    font-size: 10px;
     color: themed('dark');
+    font-size: themed('small');
     background-color: themed('primary');
 
     &:hover {

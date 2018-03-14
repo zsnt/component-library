@@ -18,15 +18,17 @@ storiesOf('D3A/Molekules', module)
         <div className="base" style={divStyle}>
           <Table>
             <Table.Header>
-              <Table.HeaderCell>
-                Area
-              </Table.HeaderCell>
-              <Table.HeaderCell>
-                kwH
-              </Table.HeaderCell>
-              <Table.HeaderCell>
-                €
-              </Table.HeaderCell>
+              <Table.Row>
+                <Table.HeaderCell>
+                  Area
+                </Table.HeaderCell>
+                <Table.HeaderCell>
+                  kwH
+                </Table.HeaderCell>
+                <Table.HeaderCell>
+                  €
+                </Table.HeaderCell>
+              </Table.Row>
             </Table.Header>
             <Table.Body>
               <Table.Row>
