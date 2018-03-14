@@ -1,0 +1,78 @@
+@import '../../styles/themify';
+
+%headline {
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+  }
+  font-weight: 300;
+}
+
+%headline-h1 {
+  @include themify($themes) {
+    font-size: themed('h1');
+  }
+}
+
+%headline-h2 {
+  @include themify($themes) {
+    font-size: themed('h2');
+  }
+}
+
+%headline-h3 {
+  @include themify($themes) {
+    font-size: themed('h3');
+  }
+
+  font-weight: 400;
+}
+
+%headline-h4 {
+  @include themify($themes) {
+    font-size: themed('h4');
+  }
+
+  font-weight: 400;
+}
+
+%headline-title {
+  @include themify($themes) {
+    font-size: themed('h2');
+    border-bottom: themed('border');
+  }
+  padding-bottom: 15px;
+}
+
+%headline-subtitle {
+  @include themify($themes) {
+    color: themed('textSubColor');
+  }
+}
+
+.headline {
+  @extend %headline;
+
+  &-h1 {
+    @extend %headline-h1;
+  }
+
+  &-h2 {
+    @extend %headline-h2;
+  }
+
+  &-h3 {
+    @extend %headline-h3;
+  }
+
+  &-h4 {
+    @extend %headline-h4;
+  }
+
+  &-title {
+    @extend %headline-title;
+  }
+
+  &-subtitle {
+    @extend %headline-subtitle;
+  }
+}

@@ -3,7 +3,7 @@
 %base {
   @include themify($themes) {
     background: themed('bgColor');
-    color: themed('light');
+    color: themed('textcolor');
     font-family: themed('fontFamily');
     font-size: themed('body');
     font-weight: 300;
