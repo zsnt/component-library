@@ -1,20 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { ThemeProvider, Layout, Header } from '../lib';
+import { ThemeProvider, Layout, Header, Hero } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
 import logo from './img/Logo.png';
-
 
 const image = {
   src: imageFile,
   alt: 'plsceholder',
 };
 
-storiesOf('D3A/Layouts', module)
-  .add(
-    'Results Page',
-    withInfo(`
+storiesOf('D3A/Layouts', module).add(
+  'Results Page',
+  withInfo(`
       description or documentation about my component, supports markdown
 
       ~~~js
@@ -24,15 +22,12 @@ storiesOf('D3A/Layouts', module)
     `)(() => (
       <ThemeProvider theme="d3a">
         <Layout layout="wrapper">
-          <Header
-            logoUrl={logo}
-            logoLink="/"
-            logoAlt="D3ASIM"
-          />
+          <Header logoUrl={logo} logoLink="/" logoAlt="D3ASIM" />
           <Layout layout="results" className="content">
-            <div className="hero">
-              <h1>Hallo world</h1>
-            </div>
+            <Hero
+              titleText="Results Page"
+              subtitleText="shows all the pretty results to the stuff with shiny graphs"
+            />
             <div className="gridLevel">
               <h2>Grid Level</h2>
             </div>
@@ -53,11 +48,11 @@ storiesOf('D3A/Layouts', module)
               <h2>Market overview</h2>
             </div>
             <div className="result1">
-              Result 1
+            Result 1
               <img src={image.src} alt={image.alt} />
             </div>
             <div className="result2">
-              Result 2
+            Result 2
               <img src={image.src} alt={image.alt} />
             </div>
           </Layout>
@@ -66,5 +61,5 @@ storiesOf('D3A/Layouts', module)
           </div>
         </Layout>
       </ThemeProvider>
-    )),
-  );
+  )),
+);
