@@ -1,17 +1,21 @@
 $themes: (
   d3a: (
-    bgColor: radial-gradient(#003950 60%, #00171f),
     fontFamily: ('Lato', sans-serif),
-    fontAlternative: sans-serif,
+
+    bgColor: radial-gradient(#003950 60%, #00171f),
+    bg: #003950,
+    textcolor: #fff,
+    textSubColor: #708993,
+    link: #e31468,
     light: #fff,
     primary: #00ceea,
     secondary: #0e5e7a,
-    bg: #003950,
-    link: #e31468,
     dark: #00171f,
+    borderColor: #43525b,
     warning: #fde74c,
-    positive: #9bc53d,
+    positive: #35d7c6,
     negative: #d90429,
+
     h1: 42px,
     h2: 28px,
     h3: 17px,
@@ -19,5 +23,7 @@ $themes: (
     body: 15px,
     small: 12px,
     bigText: 36px,
+
+    border: (solid 1px #43525b),
   ),
 );
