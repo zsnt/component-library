@@ -20,7 +20,7 @@ storiesOf('D3A/Atoms/Headline', module)
     `)(() => (
       <ThemeProvider theme="d3a">
         <div className="base" style={divStyle}>
-          <Headline as="h1">
+          <Headline as="h1" className="myClass">
             Lorem Ipsum
           </Headline>
         </div>
