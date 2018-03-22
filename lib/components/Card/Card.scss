@@ -1,0 +1,8 @@
+@import '../../styles/themify';
+
+.card {
+  @include themify($themes) {
+    background: themed('cardBg');
+  }
+  padding: 25px;
+}
