@@ -2,19 +2,22 @@ $themes: (
   d3a: (
     fontFamily: ('Lato', sans-serif),
 
-    bgColor: radial-gradient(#003950 60%, #00171f),
-    bg: #003950,
+    bgColor: radial-gradient(#10455c 60%, #00171f),
+    cardBg: rgba(0, 0, 0, 0.06),
+    bg: #10455c,
     textcolor: #fff,
     textSubColor: #708993,
-    link: #e31468,
+
+    link: #a666ff,
     light: #fff,
-    primary: #00ceea,
-    secondary: #0e5e7a,
+
+    primary: #553581,
+    secondary: #35d7c6,
     dark: #00171f,
     borderColor: #43525b,
     warning: #fde74c,
-    positive: #35d7c6,
-    negative: #d90429,
+    positive: #5de668,
+    negative: #961d46,
 
     h1: 42px,
     h2: 28px,
