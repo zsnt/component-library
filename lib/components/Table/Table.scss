@@ -15,10 +15,12 @@
   .tableHeaderCell,
   .tableCell {
     text-align: left;
-    padding: 15px;
+    padding: {
+      top: 17px;
+      bottom: 17px;
+    }
     @include themify($themes) {
       border-bottom: themed('border');
-
     }
   }
 }
