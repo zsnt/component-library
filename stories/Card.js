@@ -13,7 +13,7 @@ const divStyle = {
   margin: '0 auto',
 };
 
-storiesOf('D3A/Molekules', module)
+storiesOf('D3A/Molecules', module)
   .add(
     'Card',
     withInfo(`
