@@ -14,13 +14,17 @@
 
   .tableHeaderCell,
   .tableCell {
-    text-align: left;
+    text-align: right;
     padding: {
       top: 17px;
       bottom: 17px;
     }
     @include themify($themes) {
       border-bottom: themed('border');
+    }
+
+    &:first-child {
+      text-align: left;
     }
   }
 }
