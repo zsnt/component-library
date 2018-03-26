@@ -9,7 +9,7 @@ module.exports = {
         include: path.resolve(__dirname, '../')
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
