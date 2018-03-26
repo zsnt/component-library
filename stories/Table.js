@@ -8,7 +8,7 @@ const divStyle = {
   padding: '15px',
 };
 
-storiesOf('D3A/Molekules', module)
+storiesOf('D3A/Molecules', module)
   .add(
     'Table',
     withInfo(`
