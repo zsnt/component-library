@@ -16,7 +16,7 @@
     background-color: themed('primary');
 
     &:hover {
-      color: themed('light');
+      background-color: themed('primaryHighlight');
     }
   }
 
