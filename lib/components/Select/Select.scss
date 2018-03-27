@@ -9,6 +9,9 @@
   &__icon {
     position: absolute;
     right: 5px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
   }
 
   &__select {
@@ -17,6 +20,7 @@
     background: transparent;
     @include themify($themes) {
       color: themed('textSubColor');
+      font-size: themed('small');
     }
 
     -webkit-appearance: none;
