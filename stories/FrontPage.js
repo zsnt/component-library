@@ -7,7 +7,7 @@ import logo from './img/Logo.png';
 
 const image = {
   src: imageFile,
-  alt: 'plsceholder',
+  alt: 'placeholder',
 };
 
 storiesOf('D3A/Layouts', module).add(
@@ -16,7 +16,7 @@ storiesOf('D3A/Layouts', module).add(
       description or documentation about my component, supports markdown
 
       ~~~js
-      <Layout layout="result">Children</Layout>
+      <Layout layout="frontPage">Children</Layout>
       ~~~
 
     `)(() => (
@@ -35,7 +35,7 @@ storiesOf('D3A/Layouts', module).add(
                 Example Simulations
               </Headline>
               <Headline type="subtitle">
-                Some introduction text about the configurations and the general awsomness.
+                Some introduction text about the configurations and the general awesomness.
               </Headline>
             </section>
             <section className="configurations">

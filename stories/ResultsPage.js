@@ -7,7 +7,7 @@ import logo from './img/Logo.png';
 
 const image = {
   src: imageFile,
-  alt: 'plsceholder',
+  alt: 'placeholder',
 };
 
 storiesOf('D3A/Layouts', module).add(
