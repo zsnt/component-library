@@ -9,11 +9,13 @@
   border-radius: 2px;
   text-transform: uppercase;
 
+
   @include themify($themes) {
     font-family: themed('fontFamily');
     color: themed('textcolor');
     font-size: themed('small');
     background-color: themed('primary');
+    box-shadow: themed('boxShadow');
 
     &:hover {
       background-color: themed('primaryHighlight');
