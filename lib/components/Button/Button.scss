@@ -6,7 +6,7 @@
   cursor: pointer;
   transition: color 0.1s, background-color 0.1s;
   border: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   text-transform: uppercase;
 
   @include themify($themes) {
@@ -23,10 +23,33 @@
   &.secondary {
     @include themify($themes) {
       color: themed('light');
-      background-color: themed('secondary');
+      background-color: themed('darkBg');
+      border: solid 1px themed('primaryHighlight');
 
       &:hover {
-        color: themed('primary');
+        color: themed('primaryHighlight');
+      }
+    }
+  }
+
+  &.cta {
+    .button__label {
+      position: relative;
+      display: inline-block;
+      padding-right: 15px;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - 5px);
+        right: -5px;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-width: 5px;
+        @include themify($themes) {
+          border-left-color: themed('primaryHighlight');
+        }
       }
     }
   }
