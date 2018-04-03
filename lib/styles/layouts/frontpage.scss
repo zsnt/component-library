@@ -1,0 +1,27 @@
+@media screen and (min-width: 600px) {
+  @supports (display: grid) {
+
+    .frontPage {
+      grid-area: ct;
+      display: grid,
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(12, minmax(auto, 6em));
+      grid-template-areas:
+      '. . . hero hero hero hero hero hero . . .'
+      'int int int int int int int int int int int int'
+      'confs confs confs confs confs confs confs confs confs confs confs confs';
+    }
+  }
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.intro {
+  grid-area: int;
+}
+
+.configurations {
+  grid-area: confs;
+}
