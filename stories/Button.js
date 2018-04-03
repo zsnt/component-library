@@ -4,6 +4,11 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider, Button } from '../lib';
 
+const divStyle = {
+  background: '#003950',
+  padding: '15px',
+};
+
 storiesOf('D3A/Atoms/Button', module)
   .add(
     'primary',
@@ -11,10 +16,12 @@ storiesOf('D3A/Atoms/Button', module)
       <Button />
     `)(() => (
       <ThemeProvider theme="d3a">
-        <Button
-          label="primary"
-          onClick={action('clicked')}
-        />
+        <div className="base" style={divStyle}>
+          <Button
+            label="primary"
+            onClick={action('clicked')}
+          />
+        </div>
       </ThemeProvider>
     )),
   )
@@ -24,11 +31,29 @@ storiesOf('D3A/Atoms/Button', module)
       <Button type="secondary"/>
     `)(() => (
       <ThemeProvider theme="d3a">
-        <Button
-          label="reconfigure"
-          type="secondary"
-          onClick={action('clicked')}
-        />
+        <div className="base" style={divStyle}>
+          <Button
+            label="reconfigure"
+            type="secondary"
+            onClick={action('clicked')}
+          />
+        </div>
+      </ThemeProvider>
+    )),
+  )
+  .add(
+    'call to action',
+    withInfo(`
+      <Button type="cta" />
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <div className="base" style={divStyle}>
+          <Button
+            type="cta"
+            label="Action"
+            onClick={action('clicked')}
+          />
+        </div>
       </ThemeProvider>
     )),
   );

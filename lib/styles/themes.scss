@@ -1,26 +1,37 @@
 $themes: (
   d3a: (
-    fontFamily: ('Lato', sans-serif),
-
+    // Background colors
     bgColor: radial-gradient(#10455c 60%, #00171f),
     cardBg: rgba(0, 0, 0, 0.06),
     bg: #10455c,
-    textcolor: #fff,
-    textSubColor: #c5c5c5,
-
-    link: #a666ff,
-    light: #fff,
-
-    primary: #553581,
-    primaryHighlight: #69459b,
-    secondary: #35d7c6,
-    dark: #00171f,
     darkBg: #43525b,
     lightBg: #3a657f,
     warning: #fde74c,
+
+    // Borders
+    border: (1px solid rgba(255, 255, 255, 0.15)),
+
+    // Shadows
+    boxShadow: (0 10px 15px 0 rgba(0,0,0,0.15)),
+
+    // Textcolors
+    textcolor: #fff,
+    textSubColor: #c5c5c5,
+    link: #a666ff,
+    light: #fff,
+
+    // Semantic Colors
+    primary: #553581,
+    primaryHighlight: #a666ff,
+    secondary: #35d7c6,
+    dark: #00171f,
     positive: #5de668,
     negative: #961d46,
 
+    // Fonts
+    fontFamily: ('Lato', sans-serif),
+
+    // Sizings
     h1: 42px,
     h2: 28px,
     h3: 17px,
@@ -32,6 +43,5 @@ $themes: (
     lineHeight: 1.625,
 
     headerHeight: 47px,
-    border: (1px solid rgba(255, 255, 255, 0.15)),
   ),
 );
