@@ -1,7 +1,5 @@
 $themes: (
   d3a: (
-
-
     // Background colors
     bgColor: radial-gradient(#10455c 60%, #00171f),
     cardBg: rgba(0, 0, 0, 0.06),
@@ -10,14 +8,12 @@ $themes: (
     lightBg: #3a657f,
     warning: #fde74c,
 
-    // borders
+    // Borders
     border: (1px solid rgba(255, 255, 255, 0.15)),
 
-    //shaodws
-    // borders
+    // Shadows
     boxShadow: (0 10px 15px 0 rgba(0,0,0,0.15)),
 
-    //shaodws
     // Textcolors
     textcolor: #fff,
     textSubColor: #c5c5c5,
@@ -35,7 +31,7 @@ $themes: (
     // Fonts
     fontFamily: ('Lato', sans-serif),
 
-    // sizings
+    // Sizings
     h1: 42px,
     h2: 28px,
     h3: 17px,
