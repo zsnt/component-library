@@ -1,8 +1,19 @@
 @import '../../styles/themify';
+@import '../../styles/typography';
 
 .card {
   @include themify($themes) {
     background: themed('cardBg');
   }
   padding: 25px;
+  &__headline {
+    @extend %headline-h3;
+  }
+  &__meta {
+    @include themify($themes) {
+      font-size: themed('small');
+      color: themed('secondary');
+    }
+    margin-bottom: 20px;
+  }
 }

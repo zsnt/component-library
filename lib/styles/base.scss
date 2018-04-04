@@ -38,3 +38,9 @@ a {
     font-size: themed('bigText');
   }
 }
+
+.highlighted {
+  @include themify($themes) {
+    color: themed('secondary');
+  }
+}

@@ -26,10 +26,12 @@ storiesOf('D3A/Molecules', module)
       <ThemeProvider theme="d3a">
         <div className="base" style={wrapperStyle}>
           <Card style={divStyle}>
-            Lorem ipsum dolor
-
-            erat, voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-
+            <Card.Headline>
+              Lorem ipsum dolor
+            </Card.Headline>
+            <Card.Meta>
+              erat, voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            </Card.Meta>
             kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
             amet. Lorem ipsum dolor si
             t amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l
