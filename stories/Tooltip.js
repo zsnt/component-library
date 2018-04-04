@@ -27,4 +27,22 @@ storiesOf('D3A/Molecules/Tooltip', module)
       </ThemeProvider >
 
     )),
+  )
+  .add(
+    'Static Tooltip with pointer',
+    withInfo(`
+      this tooltip goes on top of elements
+      ~~~js
+
+      ~~~
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <div className="base" style={wrapperStyle}>
+          <Tooltip position="top">
+            erat, voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+          </Tooltip>
+        </div>
+      </ThemeProvider >
+
+    )),
   );
