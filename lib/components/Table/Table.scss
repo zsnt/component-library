@@ -27,4 +27,19 @@
       text-align: left;
     }
   }
+
+  .tableBody {
+    .tableHeaderCell {
+      @include themify($themes) {
+        border-right: themed('border');
+        color: themed('textcolor');
+      }
+    }
+
+    .tableCell {
+      @include themify($themes) {
+        color: themed('textSubColor');
+      }
+    }
+  }
 }

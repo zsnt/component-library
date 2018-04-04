@@ -32,9 +32,9 @@ storiesOf('D3A/Molecules', module)
             </Table.Header>
             <Table.Body>
               <Table.Row>
-                <Table.Cell>
+                <Table.HeaderCell>
                   House 1
-                </Table.Cell>
+                </Table.HeaderCell>
                 <Table.Cell>
                   0.60
                 </Table.Cell>
@@ -43,9 +43,9 @@ storiesOf('D3A/Molecules', module)
                 </Table.Cell>
               </Table.Row>
               <Table.Row>
-                <Table.Cell>
+                <Table.HeaderCell>
                   House 2
-                </Table.Cell>
+                </Table.HeaderCell>
                 <Table.Cell>
                   1.60
                 </Table.Cell>
@@ -54,9 +54,9 @@ storiesOf('D3A/Molecules', module)
                 </Table.Cell>
               </Table.Row>
               <Table.Row>
-                <Table.Cell>
+                <Table.HeaderCell>
                   CellTower
-                </Table.Cell>
+                </Table.HeaderCell>
                 <Table.Cell>
                   2.76
                 </Table.Cell>
