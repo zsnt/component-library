@@ -9,6 +9,8 @@
     font-weight: 300;
     line-height: themed('lineHeight');
   }
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .base {
@@ -36,6 +38,7 @@ a {
 .bigNumbers {
   @include themify($themes) {
     font-size: themed('bigText');
+    color: themed('textcolor');
   }
 }
 
