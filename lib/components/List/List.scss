@@ -1,0 +1,21 @@
+@import '../../styles/themify';
+
+.list,
+.listElement {
+  @include themify($themes) {
+    background-color: themed('even');
+  }
+  margin: 0;
+  padding: 0;
+}
+
+.listElement {
+  list-style-type: none;
+  padding: 0 10px;
+
+  &:nth-child(odd) {
+    @include themify($themes) {
+      background-color: themed('odd');
+    }
+  }
+}

@@ -4,9 +4,11 @@ $themes: (
     bgColor: radial-gradient(#10455c 60%, #00171f),
     cardBg: rgba(0, 0, 0, 0.06),
     bg: #10455c,
-    darkBg: #43525b,
+    darkBg: #043d53,
     lightBg: #3a657f,
     warning: #fde74c,
+    even: rgba(9, 21, 25, 0.25),
+    odd: #3a657f,
 
     // Borders
     border: (1px solid rgba(255, 255, 255, 0.15)),
