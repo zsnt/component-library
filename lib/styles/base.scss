@@ -10,7 +10,7 @@
     line-height: themed('lineHeight');
   }
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .base {
@@ -21,12 +21,13 @@ a {
   @include themify($themes) {
     color: themed('link');
     font-size: themed('small');
-
-    &:hover {
-      color: themed('secondary');
-    }
   }
   text-decoration: none;
+
+  &:hover {
+    font-weight: 400;
+    text-decoration: underline;
+  }
 }
 
 .small {
