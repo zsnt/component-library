@@ -14,22 +14,32 @@
     font-family: themed('fontFamily');
     color: themed('textcolor');
     font-size: themed('small');
-    background-color: themed('primary');
+    background-color: themed('primaryDark');
     box-shadow: themed('boxShadow');
 
     &:hover {
-      background-color: themed('primaryHighlight');
+      background-color: themed('primaryLight');
+    }
+
+    &:active {
+      background-color: themed('primaryLight');
+      box-shadow: none;
     }
   }
 
   &.secondary {
     @include themify($themes) {
       color: themed('light');
-      background-color: themed('darkBg');
-      border: solid 1px themed('primaryHighlight');
+      background-color: themed('black5');
+      border: solid 1px themed('primary');
+      box-shadow: none;
 
       &:hover {
-        color: themed('primaryHighlight');
+        background-color: themed('white5');
+      }
+
+      &:active {
+        background-color: themed('white10');
       }
     }
   }
@@ -50,7 +60,7 @@
         border: solid transparent;
         border-width: 5px;
         @include themify($themes) {
-          border-left-color: themed('primaryHighlight');
+          border-left-color: themed('primary');
         }
       }
     }
