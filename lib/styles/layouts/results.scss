@@ -9,9 +9,10 @@
       grid-template-areas:
       '. . . hero hero hero hero hero hero . . .'
       'grl grl grl grl grl grl grl grl grl grl grl grl'
-      'avt avt avt avt avt avt gpi gpi gpi gpi gpi gpi'
+      'rs1 rs1 rs1 rs1 rs1 rs1 rs2 rs2 rs2 rs2 rs2 rs2 '
       'mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt '
-      'rs1 rs1 rs1 rs1 rs1 rs1 rs2 rs2 rs2 rs2 rs2 rs2 ';
+      'rs3 rs3 rs3 rs3 rs3 rs3 rs4 rs4 rs4 rs4 rs4 rs4 '
+      'rs5 rs5 rs5 rs5 rs5 rs5 . . . . . . ';
     }
 
     .hero {
@@ -26,10 +27,6 @@
       grid-area: avt;
     }
 
-    .gridPicture {
-      grid-area: gpi;
-    }
-
     .marketLevel {
       grid-area: mrkt;
     }
@@ -42,5 +39,25 @@
       grid-area: rs2;
     }
 
+    .result3 {
+      grid-area: rs3;
+    }
+
+    .result4 {
+      grid-area: rs4;
+    }
+
+    .result5 {
+      grid-area: rs5;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      flex-grow: 1;
+    }
   }
 }
