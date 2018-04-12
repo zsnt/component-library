@@ -16,7 +16,7 @@ storiesOf('D3A/Molecules', module)
   .add(
     'List',
     withInfo(`
-      description or documentation about my component, supports markdown
+      generic list Element
 
       ~~~js
 
