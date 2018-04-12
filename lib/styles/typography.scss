@@ -4,19 +4,21 @@
   @include themify($themes) {
     font-family: themed('fontFamily');
   }
-  font-weight: 300;
+  font-weight: 400;
 }
 
 %headline-h1 {
   @include themify($themes) {
     font-size: themed('h1');
   }
+  font-weight: 300;
 }
 
 %headline-h2 {
   @include themify($themes) {
     font-size: themed('h2');
   }
+  font-weight: 300;
 }
 
 %headline-h3 {
@@ -38,6 +40,7 @@
     font-size: themed('h2');
     border-bottom: themed('border');
   }
+  font-weight: 300;
   line-height: 1em;
   padding-bottom: 15px;
 }
