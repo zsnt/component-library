@@ -7,8 +7,8 @@ $themes: (
     darkBg: #043d53,
     lightBg: #3a657f,
     warning: #fde74c,
-    even: rgba(9, 21, 25, 0.25),
-    odd: #3a657f,
+    odd: rgba(9, 21, 25, 0.25),
+    even: #3a657f,
 
     // Borders
     border: (1px solid rgba(255, 255, 255, 0.15)),
@@ -51,6 +51,10 @@ $themes: (
     body: 16px,
     small: 12px,
     bigText: 36px,
+
+    lightWeight: 300,
+    regularWeight: 400,
+    boldWeight: 700,
 
     lineHeight: 1.625,
 

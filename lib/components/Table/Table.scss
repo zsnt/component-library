@@ -5,9 +5,9 @@
   border-collapse: collapse;
 
   .tableHeaderCell {
-    font-weight: 400;
     @include themify($themes) {
       font-size: themed('small');
+      font-weight: themed('regularWeight');
     }
   }
 

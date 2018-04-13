@@ -10,8 +10,8 @@
   &__headline {
     @include themify($themes) {
       font-size: themed('h3');
+      font-weight: themed('regularWeight');
     }
-    font-weight: 400;
   }
 
   &__meta {
