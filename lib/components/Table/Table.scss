@@ -6,7 +6,7 @@
 
   .tableHeaderCell {
     @include themify($themes) {
-      font-size: themed('small');
+      font-size: themed('medium');
       font-weight: themed('regularWeight');
     }
   }
