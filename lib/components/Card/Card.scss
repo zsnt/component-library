@@ -16,7 +16,7 @@
 
   &__meta {
     @include themify($themes) {
-      font-size: themed('small');
+      font-size: themed('h4');
       color: themed('secondary');
     }
   }
