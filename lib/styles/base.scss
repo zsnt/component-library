@@ -6,7 +6,7 @@
     color: themed('textcolor');
     font-family: themed('fontFamily');
     font-size: themed('body');
-    font-weight: 300;
+    font-weight: themed('lightWeight');;
     line-height: themed('lineHeight');
   }
   -webkit-font-smoothing: antialiased;
@@ -25,7 +25,9 @@ a {
   text-decoration: none;
 
   &:hover {
-    font-weight: 400;
+    @include themify($themes) {
+      font-weight: themed('regularWeight');
+    }
     text-decoration: underline;
   }
 }

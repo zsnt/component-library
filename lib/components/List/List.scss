@@ -2,9 +2,6 @@
 
 .list,
 .listElement {
-  @include themify($themes) {
-    background-color: themed('even');
-  }
   margin: 0;
   padding: 0;
 }
@@ -13,9 +10,22 @@
   list-style-type: none;
   padding: 0 10px;
 
+  @include themify($themes) {
+    background-color: themed('even');
+  }
   &:nth-child(odd) {
     @include themify($themes) {
       background-color: themed('odd');
+    }
+  }
+
+}
+
+.tooltip {
+  .list {
+    margin: -10px;
+    .list {
+      margin: 0 -10px;
     }
   }
 }

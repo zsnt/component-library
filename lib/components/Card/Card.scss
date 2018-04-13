@@ -8,12 +8,15 @@
   padding: 25px;
 
   &__headline {
-    @extend %headline-h3;
+    @include themify($themes) {
+      font-size: themed('h3');
+      font-weight: themed('regularWeight');
+    }
   }
 
   &__meta {
     @include themify($themes) {
-      font-size: themed('small');
+      font-size: themed('h4');
       color: themed('secondary');
     }
   }
