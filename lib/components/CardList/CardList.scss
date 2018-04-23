@@ -1,0 +1,28 @@
+.cardList {
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__card {
+    @media all and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 300px;
+      max-width: calc(50% - 18px);
+    }
+
+    @media all and (min-width: 1024px) {
+      flex-basis: 400px;
+      max-width: calc(33% - 18px);
+    }
+
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-bottom: 20px;
+  }
+}

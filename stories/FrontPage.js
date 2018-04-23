@@ -1,14 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { ThemeProvider, Layout, Header, Hero, Headline, Button } from '../lib';
+import { action } from '@storybook/addon-actions';
+
+import { ThemeProvider, Layout, Header, Hero, Headline, Button, CardList } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
 import logo from './img/Logo.png';
-
-const image = {
-  src: imageFile,
-  alt: 'placeholder',
-};
 
 storiesOf('D3A/Layouts', module).add(
   'Front Page',
@@ -39,7 +36,81 @@ storiesOf('D3A/Layouts', module).add(
               </Headline>
             </section>
             <section className="configurations">
-              <img src={image.src} alt={image.alt} />
+              <CardList>
+                <CardList.Card className="cardList__card">
+                  <CardList.Card.Header>
+                    <CardList.Card.Headline>
+                      Second Card
+                    </CardList.Card.Headline>
+                  </CardList.Card.Header>
+                  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                  amet. Lorem ipsum dolor si
+                  t amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l
+                  abore et dolore magna aliquyam erat,
+                  sed diam voluptua. At vero eos et accusam et justo duo
+                  dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                  <CardList.Card.Footer>
+                    <CardList.Card.Button onClick={action('clicked')} label="Card Button" />
+                  </CardList.Card.Footer>
+                </CardList.Card>
+                <CardList.Card className="cardList__card">
+                  <CardList.Card.Header>
+                    <CardList.Card.Headline>
+                      Second Card
+                    </CardList.Card.Headline>
+                  </CardList.Card.Header>
+                  <img src={imageFile} alt="placeholder" />
+                  <CardList.Card.Footer>
+                    <CardList.Card.Button type="secondary" onClick={action('clicked')} label="Card Button" />
+                  </CardList.Card.Footer>
+                </CardList.Card>
+                <CardList.Card className="cardList__card">
+                  <CardList.Card.Header>
+                    <CardList.Card.Headline>
+                      Second Card
+                    </CardList.Card.Headline>
+                  </CardList.Card.Header>
+                  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                  amet. Lorem ipsum dolor si
+                  t amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l
+                  abore et dolore magna aliquyam erat,
+                  sed diam voluptua. At vero eos et accusam et justo duo
+                  dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                  <CardList.Card.Footer>
+                    <CardList.Card.Button onClick={action('clicked')} label="Card Button" />
+                  </CardList.Card.Footer>
+                </CardList.Card>
+                <CardList.Card className="cardList__card">
+                  <CardList.Card.Header>
+                    <CardList.Card.Headline>
+                      Second Card
+                    </CardList.Card.Headline>
+                  </CardList.Card.Header>
+                  <img src={imageFile} alt="placeholder" />
+                  <CardList.Card.Footer>
+                    <CardList.Card.Button type="secondary" onClick={action('clicked')} label="Card Button" />
+                  </CardList.Card.Footer>
+                </CardList.Card>
+                <CardList.Card className="cardList__card">
+                  <CardList.Card.Header>
+                    <CardList.Card.Headline>
+                      Second Card
+                    </CardList.Card.Headline>
+                  </CardList.Card.Header>
+                  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                  amet. Lorem ipsum dolor si
+                  t amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l
+                  abore et dolore magna aliquyam erat,
+                  sed diam voluptua. At vero eos et accusam et justo duo
+                  dolores et ea rebum. Stet clita kasd gubergren,
+                  no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                  <CardList.Card.Footer>
+                    <CardList.Card.Button onClick={action('clicked')} label="Card Button" />
+                  </CardList.Card.Footer>
+                </CardList.Card>
+              </CardList>
             </section>
           </Layout>
           <div className="footer">
