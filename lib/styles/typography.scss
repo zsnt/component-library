@@ -1,46 +1,38 @@
+@import './variables';
 @import './themify';
 
 %headline {
   @include themify($themes) {
     font-family: themed('fontFamily');
-    font-weight: themed('regularWeight');
   }
+  font-weight: $regular-weight;
 }
 
 %headline-h1 {
-  @include themify($themes) {
-    font-size: themed('h1');
-    font-weight: themed('lightWeight');
-  }
+  font-size: $h1;
+  font-weight: $light-weight;
 }
 
 %headline-h2 {
-  @include themify($themes) {
-    font-size: themed('h2');
-    font-weight: themed('lightWeight');
-  }
+  font-size: $h2;
+  font-weight: $light-weight;
 }
 
 %headline-h3 {
-  @include themify($themes) {
-    font-size: themed('h3');
-  }
+  font-size: $h3;
 }
 
 %headline-h4 {
-  @include themify($themes) {
-    font-size: themed('h4');
-    font-weight: themed('regularWeight');
-  }
-
+  font-size: $h4;
+  font-weight: $regular-weight;
 }
 
 %headline-title {
   @include themify($themes) {
-    font-size: themed('h2');
     border-bottom: themed('border');
-    font-weight: themed('lightWeight');
   }
+  font-size: $h2;
+  font-weight: $light-weight;
   line-height: 1em;
   padding-bottom: 15px;
 }

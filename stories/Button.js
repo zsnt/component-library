@@ -5,7 +5,6 @@ import { action } from '@storybook/addon-actions';
 import { ThemeProvider, Button } from '../lib';
 
 const divStyle = {
-  background: '#003950',
   padding: '15px',
 };
 

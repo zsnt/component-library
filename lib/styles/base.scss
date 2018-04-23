@@ -1,13 +1,15 @@
 @import './themify';
+@import './variables';
 
 %base {
   @include themify($themes) {
     background: themed('bgColor');
     color: themed('textcolor');
     font-family: themed('fontFamily');
-    font-size: themed('body');
-    line-height: themed('lineHeight');
   }
+
+  line-height: $default-lh;
+  font-size: $body;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,29 +21,25 @@
 a {
   @include themify($themes) {
     color: themed('link');
-    font-size: themed('small');
   }
+  font-size: $small;
   text-decoration: none;
 
   &:hover {
-    @include themify($themes) {
-      font-weight: themed('regularWeight');
-    }
+    font-weight: $regular-weight;
     text-decoration: underline;
   }
 }
 
 .small {
-  @include themify($themes) {
-    font-size: themed('small');
-  }
+  font-size: $small;
 }
 
 .bigNumbers {
   @include themify($themes) {
-    font-size: themed('bigText');
     color: themed('textcolor');
   }
+  font-size: $big-text;
 }
 
 .highlighted {

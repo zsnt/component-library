@@ -1,19 +1,19 @@
 @import '../../styles/themify';
+@import '../../styles/variables';
 
 .button {
   display: inline-block;
   padding: 12px 22px;
-  cursor: pointer;
-  transition: color 0.1s, background-color 0.1s;
   border: 0;
   border-radius: 2px;
-  text-transform: uppercase;
-
+  cursor: pointer;
+  transition: color 0.1s, background-color 0.1s;
+  font-size: $small;
 
   @include themify($themes) {
-    font-family: themed('fontFamily');
     color: themed('textcolor');
-    font-size: themed('small');
+    font-family: themed('fontFamily');
+    text-transform: themed('textTransform');
     background-color: themed('primaryDark');
     box-shadow: themed('boxShadow');
 
@@ -49,6 +49,7 @@
       position: relative;
       display: inline-block;
       padding-right: 15px;
+
       &::after {
         content: '';
         display: block;

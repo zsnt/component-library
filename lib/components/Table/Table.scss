@@ -1,14 +1,13 @@
 @import '../../styles/themify';
+@import '../../styles/variables';
 
 .table {
   width: 100%;
   border-collapse: collapse;
 
   .tableHeaderCell {
-    @include themify($themes) {
-      font-size: themed('medium');
-      font-weight: themed('regularWeight');
-    }
+    font-size: $medium;
+    font-weight: $regular-weight;
   }
 
   .tableHeaderCell,
