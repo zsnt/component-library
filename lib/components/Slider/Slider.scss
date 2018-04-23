@@ -6,11 +6,9 @@
   border-radius: 6px;
   -ms-touch-action: none;
       touch-action: none;
-  box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   * {
-    box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
@@ -267,11 +265,10 @@
   left: -9999px;
   top: -9999px;
   visibility: visible;
-  box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 .rc-slider-tooltip * {
-  box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .rc-slider-tooltip-hidden {

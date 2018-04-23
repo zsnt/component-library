@@ -5,7 +5,6 @@
   @include themify($themes) {
     background: themed('cardBg');
   }
-  box-sizing: border-box;
   padding: 25px;
 
   &__headline {

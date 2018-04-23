@@ -1,6 +1,12 @@
 @import './themify';
 @import './variables';
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 %base {
   @include themify($themes) {
     background: themed('bgColor');
