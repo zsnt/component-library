@@ -8,17 +8,16 @@
   padding: 25px;
 
   &__headline {
-    @include themify($themes) {
-      font-size: themed('h3');
-      font-weight: themed('regularWeight');
-    }
+    font-size: $h3;
+    font-weight: $regular-weight;
+
   }
 
   &__meta {
     @include themify($themes) {
-      font-size: themed('h4');
       color: themed('secondary');
     }
+    font-size: $h4;
   }
 
   &__header {
@@ -27,5 +26,17 @@
     }
     padding-bottom: 20px;
     margin-bottom: 10px;
+  }
+
+  &__footer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  &__button {
+    align-self: flex-start;
   }
 }

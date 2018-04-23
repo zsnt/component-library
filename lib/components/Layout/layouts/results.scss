@@ -12,7 +12,7 @@
       'rs1 rs1 rs1 rs1 rs1 rs1 rs2 rs2 rs2 rs2 rs2 rs2 '
       'mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt mrkt '
       'rs3 rs3 rs3 rs3 rs3 rs3 rs4 rs4 rs4 rs4 rs4 rs4 '
-      'rs5 rs5 rs5 rs5 rs5 rs5 . . . . . . ';
+      'rs5 rs5 rs5 rs5 rs5 rs5 rs6 rs6 rs6 rs6 rs6 rs6 ';
     }
 
     .hero {
@@ -49,6 +49,10 @@
 
     .result5 {
       grid-area: rs5;
+    }
+
+    .result6 {
+      grid-area: rs6;
     }
 
     .container {

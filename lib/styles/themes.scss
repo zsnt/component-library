@@ -1,14 +1,26 @@
 $themes: (
   d3a: (
+
+    //Brand colors
+    primary: #a666ff, //brand
+    primaryLight: #69459b, //brand lightend
+    primaryDark: #553581, // brand darken
+    secondary: #35d7c6, //second highlight
+
     // Background colors
     bgColor: radial-gradient(#10455c 60%, #00171f),
     cardBg: rgba(0, 0, 0, 0.06),
-    bg: #10455c,
     darkBg: #043d53,
     lightBg: #3a657f,
-    warning: #fde74c,
     odd: rgba(9, 21, 25, 0.25),
     even: #3a657f,
+    black5: rgba(0, 0, 0, 0.05),
+    white5: rgba(255, 255, 255, 0.05),
+    white10: rgba(255, 255, 255, 0.1),
+
+    positive: #5de668,
+    negative: #961d46,
+    warning: #fde74c,
 
     // Borders
     border: (1px solid rgba(255, 255, 255, 0.15)),
@@ -16,48 +28,15 @@ $themes: (
     // Shadows
     boxShadow: (0 10px 15px 0 rgba(0, 0, 0, 0.15)),
 
+    // Fonts
+    fontFamily: ('Lato', sans-serif),
+    textTransform: uppercase,
+
     // Textcolors
     textcolor: #fff,
     textSubColor: #8daebc,
     link: #a666ff,
     light: #fff,
-
-    // Semantic Colors
-    primary: #a666ff, //brand
-    primaryLight: #69459b, //brand lightend
-    primaryDark: #553581, // brand darken
-    secondary: #35d7c6, //second highlight
-
-    black5: rgba(0, 0, 0, 0.05),
-    white5: rgba(255, 255, 255, 0.05),
-    white10: rgba(255, 255, 255, 0.10),
-    grey: #d3dee3,
-
-    positive: #5de668,
-    negative: #961d46,
-
-    blue: #135671,
-    green: #388574,
-    red: #833755,
-    lightBlue: #3199C2,
-    // Fonts
-    fontFamily: ('Lato', sans-serif),
-
-    // Sizings
-    h1: 42px,
-    h2: 28px,
-    h3: 20px,
-    h4: 16px,
-    body: 16px,
-    medium: 14px,
-    small: 12px,
-    bigText: 36px,
-
-    lightWeight: 300,
-    regularWeight: 400,
-    boldWeight: 700,
-
-    lineHeight: 1.625,
 
     headerHeight: 47px,
   ),
