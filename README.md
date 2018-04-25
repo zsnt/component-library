@@ -70,7 +70,7 @@ on your working branch run
 `npm run build-storybook`
 this will create the static files inside .out folder. **Commit and push** your changes to your branch. Otherwise git will respond with 'No new revisions were found'.
 
-For the deployment to heroku it needs to be merged into the deploy branch. This branch is a subtree of the master branch. Therefore you have to subtree split the .out folder into a new branch with the upda Otherwise git will respond with No new revisions were foundted version name.
+For the deployment to heroku it needs to be merged into the deploy branch. This branch is a subtree of the master branch. Therefore you have to subtree split the .out folder into a new branch with the updated version name.
 `git subtree split --prefix=.out -b version-123`
 
 You now should have a new branch which contains the contents of .out inside its main folder.
