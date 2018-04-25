@@ -63,3 +63,21 @@ Create a pull request, get a review and merge your changes to master.
 Check out the updated master version.
 Create release on GitHub and explain what is content of the new release.
 Run `npm publish` to push the latest version to npm package server.
+
+###Deploy to heroku
+on your working branch run
+`npm run build-storybook`
+this will create the new .out folder. Commit and push your changes to your branch.
+
+For the deployment to heroku it needs to be merged it into the deploy-subtree. Therefore you have to split off the .out folder as a subtree into a new branch with the updated version name.
+`git subtree split --prefix=.out -b version-123`
+
+Then switch to deploy branch.
+now you have to merge in our newly created release branch.
+`git merge version-123 --allow-unrelated-histories`
+
+you can check if your changes applied with
+`npm run start`
+
+
+When you pushed the deploy branch the heroku deploy pipeline will automatically deploy this version.
