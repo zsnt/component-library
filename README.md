@@ -12,7 +12,7 @@ Install the gsy component library package from npm
 Now you should have in your node modules a folder from gsy-component-library which contains a build folder. In this build folder are all ready to use pre-compiled components.
 If you want to use one of them in a react render function just import the component you want to use:
 
-`import Button from 'gsy-component-library/build/components/Button/Button'`
+`import Button from 'gsy-component-library/build/'`
 
 Every component comes with its own, already included, css. Check out the storybook demo of the component to see prop and theming options and how to set them.
 
@@ -63,3 +63,25 @@ Create a pull request, get a review and merge your changes to master.
 Check out the updated master version.
 Create release on GitHub and explain what is content of the new release.
 Run `npm publish` to push the latest version to npm package server.
+
+### Deploy to heroku
+
+on your working branch run
+`npm run build-storybook`
+this will create the static files inside .out folder. **Commit and push** your changes to your branch. Otherwise git will respond with 'No new revisions were found'.
+
+For the deployment to heroku it needs to be merged into the deploy branch. This branch is a subtree of the master branch. Therefore you have to subtree split the .out folder into a new branch with the updated version name.
+`git subtree split --prefix=.out -b version-123`
+
+You now should have a new branch which contains the contents of .out inside its main folder.
+
+Then switch to deploy branch. The deploy branch contains the files of the .out folder plus a gitignore file and a different package.json to run it as a static-page.
+Now all you have to do is merge your newly created version branch.
+`git merge version-123 --allow-unrelated-histories`
+
+you can check if your changes applied when running
+`npm install`
+`npm run start`
+
+
+When you pushed the deploy branch the heroku deploy pipeline will automatically deploy this version.
