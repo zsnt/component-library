@@ -64,13 +64,13 @@ Check out the updated master version.
 Create release on GitHub and explain what is content of the new release.
 Run `npm publish` to push the latest version to npm package server.
 
-###Deploy to heroku
+### Deploy to heroku
 
 on your working branch run
 `npm run build-storybook`
-this will create the static files inside .out folder. Commit and push your changes to your branch.
+this will create the static files inside .out folder. **Commit and push** your changes to your branch. Otherwise git will respond with 'No new revisions were found'.
 
-For the deployment to heroku it needs to be merged into the deploy branch. This branch is a subtree of the master branch. Therefore you have to subtree split the .out folder into a new branch with the updated version name.
+For the deployment to heroku it needs to be merged into the deploy branch. This branch is a subtree of the master branch. Therefore you have to subtree split the .out folder into a new branch with the upda Otherwise git will respond with No new revisions were foundted version name.
 `git subtree split --prefix=.out -b version-123`
 
 You now should have a new branch which contains the contents of .out inside its main folder.
@@ -80,6 +80,7 @@ Now all you have to do is merge your newly created version branch.
 `git merge version-123 --allow-unrelated-histories`
 
 you can check if your changes applied when running
+`npm install`
 `npm run start`
 
 
