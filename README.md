@@ -65,18 +65,21 @@ Create release on GitHub and explain what is content of the new release.
 Run `npm publish` to push the latest version to npm package server.
 
 ###Deploy to heroku
+
 on your working branch run
 `npm run build-storybook`
-this will create the new .out folder. Commit and push your changes to your branch.
+this will create the static files inside .out folder. Commit and push your changes to your branch.
 
-For the deployment to heroku it needs to be merged it into the deploy-subtree. Therefore you have to split off the .out folder as a subtree into a new branch with the updated version name.
+For the deployment to heroku it needs to be merged into the deploy branch. This branch is a subtree of the master branch. Therefore you have to subtree split the .out folder into a new branch with the updated version name.
 `git subtree split --prefix=.out -b version-123`
 
-Then switch to deploy branch.
-now you have to merge in our newly created release branch.
+You now should have a new branch which contains the contents of .out inside its main folder.
+
+Then switch to deploy branch. The deploy branch contains the files of the .out folder plus a gitignore file and a different package.json to run it as a static-page.
+Now all you have to do is merge your newly created version branch.
 `git merge version-123 --allow-unrelated-histories`
 
-you can check if your changes applied with
+you can check if your changes applied when running
 `npm run start`
 
 
