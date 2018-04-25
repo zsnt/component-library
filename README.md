@@ -12,7 +12,7 @@ Install the gsy component library package from npm
 Now you should have in your node modules a folder from gsy-component-library which contains a build folder. In this build folder are all ready to use pre-compiled components.
 If you want to use one of them in a react render function just import the component you want to use:
 
-`import Button from 'gsy-component-library/build/components/Button/Button'`
+`import Button from 'gsy-component-library/build/'`
 
 Every component comes with its own, already included, css. Check out the storybook demo of the component to see prop and theming options and how to set them.
 
