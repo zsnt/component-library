@@ -2,14 +2,16 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
-
+import StoryRouter from 'storybook-react-router';
 import { ThemeProvider, Layout, Header, Hero, Headline, Button, CardList } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
 import logo from './img/Logo.png';
 
-storiesOf('D3A/Layouts', module).add(
-  'Front Page',
-  withInfo(`
+storiesOf('D3A/Layouts', module)
+  .addDecorator(StoryRouter())
+  .add(
+    'Front Page',
+    withInfo(`
       description or documentation about my component, supports markdown
 
       ~~~js
@@ -19,7 +21,11 @@ storiesOf('D3A/Layouts', module).add(
     `)(() => (
       <ThemeProvider theme="d3a">
         <Layout layout="wrapper">
-          <Header logoUrl={logo} logoLink="/" logoAlt="D3ASIM" />
+          <Header
+            logoUrl={logo}
+            logoLink="/"
+            logoAlt="D3ASIM"
+          />
           <Layout layout="frontPage" className="content">
             <Hero
               titleText="Welcome to D3A Alpha"
