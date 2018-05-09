@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import StoryRouter from 'storybook-react-router';
 import { ThemeProvider, Header } from '../lib';
 import logo from './img/Logo.png';
 
@@ -10,6 +11,7 @@ const divStyle = {
 };
 
 storiesOf('D3A/Organisms', module)
+  .addDecorator(StoryRouter())
   .add(
     'Header',
     withInfo(`
