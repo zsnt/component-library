@@ -1,0 +1,23 @@
+.user-status {
+  display: flex;
+  align-items: center;
+
+  &-name {
+    font-size: 14px;
+  }
+}
+
+.auth-nav {
+  &-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-link {
+    display: inline-block;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
