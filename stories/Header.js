@@ -23,6 +23,7 @@ storiesOf('D3A/Organisms', module)
             logoUrl={logo}
             logoLink="/"
             logoAlt="D3ASIM"
+            authenticated={false}
           />
         </div>
       </ThemeProvider>
