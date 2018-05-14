@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider, Layout, Header, Hero, Card } from '../lib';
+import { ThemeProvider, Layout, Header, Hero, Card, UserStatus } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
 import logo from './img/Logo.png';
 
@@ -29,7 +29,9 @@ storiesOf('D3A/Layouts', module)
             logoUrl={logo}
             logoLink="/"
             logoAlt="D3ASIM"
-          />
+          >
+            <UserStatus />
+          </Header>
           <Layout layout="results" className="content">
             <Hero
               titleText="Results Page"

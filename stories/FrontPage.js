@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider, Layout, Header, Hero, Headline, Button, CardList } from '../lib';
+import { ThemeProvider, Layout, Header, Hero, Headline, Button, CardList, UserStatus } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
 import logo from './img/Logo.png';
 
@@ -25,7 +25,9 @@ storiesOf('D3A/Layouts', module)
             logoUrl={logo}
             logoLink="/"
             logoAlt="D3ASIM"
-          />
+          >
+            <UserStatus />
+          </Header>
           <Layout layout="frontPage" className="content">
             <Hero
               titleText="Welcome to D3A Alpha"
