@@ -1,9 +1,9 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { setDefaults } from '@storybook/addon-info';
-require('./style.css');
 import '@storybook/addon-viewport/register'
 import '@storybook/addon-actions/register';
+require('./style.css');
 
 function loadStories() {
   const req = require.context('../stories', true, /\.js$/);

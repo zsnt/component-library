@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { ThemeProvider, Layout, Header, Hero, Card } from '../lib';
+import StoryRouter from 'storybook-react-router';
+import { ThemeProvider, Layout, Header, Hero, Card, UserStatus } from '../lib';
 import imageFile from './img/placeholder-2.jpg';
 import logo from './img/Logo.png';
 
@@ -10,9 +11,11 @@ const image = {
   alt: 'placeholder',
 };
 
-storiesOf('D3A/Layouts', module).add(
-  'Results Page',
-  withInfo(`
+storiesOf('D3A/Layouts', module)
+  .addDecorator(StoryRouter())
+  .add(
+    'Results Page',
+    withInfo(`
       description or documentation about my component, supports markdown
 
       ~~~js
@@ -22,7 +25,13 @@ storiesOf('D3A/Layouts', module).add(
     `)(() => (
       <ThemeProvider theme="d3a">
         <Layout layout="wrapper">
-          <Header logoUrl={logo} logoLink="/" logoAlt="D3ASIM" />
+          <Header
+            logoUrl={logo}
+            logoLink="/"
+            logoAlt="D3ASIM"
+          >
+            <UserStatus />
+          </Header>
           <Layout layout="results" className="content">
             <Hero
               titleText="Results Page"
@@ -87,5 +96,5 @@ storiesOf('D3A/Layouts', module).add(
           </div>
         </Layout>
       </ThemeProvider>
-  )),
-);
+    )),
+  );

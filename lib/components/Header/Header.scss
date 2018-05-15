@@ -6,4 +6,6 @@
     height: themed('headerHeight');
     border-bottom: themed('border');
   }
+  display: flex;
+  justify-content: space-between;
 }
