@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import StoryRouter from 'storybook-react-router';
 import { ThemeProvider, UserStatus } from '../lib';
-import logo from './img/Logo.png';
 
 const divStyle = {
   background: '#003950',
