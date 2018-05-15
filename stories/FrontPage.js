@@ -126,5 +126,5 @@ storiesOf('D3A/Layouts', module)
           </div>
         </Layout>
       </ThemeProvider>
-  )),
-);
+    )),
+  );
