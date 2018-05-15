@@ -22,4 +22,17 @@ storiesOf('D3A/Organisms/UserStatus', module)
         </div>
       </ThemeProvider>
     )),
+  )
+  .add(
+    'With user signed-in',
+    withInfo()(() => (
+      <ThemeProvider theme="d3a">
+        <div className="base" style={divStyle}>
+          <UserStatus
+            authenticated
+            username="ExampleUsername"
+          />
+        </div>
+      </ThemeProvider>
+    )),
   );
