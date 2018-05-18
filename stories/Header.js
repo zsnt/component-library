@@ -45,6 +45,9 @@ storiesOf('D3A/Organisms/Header', module)
             <UserStatus
               authenticated
               username="ExampleUsername"
+              handleLogout={(ev) => {
+                ev.preventDefault();
+              }}
             />
           </Header>
         </div>
