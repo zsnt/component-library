@@ -1,14 +1,4 @@
 .userStatus {
   display: flex;
   align-items: center;
-
-  &__name {
-    display: flex;
-    font-size: 14px;
-  }
-
-  &__icon {
-    line-height: 1;
-    margin-right: 12px;
-  }
 }

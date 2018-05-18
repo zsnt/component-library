@@ -1,0 +1,9 @@
+.userName {
+  display: flex;
+  font-size: 14px;
+
+  &__icon {
+    line-height: 1;
+    margin-right: 12px;
+  }
+}
