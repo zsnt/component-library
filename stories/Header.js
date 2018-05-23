@@ -10,10 +10,10 @@ const divStyle = {
   padding: '15px',
 };
 
-storiesOf('D3A/Organisms', module)
+storiesOf('D3A/Organisms/Header', module)
   .addDecorator(StoryRouter())
   .add(
-    'Header',
+    'With user not signed-in',
     withInfo(`
       Site header displaying site logo which links to home page and navigation for authenticating.
     `)(() => (
@@ -25,6 +25,30 @@ storiesOf('D3A/Organisms', module)
             logoAlt="D3ASIM"
           >
             <UserStatus />
+          </Header>
+        </div>
+      </ThemeProvider>
+    )),
+  )
+  .add(
+    'With user signed-in',
+    withInfo(`
+      Site header displaying site logo which links to home page and username for signed-in users.
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <div className="base" style={divStyle}>
+          <Header
+            logoUrl={logo}
+            logoLink="/"
+            logoAlt="D3ASIM"
+          >
+            <UserStatus
+              authenticated
+              username="ExampleUsername"
+              handleLogout={(ev) => {
+                ev.preventDefault();
+              }}
+            />
           </Header>
         </div>
       </ThemeProvider>
