@@ -1,11 +1,11 @@
 $themes: (
   d3a: (
 
-    //Brand colors
-    primary: #a666ff, //brand
-    primaryLight: #69459b, //brand lightend
-    primaryDark: #553581, // brand darken
-    secondary: #35d7c6, //second highlight
+    // Brand colors
+    primary: #a666ff, // brand
+    primaryLight: #69459b, // brand lightened
+    primaryDark: #553581, // brand darkened
+    secondary: #35d7c6, // second highlight
 
     // Background colors
     bgColor: radial-gradient(#10455c 60%, #00171f),
@@ -38,7 +38,9 @@ $themes: (
     textSubColor: #8daebc,
     link: #a666ff,
     light: #fff,
+    lightGrayBlue: #d3dee3,
 
+    // Dimensions
     headerHeight: 47px,
   ),
 );
