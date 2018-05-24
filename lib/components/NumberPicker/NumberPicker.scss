@@ -1,48 +1,64 @@
 @import '../../styles/themify';
+@import '../../styles/variables';
 
-.number-picker-wrapper {
+.numberPicker {
   margin-bottom: 10px;
   border-radius: 5px;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .rc-input-number {
   display: flex;
-  background: hsl(201, 37%, 7%);
-  transition: 0.1s opacity;
 
   &-disabled {
     opacity: 0.75;
   }
 }
 
+.big {
+  .rc-input-number-input {
+    font-size: $h3;
+  }
+
+  .rc-input-number {
+    .rc-input-number-handler {
+      height: 30px;
+    }
+  }
+
+  .rc-input-number-handler-up-inner,
+  .rc-input-number-handler-down-inner {
+    width: 30px;
+    height: 30px;
+    &::after {
+      font-size: $h3;
+    }
+  }
+}
+
+.rc-input-number
 .rc-input-number-handler {
-  flex: 1;
-  padding: 20px 0;
-  border: none;
-  font-size: 150%;
-  font-weight: 700;
-  color: hsl(169, 100%, 34%);
-  background: hsl(199, 21%, 17%);
+  display: flex;
+  flex: 0 0 20%;
+  border: 0;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 25px;
+  background-color: transparent;
 }
 
 .rc-input-number {
   position: relative;
+  background: transparent;
 }
 
 .rc-input-number-handler-wrap {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
-
-.rc-input-number .rc-input-number-handler {
-  display: block;
-  padding: 0;
-  height: 70px;
-  flex: 0 0 20%;
 }
 
 .rc-input-number-handler-up {
@@ -61,6 +77,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   color: #fff;
+  background: transparent;
 
   .has-input-label & {
     margin-top: -0.5rem;
@@ -70,29 +87,40 @@
 .rc-input-number-input {
   width: 100%;
   padding: 0;
-  border: none;
+  border: 0;
   background: transparent;
-  font-size: 175%;
-  font-weight: 300;
+  font-size: $medium;
   color: inherit;
   text-align: center;
   outline: none;
+  font-weight: $light-weight;
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+  }
 }
 
 .rc-input-number-handler-up-inner,
 .rc-input-number-handler-down-inner {
   position: relative;
   display: block;
-  height: 100%;
-}
+  width: 25px;
+  height: 25px;
+  @include themify($themes) {
+    border-radius: 50%;
+    border: solid 1px themed('primary');
+  }
 
-.rc-input-number-handler-up-inner,
-.rc-input-number-handler-down-inner {
-  &:after {
+  &::after {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: $medium;
+    font-weight: bold;
+    @include themify($themes) {
+      color: themed('primary');
+    }
+
   }
 }
 
@@ -103,18 +131,21 @@
 }
 
 .rc-input-number-handler-down-inner {
-  &:after {
-    content: "–";
+  &::after {
+    content: '-';
   }
 }
 
-.number-picker-label {
+.numberPicker_label {
+  @include themify($themes) {
+    color: themed('title');
+  }
   position: relative;
-  margin-top: -1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
   line-height: 1;
-  font-size: 95%;
+  font-size: $small;
   font-weight: 300;
-  color: #fff;
   text-align: center;
+  text-transform: uppercase;
 }

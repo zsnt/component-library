@@ -23,6 +23,16 @@ storiesOf('Organisms/NumberPicker', module)
               max={48}
             />
           </Card>
+          <Card style={cardStyle}>
+            <NumberPicker
+              defaultValue={0.5}
+              max={7}
+              className="big"
+              precision={1}
+              step={0.5}
+              label="big variant"
+            />
+          </Card>
         </div>
       </ThemeProvider>
     )),
