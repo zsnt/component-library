@@ -1,0 +1,21 @@
+@import '../../styles/themify';
+@import '../../styles/variables';
+
+.textInput {
+  margin-bottom: 20px;
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    @include themify($themes) {
+      background: themed('darkBg');
+    }
+    font-size: $medium;
+    @include themify($themes) {
+      color: themed('lightGrayBlue');
+    }
+    text-align: center;
+  }
+}

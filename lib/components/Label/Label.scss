@@ -1,0 +1,14 @@
+@import '../../styles/themify';
+@import '../../styles/variables';
+
+.label {
+  &__text {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $small;
+    @include themify($themes) {
+      color: themed('secondary');
+    }
+    text-align: center;
+  }
+}

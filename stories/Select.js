@@ -26,6 +26,7 @@ const selectOptions = [
 const wrapperStyle = {
   padding: '15px',
 };
+
 const cardStyle = {
   width: '300px',
   margin: '0 auto',
