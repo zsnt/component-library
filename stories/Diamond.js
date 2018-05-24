@@ -29,18 +29,29 @@ storiesOf('D3A/Atoms', module)
         <div className="base" style={divStyle}>
           <ul style={listStyle}>
             <li style={elementStyle}>
+              Anchor: configuration
               <Diamond
-                kind="action"
+                kind="anchor"
                 type="configuration"
+                active
               />
             </li>
             <li style={elementStyle}>
+              Action: run
+              <Diamond
+                kind="action"
+                type="run"
+              />
+            </li>
+            <li style={elementStyle}>
+              Entity: generator
               <Diamond
                 kind="entity"
                 type="generator"
               />
             </li>
             <li style={elementStyle}>
+              Entity: house in active-state
               <Diamond
                 kind="entity"
                 type="house"
@@ -48,12 +59,14 @@ storiesOf('D3A/Atoms', module)
               />
             </li>
             <li style={elementStyle}>
+              Device: light
               <Diamond
                 kind="device"
                 type="light"
               />
             </li>
             <li style={elementStyle}>
+              Device: battery in active-state
               <Diamond
                 kind="device"
                 type="battery"

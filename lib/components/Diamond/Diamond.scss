@@ -58,10 +58,10 @@
     border: solid 3px;
   }
 
-  &__action {
+  &__anchor {
     @include themify($themes) {
       background-color: themed('white10');
-      border-color: themed('secondary');
+      border-color: themed('primary');
     }
 
     border: solid 3px;
@@ -72,11 +72,22 @@
       width: 45px;
       height: 45px;
     }
+  }
 
-    &.diamond--active {
-      @include themify($themes) {
-        border-color: themed('primary');
-      }
+  &__action {
+    @include themify($themes) {
+      background-color: themed('white10');
+      border-color: themed('secondary');
+    }
+
+    border: solid 3px;
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+
+    .diamond__icon {
+      width: 25px;
+      height: 25px;
     }
   }
 }
