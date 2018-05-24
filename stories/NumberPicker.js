@@ -1,16 +1,30 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { NumberPicker } from '../lib';
+import { ThemeProvider, Card, NumberPicker } from '../lib';
+
+const wrapperStyle = {
+  padding: '15px',
+};
+const cardStyle = {
+  width: '300px',
+  margin: '0 auto',
+};
 
 storiesOf('Organisms/NumberPicker', module)
   .add(
     'With default props',
     withInfo()(() => (
-      <NumberPicker
-        defaultValue={24}
-        max={48}
-      />
+      <ThemeProvider theme="d3a">
+        <div className="base" style={wrapperStyle}>
+          <Card style={cardStyle}>
+            <NumberPicker
+              defaultValue={24}
+              max={48}
+            />
+          </Card>
+        </div>
+      </ThemeProvider>
     )),
   )
   .add(
