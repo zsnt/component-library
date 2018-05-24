@@ -54,7 +54,7 @@ When writing scss for your component you should use these variables so the compo
 
 ### Publish new version
 
-Run `npm run prepublish`
+Run `npm run prepare`
 
 Update the version number in `/package.json` inside your working branch.
 
