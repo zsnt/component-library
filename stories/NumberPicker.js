@@ -11,7 +11,7 @@ const cardStyle = {
   margin: '0 auto',
 };
 
-storiesOf('Organisms/NumberPicker', module)
+storiesOf('D3A/Organisms/NumberPicker', module)
   .add(
     'With default props',
     withInfo()(() => (
@@ -40,35 +40,53 @@ storiesOf('Organisms/NumberPicker', module)
   .add(
     'With decimal digits, currency symbol & text label',
     withInfo()(() => (
-      <NumberPicker
-        defaultValue={2}
-        label="Einkauf"
-        currencySymbol="€"
-        min={-10}
-        max={10}
-        precision={2}
-      />
+      <ThemeProvider theme="d3a">
+        <div className="base" style={wrapperStyle}>
+          <Card style={cardStyle}>
+            <NumberPicker
+              defaultValue={2}
+              label="Einkauf"
+              currencySymbol="€"
+              min={-10}
+              max={10}
+              precision={2}
+            />
+          </Card>
+        </div>
+      </ThemeProvider>
     )),
   )
   .add(
     'With decimal digits, currency symbol, text label & custom steps',
     withInfo()(() => (
-      <NumberPicker
-        defaultValue={2.64}
-        label="Verkauf"
-        currencySymbol="€"
-        min={-10}
-        max={10}
-        precision={2}
-        step={0.01}
-      />
+      <ThemeProvider theme="d3a">
+        <div className="base" style={wrapperStyle}>
+          <Card style={cardStyle}>
+            <NumberPicker
+              defaultValue={2.64}
+              label="Verkauf"
+              currencySymbol="€"
+              min={-10}
+              max={10}
+              precision={2}
+              step={0.01}
+            />
+          </Card>
+        </div>
+      </ThemeProvider>
     )),
   )
   .add(
     'With disabled state',
     withInfo()(() => (
-      <NumberPicker
-        disabled
-      />
+      <ThemeProvider theme="d3a">
+        <div className="base" style={wrapperStyle}>
+          <Card style={cardStyle}>
+            <NumberPicker
+              disabled
+            />
+          </Card>
+        </div>
+      </ThemeProvider>
     )),
   );
