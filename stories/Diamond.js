@@ -6,6 +6,14 @@ import { ThemeProvider, Diamond } from '../lib';
 const divStyle = {
   padding: '50px',
 };
+const listStyle = {
+  listStyleType: 'none',
+};
+
+const elementStyle = {
+  paddingBottom: '10px',
+  listStyle
+};
 
 storiesOf('D3A/Atoms', module)
   .add(
@@ -19,28 +27,40 @@ storiesOf('D3A/Atoms', module)
     `)(() => (
       <ThemeProvider theme="d3a">
         <div className="base" style={divStyle}>
-          <Diamond
-            kind="action"
-            type="configuration"
-          />
-          <Diamond
-            kind="entity"
-            type="generator"
-          />
-          <Diamond
-            kind="entity"
-            type="house"
-            active
-          />
-          <Diamond
-            kind="device"
-            type="light"
-          />
-          <Diamond
-            kind="device"
-            type="battery"
-            active
-          />
+          <ul style={listStyle}>
+            <li style={elementStyle}>
+              <Diamond
+                kind="action"
+                type="configuration"
+              />
+            </li>
+            <li style={elementStyle}>
+              <Diamond
+                kind="entity"
+                type="generator"
+              />
+            </li>
+            <li style={elementStyle}>
+              <Diamond
+                kind="entity"
+                type="house"
+                active
+              />
+            </li>
+            <li style={elementStyle}>
+              <Diamond
+                kind="device"
+                type="light"
+              />
+            </li>
+            <li style={elementStyle}>
+              <Diamond
+                kind="device"
+                type="battery"
+                active
+              />
+            </li>
+          </ul>
         </div>
       </ThemeProvider>
     )),
