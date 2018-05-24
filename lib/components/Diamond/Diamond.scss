@@ -1,0 +1,93 @@
+@import '../../styles/themify';
+@import '../../styles/variables';
+
+.diamond {
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: (93px/4);
+
+  &__icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(-45deg);
+  }
+
+  &__device {
+    background-color: $color-device;
+    width: 50px;
+    height: 50px;
+
+    .diamond__icon {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &__entity {
+    width: 66px;
+    height: 66px;
+    .diamond__icon {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  &--house {
+    background-color: $color-house;
+  }
+
+  &--celltower {
+    background-color: $color-celltower;
+  }
+
+  &--generator {
+    background-color: $color-generator;
+  }
+
+  &--active {
+    @include themify($themes) {
+      background-color: themed('white10');
+      border-color: themed('primary');
+    }
+
+    border: solid 3px;
+  }
+
+  &__anchor {
+    @include themify($themes) {
+      background-color: themed('white10');
+      border-color: themed('primary');
+    }
+
+    border: solid 3px;
+    width: 90px;
+    height: 90px;
+
+    .diamond__icon {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__action {
+    @include themify($themes) {
+      background-color: themed('white10');
+      border-color: themed('secondary');
+    }
+
+    border: solid 3px;
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+
+    .diamond__icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
