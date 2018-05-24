@@ -12,7 +12,6 @@ const listStyle = {
 
 const elementStyle = {
   paddingBottom: '10px',
-  listStyle
 };
 
 storiesOf('D3A/Atoms', module)
