@@ -6,22 +6,18 @@ import { ThemeProvider, Select, Card } from '../lib';
 
 const selectOptions = [
   {
-    id: 1,
     option: 'House 1',
     value: 'house_1',
   },
   {
-    id: 2,
     option: 'House 2',
     value: 'house_2',
   },
   {
-    id: 3,
     option: 'Generator 1',
     value: 'generator_1',
   },
   {
-    id: 4,
     option: 'Fridge 1',
     value: 'fridge_1',
   },
