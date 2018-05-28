@@ -32,7 +32,7 @@ const cardStyle = {
   margin: '15px auto',
 };
 
-storiesOf('D3A/Atoms', module)
+storiesOf('D3A/Atoms/FormFields', module)
   .add(
     'Native Select',
     withInfo(`
