@@ -13,7 +13,7 @@
                     <use xlink:href="#path-1"></use>
                 </mask>
                 <use id="icon-:-arrow_filled" fill="#00CDFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <g id="Colors/Brand-2" mask="url(#mask-2)" fill="#5DE668" fill-rule="evenodd">
+                <g id="Colors/Brand-2" mask="url(#mask-2)" fill="#a666ff" fill-rule="evenodd">
                     <rect id="layer" x="0" y="0" width="8" height="6"></rect>
                 </g>
             </g>
