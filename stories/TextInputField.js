@@ -15,7 +15,14 @@ storiesOf('D3A/Atoms', module)
       <ThemeProvider theme="d3a">
         <div className="base" style={wrapperStyle}>
           <TextInputField
-            label="Name of your Simulation"
+            label="Small Size"
+            htmlFor="name"
+            placeholder="Simulation Name"
+            onChange={action('onChange')}
+          />
+          <TextInputField
+            label="Medium Size"
+            kind="medium"
             htmlFor="name"
             placeholder="Simulation Name"
             onChange={action('onChange')}

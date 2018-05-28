@@ -29,7 +29,7 @@ const wrapperStyle = {
 
 const cardStyle = {
   width: '300px',
-  margin: '0 auto',
+  margin: '15px auto',
 };
 
 storiesOf('D3A/Atoms', module)
@@ -45,10 +45,20 @@ storiesOf('D3A/Atoms', module)
       <ThemeProvider theme="d3a">
         <div className="base" style={wrapperStyle}>
           <Card style={cardStyle}>
+            <p>Small size</p>
             <Select
               options={selectOptions}
               onChange={action('onChange')}
               className="myFancyClass"
+            />
+          </Card>
+          <Card style={cardStyle}>
+            <p>Medium Size</p>
+            <Select
+              options={selectOptions}
+              onChange={action('onChange')}
+              className="myFancyClass"
+              kind="medium"
             />
           </Card>
         </div>
