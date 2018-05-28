@@ -5,17 +5,24 @@
   margin-bottom: 20px;
 
   &__input {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
     @include themify($themes) {
       background: themed('darkBg');
     }
-    font-size: $medium;
     @include themify($themes) {
       color: themed('lightGrayBlue');
     }
     text-align: center;
+    display: block;
+    width: 100%;
+    border: 0;
+    font-size: $small;
+    padding: 5px 15px;
+  }
+
+  &--medium {
+    .textInput__input {
+      padding: 14px;
+      font-size: $medium;
+    }
   }
 }
