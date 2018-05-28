@@ -38,4 +38,16 @@
       display: none;
     }
   }
+
+  &.nativeSelect--medium {
+    .nativeSelect__select {
+      padding: 15px 50px 15px 15px;
+    }
+
+    .nativeSelect__icon {
+      right: 15px;
+      height: 45px;
+    }
+
+  }
 }
