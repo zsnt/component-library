@@ -30,7 +30,7 @@ storiesOf('D3A/Atoms', module)
             <li style={elementStyle}>
               Anchor: configuration
               <Diamond
-                kind="anchor"
+                kind="large"
                 type="configuration"
                 active
               />
@@ -38,21 +38,21 @@ storiesOf('D3A/Atoms', module)
             <li style={elementStyle}>
               Action: run
               <Diamond
-                kind="action"
+                kind="medium"
                 type="run"
               />
             </li>
             <li style={elementStyle}>
               Entity: generator
               <Diamond
-                kind="entity"
+                kind="medium"
                 type="generator"
               />
             </li>
             <li style={elementStyle}>
               Entity: house in active-state
               <Diamond
-                kind="entity"
+                kind="medium"
                 type="house"
                 active
               />
@@ -60,14 +60,14 @@ storiesOf('D3A/Atoms', module)
             <li style={elementStyle}>
               Device: light
               <Diamond
-                kind="device"
+                kind="small"
                 type="light"
               />
             </li>
             <li style={elementStyle}>
               Device: battery in active-state
               <Diamond
-                kind="device"
+                kind="small"
                 type="battery"
                 active
               />
