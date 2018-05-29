@@ -1,0 +1,159 @@
+@import '../../styles/themify';
+@import '../../styles/variables';
+
+.treeView {
+  padding-left: 15px;
+
+  &__branch {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 40px 0;
+    position: relative;
+
+    &::before {
+      @include themify($themes) {
+        border-left: themed('border');
+      }
+      content: '';
+      height: 40px;
+      width: 2px;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+    }
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__leaf {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 20px 20px 0;
+    margin: 0 auto;
+
+    &::before {
+      @include themify($themes) {
+        border-left: themed('border');
+      }
+      content: '';
+      height: 20px;
+      width: 2px;
+      position: absolute;
+      top: 0;
+    }
+
+    &::after {
+      @include themify($themes) {
+        border-top: themed('border');
+      }
+      content: '';
+      position: absolute;
+      width: 110%;
+      height: 2px;
+      top: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        padding-top: 20px;
+
+        &::after {
+          display: block;
+          width: 50%;
+          right: 0;
+        }
+
+        &::before {
+          display: block;
+        }
+      }
+    }
+
+    &:last-child {
+      &:not(:first-child) {
+        &::after {
+          width: 50%;
+          left: 0;
+        }
+      }
+    }
+
+    &--active {
+      @include themify($themes) {
+        color: themed('textcolor');
+      }
+
+      >.numberPicker {
+        overflow: visible;
+
+        &::after {
+          @include themify($themes) {
+            border-left: themed('border');
+          }
+          content: '';
+          height: 40px;
+          width: 2px;
+          position: absolute;
+          bottom: -51px;
+          left: 50%;
+        }
+      }
+    }
+
+    .treeView__branch {
+      z-index: 99;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $small;
+    white-space: nowrap;
+    @include themify($themes) {
+      color: themed('title');
+    }
+    margin-top: 5px;
+  }
+
+  .numberPicker {
+    width: 100%;
+    max-width: 120px;
+    padding-top: 10px;
+    position: relative;
+
+    &::before {
+      @include themify($themes) {
+        border-left: themed('border');
+      }
+      content: '';
+      height: 10px;
+      width: 2px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+  }
+}
