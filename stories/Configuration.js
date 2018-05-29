@@ -27,7 +27,7 @@ storiesOf('D3A/Layouts', module)
             <UserStatus />
           </Header>
           <Layout layout="configurationPage--2" className="content">
-            <section className="tree">
+            <section className="configurationTree">
               <TreeView>
                 <TreeView.Branch>
                   <TreeView.Leaf>
