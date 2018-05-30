@@ -5,16 +5,29 @@
   margin-bottom: 10px;
   border-radius: 5px;
   overflow: hidden;
-  font-family: "Lato", sans-serif;
 }
 
 .rc-input-number {
   display: flex;
+  position: relative;
+  background: transparent;
 
   &-disabled {
     opacity: 0.75;
   }
+
+  .rc-input-number-handler {
+    display: flex;
+    flex: 0 0 20%;
+    border: 0;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+  }
 }
+
 
 .big {
   .rc-input-number-input {
@@ -31,34 +44,41 @@
   .rc-input-number-handler-down-inner {
     width: 30px;
     height: 30px;
+
     &::after {
       font-size: $h3;
     }
   }
 }
 
-.rc-input-number
-.rc-input-number-handler {
-  display: flex;
-  flex: 0 0 20%;
-  border: 0;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  height: 25px;
-  background-color: transparent;
-}
+.numberPicker--inactive {
+  .rc-input-number {
+    .rc-input-number-handler {
+      display: none;
+    }
+  }
 
-.rc-input-number {
-  position: relative;
-  background: transparent;
+  .rc-input-number-input-wrap {
+    @include themify($themes) {
+      color: themed('title');
+    }
+    margin-left: -5px;
+
+    &::after {
+      content: 'x';
+      display: block;
+      font-size: $small;
+      line-height: 25px;
+      margin-left: -30%;
+    }
+  }
 }
 
 .rc-input-number-handler-wrap {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: 25px;
 }
 
 .rc-input-number-handler-up {
@@ -70,13 +90,15 @@
 }
 
 .rc-input-number-input-wrap {
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
   display: flex;
   width: 60%;
   height: 100%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  color: #fff;
   background: transparent;
 
   .has-input-label & {
@@ -125,8 +147,8 @@
 }
 
 .rc-input-number-handler-up-inner {
-  &:after {
-    content: "+";
+  &::after {
+    content: '+';
   }
 }
 

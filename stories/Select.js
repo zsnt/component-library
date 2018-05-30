@@ -59,6 +59,7 @@ storiesOf('D3A/Atoms/FormFields', module)
               onChange={action('onChange')}
               className="myFancyClass"
               kind="medium"
+              value="fridge_1"
             />
           </Card>
         </div>
