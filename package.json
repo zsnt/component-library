@@ -63,7 +63,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "gsap": "^2.0.0",
     "node-sass": "^4.9.0",
     "prop-types": "^15.6.1",
     "rc-input-number": "^4.0.7",
