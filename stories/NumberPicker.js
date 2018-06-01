@@ -11,7 +11,7 @@ const cardStyle = {
   margin: '0 auto',
 };
 
-storiesOf('D3A/Organisms/NumberPicker', module)
+storiesOf('D3A/Atoms/FormFields/NumberPicker', module)
   .add(
     'With default props',
     withInfo()(() => (
@@ -25,12 +25,9 @@ storiesOf('D3A/Organisms/NumberPicker', module)
           </Card>
           <Card style={cardStyle}>
             <NumberPicker
-              defaultValue={0.5}
               max={7}
-              className="big"
-              precision={1}
-              step={0.5}
-              label="big variant"
+              kind="medium"
+              label="Kind medium"
             />
           </Card>
         </div>
@@ -77,13 +74,21 @@ storiesOf('D3A/Organisms/NumberPicker', module)
     )),
   )
   .add(
-    'With disabled state',
+    'With disabled and inactive state',
     withInfo()(() => (
       <ThemeProvider theme="d3a">
         <div className="base" style={wrapperStyle}>
           <Card style={cardStyle}>
             <NumberPicker
               disabled
+              label="this is disabled, not changeable"
+            />
+          </Card>
+          <Card style={cardStyle}>
+            <NumberPicker
+              inactive
+              disabled
+              label="this one is temporary inactive"
             />
           </Card>
         </div>
