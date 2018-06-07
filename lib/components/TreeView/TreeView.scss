@@ -19,8 +19,9 @@
 
     &--level3 {
       margin-top: 25px;
-      display: none;
       flex-direction: column;
+      max-height: 0;
+      transition: max-height 1s ease-out;
 
       .treeView__leaf:not(.entryPoint) {
         margin-left: 160px;
@@ -75,9 +76,13 @@
   }
 
   .treeView__leaf--active {
-    >.treeView__branch--level2,
-    >.treeView__branch--level3 {
+    >.treeView__branch--level2 {
       display: flex;
+    }
+
+    >.treeView__branch--level3 {
+      max-height: 1000px;
+      transition: max-height 1s ease-out;
     }
   }
 
