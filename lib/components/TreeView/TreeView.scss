@@ -25,6 +25,7 @@
       .treeView__leaf:not(.entryPoint) {
         margin-left: 160px;
         margin-top: 0;
+
         &::after {
           @include themify($themes) {
             border-left: themed('border');
@@ -56,6 +57,7 @@
 
       .entryPoint {
         margin-bottom: -61px;
+
         .treeView__leaf__content::after {
           @include themify($themes) {
             border-top: themed('border');

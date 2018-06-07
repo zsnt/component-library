@@ -6,7 +6,6 @@ import { Button, ThemeProvider, Layout, Header, TreeView, Diamond, NumberPicker,
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
-import IconRun from './img/icon_run.svg';
 import IconPlus from './img/icon_plus.svg';
 import IconGenerator from './img/icon_generator.svg';
 import IconCelltower from './img/icon_celltower.svg';
@@ -43,7 +42,7 @@ storiesOf('D3A/Layouts', module)
               <TreeView className="treeView--left">
                 <TreeView.Branch>
                   <TreeView.Leaf className="entryPoint">
-                    <div className="treeView__leaf__content">
+                    <TreeView.Content>
                       <Diamond
                         kind="large"
                         type="configuration"
@@ -52,12 +51,12 @@ storiesOf('D3A/Layouts', module)
                       <TreeView.Title>
                         My Simulation #1
                       </TreeView.Title>
-                    </div>
+                    </TreeView.Content>
                   </TreeView.Leaf>
                 </TreeView.Branch>
                 <TreeView.Branch className="treeView__branch--level1">
                   <TreeView.Leaf className="entryPoint">
-                    <div className="treeView__leaf__content">
+                    <TreeView.Content>
                       <Diamond
                         kind="medium"
                         type="plus"
@@ -66,10 +65,10 @@ storiesOf('D3A/Layouts', module)
                       <TreeView.Title>
                         Market #1
                       </TreeView.Title>
-                    </div>
+                    </TreeView.Content>
                   </TreeView.Leaf>
                   <TreeView.Leaf active>
-                    <div className="treeView__leaf__content">
+                    <TreeView.Content>
                       <Diamond
                         kind="medium"
                         type="house"
@@ -82,10 +81,10 @@ storiesOf('D3A/Layouts', module)
                       <NumberPicker
                         defaultValue={1}
                       />
-                    </div>
+                    </TreeView.Content>
                     <TreeView.Branch className="treeView__branch--level3">
                       <TreeView.Leaf className="entryPoint">
-                        <div className="treeView__leaf__content">
+                        <TreeView.Content>
                           <Diamond
                             kind="small"
                             type="plus"
@@ -94,10 +93,10 @@ storiesOf('D3A/Layouts', module)
                           <TreeView.Title>
                             Market #3
                           </TreeView.Title>
-                        </div>
+                        </TreeView.Content>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <div className="treeView__leaf__content">
+                        <TreeView.Content>
                           <Diamond
                             kind="small"
                             type="load"
@@ -110,10 +109,10 @@ storiesOf('D3A/Layouts', module)
                             defaultValue={1}
                             inactive
                           />
-                        </div>
+                        </TreeView.Content>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <div className="treeView__leaf__content">
+                        <TreeView.Content>
                           <Diamond
                             kind="small"
                             type="light"
@@ -126,10 +125,10 @@ storiesOf('D3A/Layouts', module)
                             defaultValue={1}
                             inactive
                           />
-                        </div>
+                        </TreeView.Content>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <div className="treeView__leaf__content">
+                        <TreeView.Content>
                           <Diamond
                             kind="small"
                             type="battery"
@@ -142,10 +141,10 @@ storiesOf('D3A/Layouts', module)
                             defaultValue={1}
                             inactive
                           />
-                        </div>
+                        </TreeView.Content>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <div className="treeView__leaf__content" >
+                        <TreeView.Content>
                           <Diamond
                             kind="small"
                             type="solar"
@@ -158,10 +157,10 @@ storiesOf('D3A/Layouts', module)
                             defaultValue={1}
                             inactive
                           />
-                        </div>
+                        </TreeView.Content>
                       </TreeView.Leaf>
                       <TreeView.Leaf active>
-                        <div className="treeView__leaf__content">
+                        <TreeView.Content>
                           <Diamond
                             kind="small"
                             type="tv"
@@ -175,12 +174,12 @@ storiesOf('D3A/Layouts', module)
                             defaultValue={1}
                             inactive
                           />
-                        </div>
+                        </TreeView.Content>
                       </TreeView.Leaf>
                     </TreeView.Branch>
                   </TreeView.Leaf>
                   <TreeView.Leaf>
-                    <div className="treeView__leaf__content">
+                    <TreeView.Content>
                       <Diamond
                         kind="medium"
                         type="house"
@@ -193,10 +192,10 @@ storiesOf('D3A/Layouts', module)
                         defaultValue={1}
                         inactive
                       />
-                    </div>
+                    </TreeView.Content>
                   </TreeView.Leaf>
                   <TreeView.Leaf>
-                    <div className="treeView__leaf__content">
+                    <TreeView.Content>
                       <Diamond
                         kind="medium"
                         type="celltower"
@@ -209,10 +208,10 @@ storiesOf('D3A/Layouts', module)
                         defaultValue={1}
                         inactive
                       />
-                    </div>
+                    </TreeView.Content>
                   </TreeView.Leaf>
                   <TreeView.Leaf>
-                    <div className="treeView__leaf__content">
+                    <TreeView.Content>
                       <Diamond
                         kind="medium"
                         type="generator"
@@ -225,7 +224,7 @@ storiesOf('D3A/Layouts', module)
                         defaultValue={1}
                         inactive
                       />
-                    </div>
+                    </TreeView.Content>
                   </TreeView.Leaf>
                 </TreeView.Branch>
               </TreeView>
