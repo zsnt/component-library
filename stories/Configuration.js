@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider, Layout, Header, TreeView, Diamond, NumberPicker, UserStatus } from '../lib';
+import { Button, ThemeProvider, Layout, Header, TreeView, Diamond, NumberPicker, UserStatus, Card } from '../lib';
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
@@ -40,247 +40,201 @@ storiesOf('D3A/Layouts', module)
           </Header>
           <Layout layout="configurationPage--2" className="content">
             <section className="configurationTree">
-              <TreeView>
+              <TreeView className="treeView--left">
                 <TreeView.Branch>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="large"
-                      type="configuration"
-                      iconUrl={IconConfiguration}
-                    />
-                    <TreeView.Title>
-                      My Simulation #1
-                    </TreeView.Title>
+                  <TreeView.Leaf className="entryPoint">
+                    <div className="treeView__leaf__content">
+                      <Diamond
+                        kind="large"
+                        type="configuration"
+                        iconUrl={IconConfiguration}
+                      />
+                      <TreeView.Title>
+                        My Simulation #1
+                      </TreeView.Title>
+                    </div>
                   </TreeView.Leaf>
                 </TreeView.Branch>
-                <TreeView.Branch>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="run"
-                      iconUrl={IconRun}
-                    />
-                    <TreeView.Title>
-                      run simulation
-                    </TreeView.Title>
+                <TreeView.Branch className="treeView__branch--level1">
+                  <TreeView.Leaf className="entryPoint">
+                    <div className="treeView__leaf__content">
+                      <Diamond
+                        kind="medium"
+                        type="plus"
+                        iconUrl={IconPlus}
+                      />
+                      <TreeView.Title>
+                        Market #1
+                      </TreeView.Title>
+                    </div>
                   </TreeView.Leaf>
-                </TreeView.Branch>
-                <TreeView.Branch>
                   <TreeView.Leaf active>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                      active
-                    />
-                    <TreeView.Title>
-                      House Profile 3
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                    />
-                    <TreeView.Branch>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="load"
-                          iconUrl={IconLoad}
-                        />
-                        <TreeView.Title>
-                          Load
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
+                    <div className="treeView__leaf__content">
+                      <Diamond
+                        kind="medium"
+                        type="house"
+                        iconUrl={IconHouse}
+                        active
+                      />
+                      <TreeView.Title>
+                        Residential
+                      </TreeView.Title>
+                      <NumberPicker
+                        defaultValue={1}
+                      />
+                    </div>
+                    <TreeView.Branch className="treeView__branch--level3">
+                      <TreeView.Leaf className="entryPoint">
+                        <div className="treeView__leaf__content">
+                          <Diamond
+                            kind="small"
+                            type="plus"
+                            iconUrl={IconPlus}
+                          />
+                          <TreeView.Title>
+                            Market #3
+                          </TreeView.Title>
+                        </div>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="light"
-                          iconUrl={IconLight}
-                        />
-                        <TreeView.Title>
-                          Light
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
+                        <div className="treeView__leaf__content">
+                          <Diamond
+                            kind="small"
+                            type="load"
+                            iconUrl={IconLoad}
+                          />
+                          <TreeView.Title>
+                            Load
+                          </TreeView.Title>
+                          <NumberPicker
+                            defaultValue={1}
+                            inactive
+                          />
+                        </div>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="battery"
-                          iconUrl={IconBattery}
-                        />
-                        <TreeView.Title>
-                          Battery
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
+                        <div className="treeView__leaf__content">
+                          <Diamond
+                            kind="small"
+                            type="light"
+                            iconUrl={IconLight}
+                          />
+                          <TreeView.Title>
+                            Light
+                          </TreeView.Title>
+                          <NumberPicker
+                            defaultValue={1}
+                            inactive
+                          />
+                        </div>
                       </TreeView.Leaf>
                       <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="solar"
-                          iconUrl={IconSolar}
-                        />
-                        <TreeView.Title>
-                          Solar
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
+                        <div className="treeView__leaf__content">
+                          <Diamond
+                            kind="small"
+                            type="battery"
+                            iconUrl={IconBattery}
+                          />
+                          <TreeView.Title>
+                            Battery
+                          </TreeView.Title>
+                          <NumberPicker
+                            defaultValue={1}
+                            inactive
+                          />
+                        </div>
+                      </TreeView.Leaf>
+                      <TreeView.Leaf>
+                        <div className="treeView__leaf__content" >
+                          <Diamond
+                            kind="small"
+                            type="solar"
+                            iconUrl={IconSolar}
+                          />
+                          <TreeView.Title>
+                            Solar
+                          </TreeView.Title>
+                          <NumberPicker
+                            defaultValue={1}
+                            inactive
+                          />
+                        </div>
                       </TreeView.Leaf>
                       <TreeView.Leaf active>
-                        <Diamond
-                          kind="small"
-                          type="tv"
-                          iconUrl={IconTV}
-                          active
-                        />
-                        <TreeView.Title>
-                          TV
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="plus"
-                          iconUrl={IconPlus}
-                        />
-                        <TreeView.Title>
-                          Add small
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
+                        <div className="treeView__leaf__content">
+                          <Diamond
+                            kind="small"
+                            type="tv"
+                            active
+                            iconUrl={IconTV}
+                          />
+                          <TreeView.Title>
+                            TV
+                          </TreeView.Title>
+                          <NumberPicker
+                            defaultValue={1}
+                            inactive
+                          />
+                        </div>
                       </TreeView.Leaf>
                     </TreeView.Branch>
                   </TreeView.Leaf>
                   <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
+                    <div className="treeView__leaf__content">
+                      <Diamond
+                        kind="medium"
+                        type="house"
+                        iconUrl={IconHouse}
+                      />
+                      <TreeView.Title>
+                        Commercial
+                      </TreeView.Title>
+                      <NumberPicker
+                        defaultValue={1}
+                        inactive
+                      />
+                    </div>
                   </TreeView.Leaf>
                   <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
+                    <div className="treeView__leaf__content">
+                      <Diamond
+                        kind="medium"
+                        type="celltower"
+                        iconUrl={IconCelltower}
+                      />
+                      <TreeView.Title>
+                        Industrial
+                      </TreeView.Title>
+                      <NumberPicker
+                        defaultValue={1}
+                        inactive
+                      />
+                    </div>
                   </TreeView.Leaf>
                   <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 2
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="celltower"
-                      iconUrl={IconCelltower}
-                    />
-                    <TreeView.Title>
-                      Cell Tower Profile
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 4
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="generator"
-                      iconUrl={IconGenerator}
-                    />
-                    <TreeView.Title>
-                      Generator Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="plus"
-                      iconUrl={IconPlus}
-                    />
-                    <TreeView.Title>
-                      Add medium Profile
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
+                    <div className="treeView__leaf__content">
+                      <Diamond
+                        kind="medium"
+                        type="generator"
+                        iconUrl={IconGenerator}
+                      />
+                      <TreeView.Title>
+                        Generators
+                      </TreeView.Title>
+                      <NumberPicker
+                        defaultValue={1}
+                        inactive
+                      />
+                    </div>
                   </TreeView.Leaf>
                 </TreeView.Branch>
               </TreeView>
+            </section>
+            <section className="configurationPanel">
+              <Card>
+                <Button label="start" />
+                <Button label="save" />
+              </Card>
             </section>
           </Layout>
           <div className="footer">
