@@ -20,8 +20,19 @@
     &--level3 {
       margin-top: 25px;
       flex-direction: column;
+      max-width: 0;
       max-height: 0;
-      transition: max-height 1s ease-out;
+      transition: max-width 0.8s linear, max-height 0.8s linear;
+
+      .treeView__leaf {
+        visibility: hidden;
+        transition: visibility 0.5s ease-out;
+
+        svg {
+          visibility: hidden;
+          transition: visibility 0.5s ease-out;
+        }
+      }
 
       .treeView__leaf:not(.entryPoint) {
         margin-left: 160px;
@@ -81,8 +92,20 @@
     }
 
     >.treeView__branch--level3 {
-      max-height: 1000px;
-      transition: max-height 1s ease-out;
+      max-width: 300px;
+      max-height: 800px;
+      transition: max-width 0.8s linear, max-height 0.8s linear;
+
+      .treeView__leaf {
+        display: flex;
+        visibility: visible;
+        transition: ease-out, visibility 3s 0.5s ease-out;
+
+        svg {
+          visibility: visible;
+          transition: visibility 3s 0.5s ease-out;
+        }
+      }
     }
   }
 
@@ -145,6 +168,10 @@
     justify-content: center;
     max-width: 160px;
     position: relative;
+
+    &:focus {
+      outline: 0;
+    }
 
     &::before {
       @include themify($themes) {
