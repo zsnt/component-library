@@ -19,5 +19,9 @@
 
   .configurationPanel {
     grid-area: panel;
+    position: relative;
+  }
+  .interactions {
+    position: fixed;
   }
 }

@@ -136,7 +136,7 @@ storiesOf('D3A/Layouts', module)
               </TreeView>
             </section>
             <section className="configurationPanel">
-              <Card>
+              <Card className="interactions">
                 <Button label="start" />
                 <Button label="save" />
               </Card>
