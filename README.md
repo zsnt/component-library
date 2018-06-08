@@ -23,6 +23,8 @@ For using a theme you have to wrap the components in the themeprovider component
 This repository is published under GLGPL-3.0, you can fork it and create Pull Requests to participate in the development of this library. Feel free to check out existing issues or create new issues if you discover a bug or miss some functionality.
 
 
+Use [angular commit message format](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) to commit. This allows the automatic versioning to pick the right versionnumber.
+
 ### How to develop for this repository
 
 #### Clone repository & install dependencies
