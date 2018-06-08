@@ -1,0 +1,35 @@
+.popOutMenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    list-style-type: none;
+    position: absolute;
+    transform: translate3d(-10%, 0, 0);
+    transition: transform ease-out 0.5s 0.5s, visibility linear 1s, opacity linear 1s,;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__item {
+    margin: 30px 0;
+    max-height: 0;
+    transition: max-height ease-out 1s;
+  }
+
+  &--active {
+    .popOutMenu__list {
+      z-index: 999;
+      transform: translate3d(45px, 0, 0);
+      transition: visibility ease-out 1s, opacity ease-out 1s 0.3s, transform ease-out 0.3s 0.5s;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popOutMenu__item {
+      max-height: 500px;
+      transition: max-height linear 1.5s 0.6s;
+    }
+  }
+}
