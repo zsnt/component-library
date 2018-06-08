@@ -40,7 +40,7 @@
     &:hover,
     &.diamond--active {
       @include themify($themes) {
-        background-color: themed('white10');
+        background-color: themed(lightBg);
         border-color: themed('primary');
       }
       border: solid 3px;
@@ -60,7 +60,7 @@
     &:hover,
     &.diamond--active {
       @include themify($themes) {
-        background-color: themed('white10');
+        background-color: themed('lightBg');
         border-color: themed('primary');
       }
       border: solid 3px;
