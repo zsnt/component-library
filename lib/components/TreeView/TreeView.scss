@@ -114,10 +114,6 @@
     flex-direction: column;
     position: relative;
 
-    &:focus {
-      outline: 0;
-    }
-
     &:not(.entryPoint) {
       margin-top: 70px;
       padding: 0 20px;
