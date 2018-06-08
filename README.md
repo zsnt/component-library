@@ -56,15 +56,9 @@ When writing scss for your component you should use these variables so the compo
 
 ### Publish new version
 
-Run `npm run prepare`
+Versioning is handled via the package [semantic-release]( https://www.npmjs.com/package/semantic-release)
 
-Update the version number in `/package.json` inside your working branch.
-
-Create a pull request, get a review and merge your changes to master.
-
-Check out the updated master version.
-Create release on GitHub and explain what is content of the new release.
-Run `npm publish` to push the latest version to npm package server.
+A new version gets published after successfully merging a pull request to master. It s important to use correct [commit-message syntax](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). 
 
 ### Deploy to heroku
 
