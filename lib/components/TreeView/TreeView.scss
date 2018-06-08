@@ -2,30 +2,109 @@
 @import '../../styles/variables';
 
 .treeView {
-  padding-left: 15px;
-
   &__branch {
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
-    margin: 40px 0;
+    margin: 20px 0;
     position: relative;
 
-    &::before {
-      @include themify($themes) {
-        border-left: themed('border');
-      }
-      content: '';
-      height: 40px;
-      width: 2px;
-      position: absolute;
-      top: -40px;
-      left: 50%;
+    &--level1 {
+      margin-left: 16px;
     }
 
-    &:first-child {
-      &::before {
-        display: none;
+    &--level2 {
+      margin-left: 30px;
+      display: none;
+    }
+
+    &--level3 {
+      margin-top: 25px;
+      flex-direction: column;
+      max-width: 0;
+      max-height: 0;
+      transition: max-width 0.8s linear, max-height 0.8s linear;
+
+      .treeView__leaf {
+        visibility: hidden;
+        transition: visibility 0.5s ease-out;
+
+        svg {
+          visibility: hidden;
+          transition: visibility 0.5s ease-out;
+        }
+      }
+
+      .treeView__leaf:not(.entryPoint) {
+        margin-left: 160px;
+        margin-top: 0;
+
+        &::after {
+          @include themify($themes) {
+            border-left: themed('border');
+          }
+          border-top: 0;
+          display: block;
+          content: '';
+          width: 2px;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .treeView__leaf__content::before {
+          @include themify($themes) {
+            border-top: themed('border');
+          }
+          border-left: 0;
+          display: block;
+          content: '';
+          width: 20px;
+          height: 2px;
+          position: absolute;
+          left: -20px;
+          top: 38px;
+        }
+      }
+
+      .entryPoint {
+        margin-bottom: -61px;
+
+        .treeView__leaf__content::after {
+          @include themify($themes) {
+            border-top: themed('border');
+          }
+          display: block;
+          content: '';
+          width: 20px;
+          height: 2px;
+          position: absolute;
+          right: 0;
+          top: 38px;
+        }
+      }
+    }
+  }
+
+  .treeView__leaf--active {
+    >.treeView__branch--level2 {
+      display: flex;
+    }
+
+    >.treeView__branch--level3 {
+      max-width: 300px;
+      max-height: 800px;
+      transition: max-width 0.8s linear, max-height 0.8s linear;
+
+      .treeView__leaf {
+        display: flex;
+        visibility: visible;
+        transition: ease-out, visibility 3s 0.5s ease-out;
+
+        svg {
+          visibility: visible;
+          transition: visibility 3s 0.5s ease-out;
+        }
       }
     }
   }
@@ -34,93 +113,33 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: center;
-    padding: 20px 20px 0;
-    margin: 0 auto;
 
-    &::before {
-      @include themify($themes) {
-        border-left: themed('border');
-      }
-      content: '';
-      height: 20px;
-      width: 2px;
-      position: absolute;
-      top: 0;
-    }
-
-    &::after {
-      @include themify($themes) {
-        border-top: themed('border');
-      }
-      content: '';
-      position: absolute;
-      width: 110%;
-      height: 2px;
-      top: 0;
-    }
-
-    &:first-child {
-      padding-top: 0;
+    &:not(.entryPoint) {
+      margin-top: 70px;
+      padding: 0 20px;
 
       &::after {
-        display: none;
-      }
-
-      &::before {
-        display: none;
-      }
-
-      &:not(:last-child) {
-        padding-top: 20px;
-
-        &::after {
-          display: block;
-          width: 50%;
-          right: 0;
+        @include themify($themes) {
+          border-top: themed('border');
         }
-
-        &::before {
-          display: block;
-        }
+        display: block;
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: -20px;
       }
     }
 
     &:last-child {
-      &:not(:first-child) {
-        &::after {
-          width: 50%;
-          left: 0;
-        }
+      &::after {
+        width: 50%;
       }
     }
 
-    &--active {
-      @include themify($themes) {
-        color: themed('textcolor');
-      }
-
-      >.numberPicker {
-        overflow: visible;
-
-        &::after {
-          @include themify($themes) {
-            border-left: themed('border');
-          }
-          content: '';
-          height: 40px;
-          width: 2px;
-          position: absolute;
-          bottom: -51px;
-          left: 50%;
-        }
-      }
-    }
-
-    .treeView__branch {
-      z-index: 99;
-
-      &::before {
+    &:only-child {
+      .treeView__leaf__content::before {
         display: none;
       }
     }
@@ -138,22 +157,49 @@
     margin-top: 5px;
   }
 
-  .numberPicker {
-    width: 100%;
-    max-width: 120px;
-    padding-top: 10px;
+  &__leaf__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 160px;
     position: relative;
+
+    &:focus {
+      outline: 0;
+    }
 
     &::before {
       @include themify($themes) {
         border-left: themed('border');
       }
+      display: block;
       content: '';
-      height: 10px;
       width: 2px;
+      height: 20px;
       position: absolute;
-      top: 0;
       left: 50%;
+      top: -20px;
+    }
+
+    .numberPicker {
+      width: 100%;
+      margin-top: 13px;
+      position: relative;
+      overflow: visible;
+
+      &::before {
+        @include themify($themes) {
+          border-left: themed('border');
+        }
+        display: block;
+        content: '';
+        width: 2px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        top: -10px;
+      }
     }
   }
 }

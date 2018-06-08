@@ -2,11 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider, Layout, Header, TreeView, Diamond, NumberPicker, UserStatus } from '../lib';
+import { Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card } from '../lib';
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
-import IconRun from './img/icon_run.svg';
 import IconPlus from './img/icon_plus.svg';
 import IconGenerator from './img/icon_generator.svg';
 import IconCelltower from './img/icon_celltower.svg';
@@ -40,247 +39,107 @@ storiesOf('D3A/Layouts', module)
           </Header>
           <Layout layout="configurationPage--2" className="content">
             <section className="configurationTree">
-              <TreeView>
+              <TreeView className="treeView--left">
                 <TreeView.Branch>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="large"
-                      type="configuration"
-                      iconUrl={IconConfiguration}
-                    />
-                    <TreeView.Title>
-                      My Simulation #1
-                    </TreeView.Title>
-                  </TreeView.Leaf>
+                  <TreeView.Leaf
+                    className="entryPoint"
+                    kind="large"
+                    type="configuration"
+                    iconUrl={IconConfiguration}
+                    title="My Simulation 1"
+                  />
                 </TreeView.Branch>
-                <TreeView.Branch>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="run"
-                      iconUrl={IconRun}
-                    />
-                    <TreeView.Title>
-                      run simulation
-                    </TreeView.Title>
-                  </TreeView.Leaf>
-                </TreeView.Branch>
-                <TreeView.Branch>
-                  <TreeView.Leaf active>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                      active
-                    />
-                    <TreeView.Title>
-                      House Profile 3
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                    />
-                    <TreeView.Branch>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="load"
-                          iconUrl={IconLoad}
-                        />
-                        <TreeView.Title>
-                          Load
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="light"
-                          iconUrl={IconLight}
-                        />
-                        <TreeView.Title>
-                          Light
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="battery"
-                          iconUrl={IconBattery}
-                        />
-                        <TreeView.Title>
-                          Battery
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="solar"
-                          iconUrl={IconSolar}
-                        />
-                        <TreeView.Title>
-                          Solar
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
-                      <TreeView.Leaf active>
-                        <Diamond
-                          kind="small"
-                          type="tv"
-                          iconUrl={IconTV}
-                          active
-                        />
-                        <TreeView.Title>
-                          TV
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
-                      <TreeView.Leaf>
-                        <Diamond
-                          kind="small"
-                          type="plus"
-                          iconUrl={IconPlus}
-                        />
-                        <TreeView.Title>
-                          Add small
-                        </TreeView.Title>
-                        <NumberPicker
-                          defaultValue={1}
-                          inactive
-                        />
-                      </TreeView.Leaf>
+                <TreeView.Branch className="treeView__branch--level1">
+                  <TreeView.Leaf
+                    className="entryPoint"
+                    kind="medium"
+                    type="plus"
+                    iconUrl={IconPlus}
+                    title="Market #1"
+                  />
+                  <TreeView.Leaf
+                    kind="medium"
+                    type="house"
+                    iconUrl={IconHouse}
+                    numberPicker
+                    title="My House"
+                  >
+                    <TreeView.Branch
+                      className="treeView__branch--level3"
+                    >
+                      <TreeView.Leaf
+                        className="entryPoint"
+                        kind="small"
+                        type="plus"
+                        iconUrl={IconPlus}
+                        title="Add"
+                      />
+                      <TreeView.Leaf
+                        kind="small"
+                        type="load"
+                        iconUrl={IconLoad}
+                        numberPicker
+                        title="Load"
+                      />
+                      <TreeView.Leaf
+                        kind="small"
+                        type="light"
+                        iconUrl={IconLight}
+                        numberPicker
+                        title="Lights"
+                      />
+                      <TreeView.Leaf
+                        kind="small"
+                        type="battery"
+                        title="Battery Storage"
+                        iconUrl={IconBattery}
+                        numberPicker
+                      />
+                      <TreeView.Leaf
+                        kind="small"
+                        type="solar"
+                        iconUrl={IconSolar}
+                        numberPicker
+                        title="solar"
+                      />
+                      <TreeView.Leaf
+                        kind="small"
+                        type="tv"
+                        iconUrl={IconTV}
+                        numberPicker
+                        title="TS Set"
+                      />
                     </TreeView.Branch>
                   </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 2
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="celltower"
-                      iconUrl={IconCelltower}
-                    />
-                    <TreeView.Title>
-                      Cell Tower Profile
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                    />
-                    <TreeView.Title>
-                      House Profile 4
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="generator"
-                      iconUrl={IconGenerator}
-                    />
-                    <TreeView.Title>
-                      Generator Profile 1
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
-                  <TreeView.Leaf>
-                    <Diamond
-                      kind="medium"
-                      type="plus"
-                      iconUrl={IconPlus}
-                    />
-                    <TreeView.Title>
-                      Add medium Profile
-                    </TreeView.Title>
-                    <NumberPicker
-                      defaultValue={1}
-                      inactive
-                    />
-                  </TreeView.Leaf>
+                  <TreeView.Leaf
+                    kind="medium"
+                    type="house"
+                    title="house"
+                    iconUrl={IconHouse}
+                    numberPicker
+                  />
+                  <TreeView.Leaf
+                    kind="medium"
+                    type="celltower"
+                    iconUrl={IconCelltower}
+                    title="Cell Towers"
+                    numberPicker
+                  />
+                  <TreeView.Leaf
+                    kind="medium"
+                    type="generator"
+                    iconUrl={IconGenerator}
+                    numberPicker
+                    title="Generators"
+                  />
                 </TreeView.Branch>
               </TreeView>
+            </section>
+            <section className="configurationPanel">
+              <Card className="interactions">
+                <Button label="start" />
+                <Button label="save" />
+              </Card>
             </section>
           </Layout>
           <div className="footer">
