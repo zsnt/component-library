@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.66666667,7.66233766 L6.66666667,1.8235024 C6.66666667,1.36645957 7.03976271,0.995670996 7.5,0.995670996 C7.96344598,0.995670996 8.33333333,1.36630374 8.33333333,1.8235024 L8.33333333,7.66233766 L14.1721686,7.66233766 C14.6292114,7.66233766 15,8.0354337 15,8.495671 C15,8.95911698 14.6293673,9.32900433 14.1721686,9.32900433 L8.33333333,9.32900433 L8.33333333,15.1678396 C8.33333333,15.6248824 7.96023729,15.995671 7.5,15.995671 C7.03655402,15.995671 6.66666667,15.6250383 6.66666667,15.1678396 L6.66666667,9.32900433 L0.827831402,9.32900433 C0.370788574,9.32900433 0,8.95590829 0,8.495671 C0,8.03222501 0.370632743,7.66233766 0.827831402,7.66233766 L6.66666667,7.66233766 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Plus-Container" transform="translate(-10.000000, -10.000000)">
+            <g id="Icons/+" transform="translate(10.000000, 9.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#A666FF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

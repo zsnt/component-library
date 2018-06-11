@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
 import { Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card } from '../lib';
 import logo from './img/Logo.png';
@@ -15,6 +16,51 @@ import IconBattery from './img/icon_battery.svg';
 import IconLoad from './img/icon_load.svg';
 import IconSolar from './img/icon_solar.svg';
 import IconTV from './img/icon_tv.svg';
+
+const devices = [
+  {
+    type: 'light',
+    callback: action('onClick'),
+    iconUrl: IconLight,
+  },
+  {
+    type: 'battery',
+    callback: action('onClick'),
+    iconUrl: IconBattery,
+  },
+  {
+    type: 'solar',
+    callback: action('onClick'),
+    iconUrl: IconSolar,
+  },
+  {
+    type: 'tv',
+    callback: action('onClick'),
+    iconUrl: IconTV,
+  },
+  {
+    type: 'load',
+    callback: action('onClick'),
+    iconUrl: IconLoad,
+  },
+];
+const entities = [
+  {
+    type: 'house',
+    callback: action('onClick'),
+    iconUrl: IconHouse,
+  },
+  {
+    type: 'celltower',
+    callback: action('onClick'),
+    iconUrl: IconCelltower,
+  },
+  {
+    type: 'generator',
+    callback: action('onClick'),
+    iconUrl: IconGenerator,
+  },
+];
 
 storiesOf('D3A/Layouts', module)
   .addDecorator(StoryRouter())
@@ -54,8 +100,9 @@ storiesOf('D3A/Layouts', module)
                     className="entryPoint"
                     kind="medium"
                     type="plus"
-                    iconUrl={IconPlus}
                     title="Market #1"
+                    popOutMenu
+                    menuItems={entities}
                   />
                   <TreeView.Leaf
                     kind="medium"
@@ -71,8 +118,9 @@ storiesOf('D3A/Layouts', module)
                         className="entryPoint"
                         kind="small"
                         type="plus"
-                        iconUrl={IconPlus}
                         title="Add"
+                        menuItems={devices}
+                        popOutMenu
                       />
                       <TreeView.Leaf
                         kind="small"
