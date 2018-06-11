@@ -86,29 +86,6 @@
     }
   }
 
-  .treeView__leaf--active {
-    >.treeView__branch--level2 {
-      display: flex;
-    }
-
-    >.treeView__branch--level3 {
-      max-width: 300px;
-      max-height: 800px;
-      transition: max-width 0.8s linear, max-height 0.8s linear;
-
-      .treeView__leaf {
-        display: flex;
-        visibility: visible;
-        transition: ease-out, visibility 3s 0.5s ease-out;
-
-        svg {
-          visibility: visible;
-          transition: visibility 3s 0.5s ease-out;
-        }
-      }
-    }
-  }
-
   &__leaf {
     display: flex;
     flex-direction: column;
@@ -143,6 +120,35 @@
         display: none;
       }
     }
+
+    &.entryPoint {
+      .treeView__leaf__delete {
+        display: none;
+      }
+    }
+  }
+
+  .treeView__leaf--active {
+    >.treeView__branch--level2 {
+      display: flex;
+    }
+
+    >.treeView__branch--level3 {
+      max-width: 300px;
+      max-height: 800px;
+      transition: max-width 0.8s linear, max-height 0.8s linear;
+
+      .treeView__leaf {
+        display: flex;
+        visibility: visible;
+        transition: ease-out, visibility 3s 0.5s ease-out;
+
+        svg {
+          visibility: visible;
+          transition: visibility 3s 0.5s ease-out;
+        }
+      }
+    }
   }
 
   &__title {
@@ -155,6 +161,45 @@
       color: themed('title');
     }
     margin-top: 5px;
+  }
+
+  &__leaf__delete {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    @include themify($themes) {
+      border: solid 1px themed('even');
+    }
+    border-radius: 50%;
+    font-size: 0;
+    cursor: pointer;
+
+    svg {
+      width: 8px;
+      height: 8px;
+
+      use {
+        @include themify($themes) {
+          fill: themed('even');
+        }
+      }
+    }
+
+    &:hover {
+      @include themify($themes) {
+        border: solid 1px themed('primary');
+      }
+
+      use {
+        @include themify($themes) {
+          fill: themed('primary');
+        }
+      }
+    }
   }
 
   &__leaf__content {
