@@ -9,5 +9,7 @@ node_js:
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
 branches:
+  only:
+    - master
   except:
     - /^v\d+\.\d+\.\d+$/
