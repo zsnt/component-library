@@ -2,14 +2,12 @@
 @import '../../styles/variables';
 
 .textInput {
-  margin-bottom: 20px;
-
   &__input {
     @include themify($themes) {
       background: themed('darkBg');
     }
     @include themify($themes) {
-      color: themed('lightGrayBlue');
+      color: themed('title');
     }
     text-align: center;
     display: block;
@@ -17,6 +15,11 @@
     border: 0;
     font-size: $small;
     padding: 5px 15px;
+
+    &:disabled {
+      background: none;
+      text-transform: uppercase;
+    }
   }
 
   &--medium {
@@ -25,4 +28,5 @@
       font-size: $medium;
     }
   }
+
 }
