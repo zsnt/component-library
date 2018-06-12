@@ -7,6 +7,7 @@ import { Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card } fro
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
+import IconPlus from './img/icon_plus.svg';
 import IconGenerator from './img/icon_generator.svg';
 import IconCelltower from './img/icon_celltower.svg';
 import IconHouse from './img/icon_house.svg';
@@ -92,7 +93,6 @@ storiesOf('D3A/Layouts', module)
                     type="configuration"
                     iconUrl={IconConfiguration}
                     title="My Simulation 1"
-                    editable={false}
                   />
                 </TreeView.Branch>
                 <TreeView.Branch className="treeView__branch--level1">
@@ -101,7 +101,6 @@ storiesOf('D3A/Layouts', module)
                     kind="medium"
                     type="plus"
                     title="Market #1"
-                    editable={false}
                     popOutMenu
                     menuItems={entities}
                   />
@@ -111,7 +110,6 @@ storiesOf('D3A/Layouts', module)
                     iconUrl={IconHouse}
                     numberPicker
                     title="My House"
-                    onTitleChange={action('onChange')}
                   >
                     <TreeView.Branch
                       className="treeView__branch--level3"
@@ -121,7 +119,6 @@ storiesOf('D3A/Layouts', module)
                         kind="small"
                         type="plus"
                         title="Add"
-                        editable={false}
                         menuItems={devices}
                         popOutMenu
                       />
@@ -131,7 +128,6 @@ storiesOf('D3A/Layouts', module)
                         iconUrl={IconLoad}
                         numberPicker
                         title="Load"
-                        onTitleChange={action('onChange')}
                       />
                       <TreeView.Leaf
                         kind="small"
