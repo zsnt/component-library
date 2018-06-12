@@ -67,8 +67,8 @@
     &::after {
       content: 'x';
       display: block;
-      font-size: $small;
-      line-height: 25px;
+      font-size: $h3;
+      line-height: 26px;
       margin-left: -30%;
     }
   }
@@ -78,7 +78,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 25px;
+  height: 26px;
 }
 
 .rc-input-number-handler-up {
@@ -125,8 +125,8 @@
 .rc-input-number-handler-down-inner {
   position: relative;
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   @include themify($themes) {
     border-radius: 50%;
     border: solid 1px themed('primary');
@@ -137,8 +137,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: $medium;
+    font-size: 16px;
     font-weight: bold;
+    font-family: Tahoma, Geneva, sans-serif;
     @include themify($themes) {
       color: themed('primary');
     }
@@ -166,7 +167,7 @@
   margin-top: 10px;
   margin-bottom: 5px;
   line-height: 1;
-  font-size: $small;
+  font-size: $h3;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
