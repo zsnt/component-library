@@ -4,12 +4,9 @@
 .textInput {
   &__input {
     @include themify($themes) {
-      background: themed('darkBg');
+      background: themed('formElement');
+      color: themed('light');
     }
-    @include themify($themes) {
-      color: themed('title');
-    }
-    text-align: center;
     display: block;
     width: 100%;
     border: 0;
@@ -19,6 +16,20 @@
     &:disabled {
       background: none;
       text-transform: uppercase;
+    }
+
+    &::placeholder {
+      @include themify($themes) {
+        color: themed('textSubColor');
+      }
+    }
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      @include themify($themes) {
+        box-shadow: themed('formShadow');
+      }
     }
   }
 

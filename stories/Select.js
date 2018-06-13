@@ -45,21 +45,21 @@ storiesOf('D3A/Atoms/FormFields', module)
       <ThemeProvider theme="d3a">
         <div className="base" style={wrapperStyle}>
           <Card style={cardStyle}>
-            <p>Small size</p>
             <Select
               options={selectOptions}
               onChange={action('onChange')}
               className="myFancyClass"
+              label="Small size:"
             />
           </Card>
           <Card style={cardStyle}>
-            <p>Medium Size</p>
             <Select
               options={selectOptions}
               onChange={action('onChange')}
               className="myFancyClass"
               kind="medium"
               value="fridge_1"
+              label="Medium Size:"
             />
           </Card>
         </div>

@@ -13,6 +13,7 @@ $themes: (
     darkBg: #043d53,
     lightBg: #3a657f,
     odd: rgba(9, 21, 25, 0.25),
+    formElement: #1d5064,
     even: #3a657f,
     black5: rgba(0, 0, 0, 0.05),
     white5: rgba(255, 255, 255, 0.05),
@@ -27,6 +28,7 @@ $themes: (
 
     // Shadows
     boxShadow: (0 10px 15px 0 rgba(0, 0, 0, 0.15)),
+    formShadow: (5px 5px 0 0 rgba(9, 21, 25, 0.25)),
 
     // Fonts
     fontFamily: ('Lato', sans-serif),

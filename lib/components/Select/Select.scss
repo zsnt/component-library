@@ -2,10 +2,10 @@
 @import '../../styles/variables';
 
 .nativeSelect {
-  position: relative;
   @include themify($themes) {
-    background: themed('darkBg');
+    background: themed('formElement');
   }
+  position: relative;
 
   &__icon {
     position: absolute;
@@ -16,12 +16,12 @@
   }
 
   &__select {
+    @include themify($themes) {
+      color: themed('light');
+    }
     display: block;
     width: 100%;
     background: transparent;
-    @include themify($themes) {
-      color: themed('textSubColor');
-    }
     font-size: $small;
 
     -webkit-appearance: none;
@@ -36,6 +36,14 @@
 
     &::-ms-expand {
       display: none;
+    }
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      @include themify($themes) {
+        box-shadow: themed('formShadow');
+      }
     }
   }
 
