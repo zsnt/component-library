@@ -15,5 +15,10 @@
       "specialLink": ["to"],
       "aspects": ["noHref", "invalidHref", "preferButton"]
     }]
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
   }
 }
