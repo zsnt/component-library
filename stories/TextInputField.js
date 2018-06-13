@@ -32,6 +32,7 @@ storiesOf('D3A/Atoms/FormFields', module)
               htmlFor="name"
               placeholder="Simulation Name"
               onChange={action('onChange')}
+              disabled
             />
           </Card>
         </div>
