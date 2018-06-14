@@ -125,9 +125,9 @@
   display: block;
   width: 26px;
   height: 26px;
+  border-radius: 50%;
   @include themify($themes) {
-    border-radius: 50%;
-    border: solid 1px themed('primary');
+    border: solid 1px themed('secondary');
   }
 
   &::after {
@@ -139,9 +139,21 @@
     font-weight: bold;
     font-family: Tahoma, Geneva, sans-serif;
     @include themify($themes) {
-      color: themed('primary');
+      color: themed('secondary');
+    }
+  }
+
+  &:hover {
+    @include themify($themes) {
+      border: solid 1px themed('primary');
+      box-shadow: themed('formShadow');
     }
 
+    &::after {
+      @include themify($themes) {
+        color: themed('primary');
+      }
+    }
   }
 }
 
