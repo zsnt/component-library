@@ -40,7 +40,7 @@
     &:hover,
     &.diamond--active {
       @include themify($themes) {
-        background-color: themed(lightBg);
+        background-color: themed('lightBg');
         border-color: themed('primary');
       }
       border: solid 3px;
