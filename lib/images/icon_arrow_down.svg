@@ -6,8 +6,8 @@
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Config-Select" transform="translate(-104.000000, -10.000000)">
             <g id="Icons/arrow_filled" transform="translate(104.000000, 10.000000)">
-                <use id="icon-:-arrow_filled" fill="#fff" fill-rule="evenodd" xlink:href="#path-1"></use>
-                </g>
+                <use id="icon-:-arrow_filled" fill="#fff" fill-rule="evenodd" xlink:href="#path-1">
+                </use>
             </g>
         </g>
     </g>
