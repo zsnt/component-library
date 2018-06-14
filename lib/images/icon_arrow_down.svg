@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="8px" height="6px" viewBox="0 0 8 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>Icons/arrow_filled</title>
-    <desc>Created with Sketch.</desc>
     <defs>
         <polygon id="path-1" points="3.97638895 5.5 7.95277791 0 0 0"></polygon>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Config-Select" transform="translate(-104.000000, -10.000000)">
             <g id="Icons/arrow_filled" transform="translate(104.000000, 10.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="icon-:-arrow_filled" fill="#00CDFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <g id="Colors/Brand-2" mask="url(#mask-2)" fill="#a666ff" fill-rule="evenodd">
-                    <rect id="layer" x="0" y="0" width="8" height="6"></rect>
+                <use id="icon-:-arrow_filled" fill="#fff" fill-rule="evenodd" xlink:href="#path-1"></use>
                 </g>
             </g>
         </g>
