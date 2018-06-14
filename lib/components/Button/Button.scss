@@ -25,6 +25,9 @@
       background-color: themed('primaryLight');
       box-shadow: none;
     }
+    &:focus {
+      outline: 0;
+    }
   }
 
   &.secondary {
