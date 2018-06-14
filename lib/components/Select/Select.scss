@@ -13,6 +13,12 @@
     height: 25px;
     display: flex;
     justify-content: center;
+
+    use {
+      @include themify($themes) {
+        fill: themed('secondary');
+      }
+    }
   }
 
   &__select {
@@ -37,15 +43,23 @@
     &::-ms-expand {
       display: none;
     }
+  }
 
-    &:focus,
-    &:hover {
-      outline: 0;
-      @include themify($themes) {
-        box-shadow: themed('formShadow');
+  &:focus,
+  &:hover {
+    @include themify($themes) {
+      box-shadow: themed('formShadow');
+    }
+
+    .nativeSelect__icon {
+      use {
+        @include themify($themes) {
+          fill: themed('primary');
+        }
       }
     }
   }
+
 
   &--medium {
     .nativeSelect__select {

@@ -224,10 +224,6 @@
       flex-shrink: 0;
     }
 
-    &:focus {
-      outline: 0;
-    }
-
     &::before {
       @include themify($themes) {
         border-left: themed('border');

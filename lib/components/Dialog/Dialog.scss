@@ -23,14 +23,11 @@
         }
       }
     }
-
-    &:focus {
-      outline: 0;
-    }
   }
 
   &__header {
     position: relative;
     padding-bottom: 10px;
+    text-transform: uppercase;
   }
 }

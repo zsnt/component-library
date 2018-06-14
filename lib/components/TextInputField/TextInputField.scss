@@ -26,7 +26,6 @@
 
     &:focus,
     &:hover {
-      outline: 0;
       @include themify($themes) {
         box-shadow: themed('formShadow');
       }
