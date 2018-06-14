@@ -4,7 +4,6 @@
 .numberPicker {
   margin-bottom: 10px;
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .rc-input-number {
@@ -27,7 +26,6 @@
     background-color: transparent;
   }
 }
-
 
 .numberPicker--medium {
   .rc-input-number-input {
@@ -78,7 +76,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 26px;
+  height: 30px;
 }
 
 .rc-input-number-handler-up {
@@ -167,7 +165,7 @@
   margin-top: 10px;
   margin-bottom: 5px;
   line-height: 1;
-  font-size: $h3;
+  font-size: $medium;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
