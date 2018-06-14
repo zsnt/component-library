@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { ThemeProvider, Dialog, Button } from '../lib';
+import { action } from '@storybook/addon-actions';
+import { ThemeProvider, Dialog, Button, Select, TextInputField, Form } from '../lib';
 
 class DialogStory extends Component {
   constructor(props) {
@@ -19,6 +20,25 @@ class DialogStory extends Component {
   }
 
   render() {
+    const selectOptions = [
+      {
+        option: 'House 1',
+        value: 'house_1',
+      },
+      {
+        option: 'House 2',
+        value: 'house_2',
+      },
+      {
+        option: 'Generator 1',
+        value: 'generator_1',
+      },
+      {
+        option: 'Fridge 1',
+        value: 'fridge_1',
+      },
+    ];
+
     return (
       <div className="base">
         <Button
@@ -30,12 +50,34 @@ class DialogStory extends Component {
           onClose={this.toggleDialog}
           title="Configuration"
         >
-          hello world
+          <Form>
+            <Form.Element>
+              <Select
+                options={selectOptions}
+                onChange={action('onChange')}
+                label="Power Consumption"
+              />
+            </Form.Element>
+            <Form.Element>
+              <TextInputField
+                label="Small Size"
+                htmlFor="name"
+                placeholder="Simulation Name"
+                onChange={action('onChange')}
+              />
+            </Form.Element>
+            <Form.Element>
+              <Button
+                label="Apply"
+              />
+            </Form.Element>
+          </Form>
         </Dialog>
       </div>
     );
   }
 }
+
 
 storiesOf('D3A/Organisms/Form', module)
   .add(
