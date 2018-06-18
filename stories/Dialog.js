@@ -41,7 +41,7 @@ storiesOf('D3A/Organisms/Form', module)
   .add(
     'Dialog',
     withInfo(`
-      Dismisable dialog component
+      Dismissable dialog component
 
       ~~~js
       <Button
