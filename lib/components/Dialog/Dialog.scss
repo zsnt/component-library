@@ -1,0 +1,36 @@
+@import '../../styles/themify';
+
+.dialog {
+  width: 340px;
+
+  &__close {
+    background: none;
+    border: 0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+
+    use {
+      @include themify($themes) {
+        fill: themed('secondary');
+      }
+    }
+
+    &:hover {
+      use {
+        @include themify($themes) {
+          fill: themed('primary');
+        }
+      }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding-bottom: 10px;
+  }
+}
