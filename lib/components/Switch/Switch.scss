@@ -1,0 +1,66 @@
+@import '../../styles/themify';
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__input:checked + .switch__slider {
+    @include themify($themes) {
+      background-color: themed('secondary');
+    }
+
+    &::before {
+      transform: translateX(26px);
+    }
+
+    .switch__slider__icon {
+      display: block;
+      margin-left: 15px;
+    }
+  }
+
+  &__slider {
+    @include themify($themes) {
+      background-color: themed('formElement');
+    }
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 34px;
+    position: relative;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      @include themify($themes) {
+        box-shadow: themed('formShadow');
+      }
+    }
+
+    &::before {
+      @include themify($themes) {
+        background-color: themed('light');
+      }
+
+      content: '';
+      transition: 0.4s;
+      height: 22px;
+      width: 22px;
+      left: 6px;
+      bottom: 4px;
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+    }
+
+    &__icon {
+      display: none;
+    }
+  }
+
+  &__labeltext {
+
+  }
+}
