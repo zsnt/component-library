@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="15px" viewBox="0 0 26 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24.1400003,29.1926568 L24.1400003,8.14283601 C24.1400003,7.83904694 23.8914456,7.59601569 23.5876566,7.59601569 L20.6050003,7.59601569 L20.6050003,5.5578672 C20.6050003,5.24855469 20.3564456,5 20.0526565,5 L14.0873438,5 C13.7835548,5 13.5350001,5.24855469 13.5350001,5.5578672 L13.5350001,7.60153913 L10.5523438,7.60153913 C10.2485547,7.60153913 10,7.83904694 10,8.14835945 L10,29.1926568 C10,29.5019693 10.2485547,29.750524 10.5523438,29.750524 L23.5876566,29.750524 C23.8914456,29.750524 24.1400003,29.5019693 24.1400003,29.1926568 Z M18.9106642,12.0490284 L17.3696251,16.5230129 L20.7665392,16.5230129 L15.2210078,22.6540286 L16.7620469,18.1800441 L13.3651328,18.1800441 L18.9106642,12.0490284 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Devices/Batery" transform="translate(-4.000000, -10.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#FFFFFF" fill-rule="nonzero" transform="translate(17.070000, 17.375262) rotate(90.000000) translate(-17.070000, -17.375262) " xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="106px" viewBox="0 0 80 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Button-(temp)-back" fill="#A666FF" fill-rule="nonzero">
+            <g id="Group-13" transform="translate(66.000000, 53.000000) scale(-1, 1) translate(-66.000000, -53.000000) ">
+                <g id="Group">
+                    <polygon id="Rectangle-8" transform="translate(79.000000, 53.000000) rotate(-45.000000) translate(-79.000000, -53.000000) " points="115 17 116 16 116 90 42 90 43 89 115 89"></polygon>
+                    <polygon id="Rectangle-8" transform="translate(52.500000, 52.500000) rotate(-45.000000) translate(-52.500000, -52.500000) " points="88 88 88 17 89 16 89 89 16 89 17 88"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
