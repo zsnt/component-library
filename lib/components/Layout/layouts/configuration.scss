@@ -1,7 +1,29 @@
 @media screen and (min-width: 600px) {
   @supports (display: grid) {
-    .configurationPage--2 {
+
+    .configurationsPage {
       grid-area: ct;
+      display: grid;
+      grid-column-gap: 18px;
+      grid-row-gap: 20px;
+      grid-template-columns: repeat(12, minmax(auto, 100px));
+      grid-template-areas:
+      '. . . hero hero hero hero hero hero . . .'
+      'confs confs confs confs confs confs confs confs confs confs confs confs';
+    }
+
+    .configurationPage--1 {
+      grid-area: confs;
+      display: grid;
+      grid-column-gap: 18px;
+      grid-row-gap: 20px;
+      grid-template-columns: repeat(12, minmax(auto, 100px));
+      grid-template-areas:
+      '. nav . . .  form form . . . . .';
+    }
+
+    .configurationPage--2 {
+      grid-area: confs;
       display: grid;
       grid-column-gap: 18px;
       grid-row-gap: 20px;
@@ -9,6 +31,10 @@
       grid-template-areas:
       'nav tree tree tree tree tree tree tree tree tree panel panel';
     }
+  }
+
+  .settingsForm {
+    grid-area: form;
   }
 
   .configurationTree {
@@ -28,5 +54,9 @@
 
   .interactions {
     position: fixed;
+  }
+
+  .hero {
+    grid-area: hero;
   }
 }
