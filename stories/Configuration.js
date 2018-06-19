@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
-import { Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card } from '../lib';
+import { Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card, StepButton } from '../lib';
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
@@ -83,6 +83,7 @@ storiesOf('D3A/Layouts', module)
             <UserStatus />
           </Header>
           <Layout layout="configurationPage--2" className="content">
+            <StepButton className="stepNavigation" />
             <section className="configurationTree">
               <TreeView className="treeView--left">
                 <TreeView.Branch>
