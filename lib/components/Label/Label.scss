@@ -9,6 +9,5 @@
     @include themify($themes) {
       color: themed('secondary');
     }
-    text-align: center;
   }
 }

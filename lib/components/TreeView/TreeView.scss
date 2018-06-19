@@ -160,6 +160,17 @@
     @include themify($themes) {
       color: themed('title');
     }
+
+    .textInput__input:disabled {
+      text-align: center;
+      @include themify($themes) {
+        color: themed('title');
+      }
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
 
   &__leaf__delete {
@@ -211,10 +222,6 @@
 
     .diamond {
       flex-shrink: 0;
-    }
-
-    &:focus {
-      outline: 0;
     }
 
     &::before {

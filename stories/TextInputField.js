@@ -29,7 +29,7 @@ storiesOf('D3A/Atoms/FormFields', module)
             <TextInputField
               label="Medium Size"
               kind="medium"
-              htmlFor="name"
+              htmlFor="foobar"
               placeholder="Simulation Name"
               onChange={action('onChange')}
               disabled

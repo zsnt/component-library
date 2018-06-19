@@ -1,0 +1,51 @@
+@import '../../styles/themify';
+
+@-webkit-keyframes leftarrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-0.3em);
+  }
+}
+
+@-webkit-keyframes rightarrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0.3em);
+  }
+}
+
+.stepButton {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+
+  &:hover {
+    -webkit-animation: leftarrow 0.6s infinite alternate ease-in-out;
+  }
+
+  &--right {
+    flex-direction: row-reverse;
+
+    .stepButton__icon {
+      margin-right: 0;
+    }
+
+    &:hover {
+      -webkit-animation: rightarrow 0.6s infinite alternate ease-in-out;
+    }
+  }
+
+  &__label {
+    @include themify($themes) {
+      color: themed('title');
+    }
+  }
+}

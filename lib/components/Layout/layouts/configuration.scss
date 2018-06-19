@@ -7,7 +7,7 @@
       grid-row-gap: 20px;
       grid-template-columns: repeat(12, minmax(auto, 100px));
       grid-template-areas:
-      'tree tree tree tree tree tree tree tree tree tree panel panel';
+      'nav tree tree tree tree tree tree tree tree tree panel panel';
     }
   }
 
@@ -21,6 +21,11 @@
     grid-area: panel;
     position: relative;
   }
+
+  .stepNavigation {
+    grid-area: nav;
+  }
+
   .interactions {
     position: fixed;
   }
