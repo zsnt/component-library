@@ -19,7 +19,7 @@
       grid-row-gap: 20px;
       grid-template-columns: repeat(12, minmax(auto, 100px));
       grid-template-areas:
-      '. nav . . .  form form . . . . .';
+      'nav nav . . .  form form . . . . .';
     }
 
     .configurationPage--2 {
