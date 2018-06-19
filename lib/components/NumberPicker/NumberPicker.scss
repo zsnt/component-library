@@ -4,7 +4,6 @@
 .numberPicker {
   margin-bottom: 10px;
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .rc-input-number {
@@ -27,7 +26,6 @@
     background-color: transparent;
   }
 }
-
 
 .numberPicker--medium {
   .rc-input-number-input {
@@ -78,7 +76,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 26px;
+  height: 30px;
 }
 
 .rc-input-number-handler-up {
@@ -127,23 +125,35 @@
   display: block;
   width: 26px;
   height: 26px;
+  border-radius: 50%;
   @include themify($themes) {
-    border-radius: 50%;
-    border: solid 1px themed('primary');
+    border: solid 1px themed('secondary');
   }
 
   &::after {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 46%;
+    left: 52%;
     transform: translate(-50%, -50%);
     font-size: 16px;
     font-weight: bold;
     font-family: Tahoma, Geneva, sans-serif;
     @include themify($themes) {
-      color: themed('primary');
+      color: themed('secondary');
+    }
+  }
+
+  &:hover {
+    @include themify($themes) {
+      border: solid 1px themed('primary');
+      box-shadow: themed('formShadow');
     }
 
+    &::after {
+      @include themify($themes) {
+        color: themed('primary');
+      }
+    }
   }
 }
 
@@ -167,7 +177,7 @@
   margin-top: 10px;
   margin-bottom: 5px;
   line-height: 1;
-  font-size: $h3;
+  font-size: $medium;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
