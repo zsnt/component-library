@@ -246,7 +246,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                           type="tv"
                           iconUrl={IconTV}
                           numberPicker
-                          title="TS Set"
+                          title="TV Set"
                         />
                       </TreeView.Branch>
                     </TreeView.Leaf>
