@@ -79,7 +79,7 @@ const entities = [
 storiesOf('D3A/Layouts/Configuration', module)
   .addDecorator(StoryRouter())
   .add(
-    'Configuration Page 1',
+    'Page 1',
     withInfo()(() => (
       <ThemeProvider theme="d3a">
         <Layout layout="wrapper">
@@ -142,7 +142,65 @@ storiesOf('D3A/Layouts/Configuration', module)
     )),
   )
   .add(
-    'Configuration Page 2',
+    'Page 2 empty',
+    withInfo(`Layout of configuration page 2 with empty tree.
+
+      ~~~js
+      <Layout layout="configurationPage--2">Children</Layout>
+      ~~~
+
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <Layout layout="wrapper">
+          <Header
+            logoUrl={logo}
+            logoLink="/"
+            logoAlt="D3ASIM"
+          >
+            <UserStatus />
+          </Header>
+          <Layout layout="configurationPage" className="content">
+            <Hero
+              titleText="Start your configuration"
+              subtitleText="global settings and foo"
+            />
+            <Layout layout="configurationPage--2">
+              <div className="stepNavigation">
+                <StepButton />
+              </div>
+              <section className="configurationTree">
+                <TreeView className="treeView--left">
+                  <TreeView.Branch>
+                    <TreeView.Leaf
+                      className="entryPoint root"
+                      kind="large"
+                      type="configuration"
+                      iconUrl={IconConfiguration}
+                      title="My Simulation 1"
+                      editable={false}
+                    />
+                  </TreeView.Branch>
+                  <TreeView.Branch className="treeView__branch--level1">
+                    <TreeView.Leaf
+                      className="entryPoint"
+                      kind="medium"
+                      type="plus"
+                      title="Market #1"
+                      editable={false}
+                      popOutMenu
+                      menuItems={entities}
+                    />
+                  </TreeView.Branch>
+                </TreeView>
+              </section>
+            </Layout>
+          </Layout>
+        </Layout>
+      </ThemeProvider>
+    )),
+  )
+  .add(
+    'Page 2 filled',
     withInfo(`
       Just the layout of the Configuration with a dummy configuration tree
 

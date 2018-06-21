@@ -91,6 +91,12 @@
     flex-direction: column;
     position: relative;
 
+    &.root {
+      .treeView__leaf__content::before {
+        display: none;
+      }
+    }
+
     &:not(.entryPoint) {
       margin-top: 70px;
       padding: 0 20px;
@@ -112,12 +118,6 @@
     &:last-child {
       &::after {
         width: 50%;
-      }
-    }
-
-    &:only-child {
-      .treeView__leaf__content::before {
-        display: none;
       }
     }
 
