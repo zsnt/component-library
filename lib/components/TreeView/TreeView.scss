@@ -2,6 +2,8 @@
 @import '../../styles/variables';
 
 .treeView {
+  min-height: 120vh;
+
   &__branch {
     display: flex;
     flex-direction: row;
@@ -68,9 +70,9 @@
       }
 
       .entryPoint {
-        margin-bottom: -54px;
+        margin-bottom: -52px;
 
-        .treeView__leaf__content::after {
+        .popOutMenu::after {
           @include themify($themes) {
             border-top: themed('border');
           }
@@ -79,7 +81,7 @@
           height: 1px;
           width: 40px;
           position: absolute;
-          right: 0;
+          right: -41px;
           top: 37px;
         }
       }
