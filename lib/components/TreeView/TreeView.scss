@@ -2,6 +2,8 @@
 @import '../../styles/variables';
 
 .treeView {
+  min-height: 120vh;
+
   &__branch {
     display: flex;
     flex-direction: row;
@@ -68,9 +70,9 @@
       }
 
       .entryPoint {
-        margin-bottom: -54px;
+        margin-bottom: -52px;
 
-        .treeView__leaf__content::after {
+        .popOutMenu::after {
           @include themify($themes) {
             border-top: themed('border');
           }
@@ -79,7 +81,7 @@
           height: 1px;
           width: 40px;
           position: absolute;
-          right: 0;
+          right: -43px;
           top: 37px;
         }
       }
@@ -90,6 +92,12 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    &.root {
+      .treeView__leaf__content::before {
+        display: none;
+      }
+    }
 
     &:not(.entryPoint) {
       margin-top: 70px;
@@ -112,12 +120,6 @@
     &:last-child {
       &::after {
         width: 50%;
-      }
-    }
-
-    &:only-child {
-      .treeView__leaf__content::before {
-        display: none;
       }
     }
 
