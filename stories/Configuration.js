@@ -76,6 +76,8 @@ const entities = [
   },
 ];
 
+let myRef = React.createRef();
+
 storiesOf('D3A/Layouts/Configuration', module)
   .addDecorator(StoryRouter())
   .add(
@@ -193,12 +195,14 @@ storiesOf('D3A/Layouts/Configuration', module)
                       menuItems={entities}
                     />
                     <TreeView.Leaf
+                      key="entity-0"
                       kind="medium"
                       type="house"
                       iconUrl={IconHouse}
                       numberPicker
                       title="My House"
                       onTitleChange={action('onChange')}
+                      refHook={myRef}
                     >
                       <TreeView.Branch
                         className="treeView__branch--level3"
@@ -211,8 +215,10 @@ storiesOf('D3A/Layouts/Configuration', module)
                           editable={false}
                           menuItems={devices}
                           popOutMenu
+                          ref={myRef}
                         />
                         <TreeView.Leaf
+                          key="device-0"
                           kind="small"
                           type="load"
                           iconUrl={IconLoad}
@@ -221,6 +227,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                           onTitleChange={action('onChange')}
                         />
                         <TreeView.Leaf
+                          key="device-1"
                           kind="small"
                           type="light"
                           iconUrl={IconLight}
@@ -228,6 +235,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                           title="Lights"
                         />
                         <TreeView.Leaf
+                          key="device-2"
                           kind="small"
                           type="battery"
                           title="Battery Storage"
@@ -235,6 +243,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                           numberPicker
                         />
                         <TreeView.Leaf
+                          key="device-3"
                           kind="small"
                           type="solar"
                           iconUrl={IconSolar}
@@ -242,6 +251,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                           title="solar"
                         />
                         <TreeView.Leaf
+                          key="device-4"
                           kind="small"
                           type="tv"
                           iconUrl={IconTV}
@@ -251,6 +261,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                       </TreeView.Branch>
                     </TreeView.Leaf>
                     <TreeView.Leaf
+                      key="entity-1"
                       kind="medium"
                       type="house"
                       title="house"
@@ -258,6 +269,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                       numberPicker
                     />
                     <TreeView.Leaf
+                      key="entity-2"
                       kind="medium"
                       type="celltower"
                       iconUrl={IconCelltower}
@@ -265,6 +277,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                       numberPicker
                     />
                     <TreeView.Leaf
+                      key="entity-3"
                       kind="medium"
                       type="generator"
                       iconUrl={IconGenerator}
