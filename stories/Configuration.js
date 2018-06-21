@@ -232,7 +232,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                 <TreeView className="treeView--left">
                   <TreeView.Branch>
                     <TreeView.Leaf
-                      className="entryPoint"
+                      className="entryPoint root"
                       kind="large"
                       type="configuration"
                       iconUrl={IconConfiguration}
@@ -314,7 +314,21 @@ storiesOf('D3A/Layouts/Configuration', module)
                       title="house"
                       iconUrl={IconHouse}
                       numberPicker
-                    />
+                    >
+                      <TreeView.Branch
+                        className="treeView__branch--level3"
+                      >
+                        <TreeView.Leaf
+                          className="entryPoint"
+                          kind="small"
+                          type="plus"
+                          title="Add"
+                          editable={false}
+                          menuItems={devices}
+                          popOutMenu
+                        />
+                      </TreeView.Branch>
+                    </TreeView.Leaf>
                     <TreeView.Leaf
                       kind="medium"
                       type="celltower"
