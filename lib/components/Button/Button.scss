@@ -14,11 +14,16 @@
   transition: color 0.1s, background-color 0.1s;
   font-size: $small;
 
+  &:hover {
+    @include themify($themes) {
+      box-shadow: themed('formShadow');
+    }
+  }
+
 
   &--primary {
     @include themify($themes) {
       background-color: themed('primaryDark');
-      box-shadow: themed('boxShadow');
 
       &:hover {
         background-color: themed('primaryLight');
