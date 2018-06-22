@@ -76,6 +76,8 @@ const entities = [
   },
 ];
 
+const myRef = React.createRef();
+
 storiesOf('D3A/Layouts/Configuration', module)
   .addDecorator(StoryRouter())
   .add(
@@ -257,6 +259,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                       numberPicker
                       title="My House"
                       onTitleChange={action('onChange')}
+                      refHook={myRef}
                     >
                       <TreeView.Branch
                         className="treeView__branch--level3"
@@ -269,6 +272,7 @@ storiesOf('D3A/Layouts/Configuration', module)
                           editable={false}
                           menuItems={devices}
                           popOutMenu
+                          ref={myRef}
                         />
                         <TreeView.Leaf
                           kind="small"
