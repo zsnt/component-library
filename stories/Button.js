@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider, Button } from '../lib';
-
+import IconSolar from './img/icon_solar.svg';
 const divStyle = {
   padding: '15px',
 };
@@ -50,6 +50,23 @@ storiesOf('D3A/Atoms/Button', module)
           <Button
             type="cta"
             label="Action"
+            onClick={action('clicked')}
+          />
+        </div>
+      </ThemeProvider>
+    )),
+  )
+  .add(
+    'icon',
+    withInfo(`
+      <Button type="icon" icon={IconSolar} />
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <div className="base" style={divStyle}>
+          <Button
+            type="icon"
+            label="SolarPower"
+            icon={IconSolar}
             onClick={action('clicked')}
           />
         </div>
