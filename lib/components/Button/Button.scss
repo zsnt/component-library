@@ -76,4 +76,54 @@
       }
     }
   }
+
+  &--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include themify($themes) {
+      background-color: transparent;
+    }
+
+    .button__icon {
+      @include themify($themes) {
+        background-color: themed('black5');
+        border: solid 1px themed('primary');
+      }
+      border-radius: 50%;
+      padding: 5px;
+      margin-bottom: 5px;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      path {
+        @include themify($themes) {
+          fill: themed('primary');
+        }
+      }
+    }
+
+    &:hover,
+    &:active {
+      @include themify($themes) {
+        box-shadow: none;
+      }
+
+      .button__icon {
+        @include themify($themes) {
+          box-shadow: themed('formShadow');
+          background-color: themed('white10');
+        }
+      }
+
+      .button__label {
+        text-decoration: underline;
+      }
+    }
+  }
+
 }
