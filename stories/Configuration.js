@@ -76,7 +76,7 @@ const entities = [
   },
 ];
 
-let myRef = React.createRef();
+const myRef = React.createRef();
 
 storiesOf('D3A/Layouts/Configuration', module)
   .addDecorator(StoryRouter())
