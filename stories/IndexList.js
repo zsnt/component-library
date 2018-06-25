@@ -58,7 +58,7 @@ const indexEntries = [
 ];
 
 const Entries = indexEntries.map(element => (
-  <IndexList.Element entry={element.entry} actions={element.actions} />
+  <IndexList.Element key={`listIndex-${element.entry}`} entry={element.entry} actions={element.actions} />
 ));
 
 storiesOf('D3A/Molecules', module)
