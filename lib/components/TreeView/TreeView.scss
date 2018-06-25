@@ -193,11 +193,8 @@
     svg {
       width: 10px;
       height: 10px;
-
-      use {
-        @include themify($themes) {
-          fill: themed('even');
-        }
+      @include themify($themes) {
+        fill: themed('even');
       }
     }
 
@@ -206,7 +203,7 @@
         border: solid 1px themed('primary');
       }
 
-      use {
+      svg {
         @include themify($themes) {
           fill: themed('primary');
         }

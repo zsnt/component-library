@@ -84,6 +84,14 @@
     }
   }
 
+  &--configuration {
+    svg {
+      @include themify($themes) {
+        fill: themed('light');
+      }
+    }
+  }
+
   &--house {
     background-color: $color-house;
   }
