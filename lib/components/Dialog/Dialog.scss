@@ -10,14 +10,14 @@
     right: 0;
     cursor: pointer;
 
-    use {
+    svg {
       @include themify($themes) {
         fill: themed('secondary');
       }
     }
 
     &:hover {
-      use {
+      svg {
         @include themify($themes) {
           fill: themed('primary');
         }

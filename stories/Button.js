@@ -4,6 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider, Button } from '../lib';
 import IconSolar from './img/icon_solar.svg';
+
 const divStyle = {
   padding: '15px',
 };
