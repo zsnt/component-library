@@ -98,9 +98,6 @@
       svg {
         width: 22px;
         height: 22px;
-      }
-
-      path {
         @include themify($themes) {
           fill: themed('primary');
         }
@@ -125,5 +122,4 @@
       }
     }
   }
-
 }
