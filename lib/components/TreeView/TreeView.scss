@@ -70,7 +70,7 @@
       }
 
       .entryPoint {
-        margin-bottom: -52px;
+        margin-bottom: -56px;
 
         .popOutMenu::after {
           @include themify($themes) {
@@ -137,11 +137,12 @@
 
     >.treeView__branch--level3 {
       max-width: 300px;
-      max-height: 800px;
+      max-height: 10000px;
       transition: max-width 0.8s linear, max-height 0.8s linear;
 
       .treeView__leaf {
         display: flex;
+        flex-shrink: 0;
         visibility: visible;
         transition: ease-out, visibility 3s 0.5s ease-out;
 
