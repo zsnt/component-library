@@ -1,3 +1,5 @@
+@import '../../styles/themify';
+
 .userName {
   display: flex;
   font-size: 14px;
@@ -5,6 +7,12 @@
   &__icon {
     line-height: 1;
     margin-right: 12px;
+
+    svg {
+      @include themify($themes) {
+        fill: themed('primary');
+      }
+    }
   }
 
   &__logout {

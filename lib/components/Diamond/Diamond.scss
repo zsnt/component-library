@@ -23,6 +23,9 @@
     svg {
       width: 100%;
       height: 100%;
+      @include themify($themes) {
+        fill: themed('light');
+      }
     }
   }
 
@@ -84,14 +87,6 @@
     }
   }
 
-  &--configuration {
-    svg {
-      @include themify($themes) {
-        fill: themed('light');
-      }
-    }
-  }
-
   &--house {
     background-color: $color-house;
   }
@@ -113,7 +108,7 @@
     border: solid 3px;
 
     .diamond__icon {
-      use {
+      svg {
         @include themify($themes) {
           fill: themed('secondary');
         }
@@ -129,7 +124,7 @@
       border: solid 3px;
 
       .diamond__icon {
-        use {
+        svg {
           @include themify($themes) {
             fill: themed('primary');
           }

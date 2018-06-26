@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
 
-    use {
+    svg {
       @include themify($themes) {
         fill: themed('secondary');
       }
@@ -52,7 +52,7 @@
     }
 
     .nativeSelect__icon {
-      use {
+      svg {
         @include themify($themes) {
           fill: themed('primary');
         }

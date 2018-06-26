@@ -16,7 +16,14 @@
 
     .switch__slider__icon {
       display: block;
-      margin-left: 15px;
+      margin-left: 8px;
+      margin-top: 2px;
+
+      svg {
+        @include themify($themes) {
+          fill: themed('light');
+        }
+      }
     }
   }
 
@@ -58,9 +65,5 @@
     &__icon {
       display: none;
     }
-  }
-
-  &__labeltext {
-
   }
 }
