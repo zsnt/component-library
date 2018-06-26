@@ -137,8 +137,7 @@
 
     >.treeView__branch--level3 {
       max-width: 300px;
-      max-height: 8000px;
-      overflow: auto;
+      max-height: 10000px;
       transition: max-width 0.8s linear, max-height 0.8s linear;
 
       .treeView__leaf {
