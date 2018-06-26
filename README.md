@@ -1,6 +1,10 @@
 # component-library
+[![Build Status](https://travis-ci.org/gridsingularity/component-library.svg?branch=master)](https://travis-ci.org/gridsingularity/component-library) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-living styleguide
+
+Living Styleguide by Grid Singularity
+
+Licensed under [GNU LESSER GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/lgpl-3.0.de.html)
 
 ## Usage
 ### For react based applications
@@ -58,7 +62,7 @@ When writing scss for your component you should use these variables so the compo
 
 Versioning is handled via the package [semantic-release]( https://www.npmjs.com/package/semantic-release)
 
-A new version gets published after successfully merging a pull request to master. It s important to use correct [commit-message syntax](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). 
+A new version gets published after successfully merging a pull request to master. It s important to use correct [commit-message syntax](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
 
 ### Deploy to heroku
 
@@ -81,3 +85,7 @@ you can check if your changes applied when running
 
 
 When you pushed the deploy branch the heroku deploy pipeline will automatically deploy this version.
+
+
+### External Libraries and packages
+The used Icons are from [material.io](https://material.io/tools/icons/)
