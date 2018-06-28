@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
-import { Diamond, Hero, Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card, StepButton, Form, TextInputField, Label, NumberPicker, Select } from '../lib';
+import { Diamond, Hero, Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card, StepButton, Form, TextInputField, Label, NumberPicker, Dialog, Select } from '../lib';
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
@@ -30,6 +30,13 @@ const selectOptions = [
     value: 'generator_1',
   },
 ];
+
+const dialogboxStyle = {
+  position: 'absolute',
+  left: '-100px',
+  top: '160px',
+  zIndex: '1',
+};
 
 const devices = [
   {
@@ -281,7 +288,16 @@ storiesOf('D3A/Layouts/Configuration', module)
                           numberPicker
                           title="Load"
                           onTitleChange={action('onChange')}
-                        />
+                        >
+                          <Dialog
+                            show
+                            onClose={action('onClick')}
+                            title="Configuration"
+                            style={dialogboxStyle}
+                          >
+                            hello world
+                          </Dialog>
+                        </TreeView.Leaf>
                         <TreeView.Leaf
                           kind="small"
                           type="light"

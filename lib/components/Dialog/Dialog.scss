@@ -2,6 +2,10 @@
 
 .dialog {
   width: 340px;
+  position: relative;
+  @include themify($themes) {
+    background-color: themed('darkBg');
+  }
 
   &__close {
     background: none;
