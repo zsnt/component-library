@@ -73,4 +73,20 @@ storiesOf('D3A/Atoms/Button', module)
         </div>
       </ThemeProvider>
     )),
+  )
+  .add(
+    'disabled',
+    withInfo(`
+      <Button />
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <div className="base" style={divStyle}>
+          <Button
+            label="disabled"
+            disabled
+            onClick={action('clicked')}
+          />
+        </div>
+      </ThemeProvider>
+    )),
   );
