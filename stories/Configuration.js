@@ -15,6 +15,7 @@ import IconBattery from './img/icon_battery.svg';
 import IconLoad from './img/icon_load.svg';
 import IconSolar from './img/icon_solar.svg';
 import IconTV from './img/icon_tv.svg';
+import IconPlus from './img/icon_plus.svg';
 
 const selectOptions = [
   {
@@ -189,16 +190,27 @@ storiesOf('D3A/Layouts/Configuration', module)
                       editable={false}
                     />
                   </TreeView.Branch>
-                  <TreeView.Branch className="treeView__branch--level1">
+                  <TreeView.Branch className="treeView__branch--level0">
                     <TreeView.Leaf
                       className="entryPoint"
-                      kind="medium"
+                      kind="large"
                       type="plus"
-                      title="Market #1"
+                      iconUrl={IconPlus}
+                      title="Add neighborhood"
                       editable={false}
-                      popOutMenu
-                      menuItems={entities}
-                    />
+                    >
+                      <TreeView.Branch className="treeView__branch--level1">
+                        <TreeView.Leaf
+                          className="entryPoint"
+                          kind="medium"
+                          type="plus"
+                          title="Market #1"
+                          editable={false}
+                          popOutMenu
+                          menuItems={entities}
+                        />
+                      </TreeView.Branch>
+                    </TreeView.Leaf>
                   </TreeView.Branch>
                 </TreeView>
               </section>
@@ -235,7 +247,9 @@ storiesOf('D3A/Layouts/Configuration', module)
             />
             <Layout layout="configurationPage--2">
               <div className="stepNavigation">
-                <StepButton />
+                <StepButton
+                  label="General Setupo"
+                />
               </div>
               <section className="configurationTree">
                 <TreeView className="treeView--left">
@@ -249,120 +263,247 @@ storiesOf('D3A/Layouts/Configuration', module)
                       editable={false}
                     />
                   </TreeView.Branch>
-                  <TreeView.Branch className="treeView__branch--level1">
+                  <TreeView.Branch className="treeView__branch--level0">
                     <TreeView.Leaf
                       className="entryPoint"
-                      kind="medium"
+                      kind="large"
                       type="plus"
-                      title="Market #1"
+                      iconUrl={IconPlus}
+                      title="Add neighborhood"
                       editable={false}
-                      popOutMenu
-                      menuItems={entities}
-                    />
-                    <TreeView.Leaf
-                      kind="medium"
-                      type="house"
-                      iconUrl={IconHouse}
-                      numberPicker
-                      title="My House"
-                      onTitleChange={action('onChange')}
-                      refHook={myRef}
                     >
-                      <TreeView.Branch
-                        className="treeView__branch--level3"
-                      >
+                      <TreeView.Branch className="treeView__branch--level1">
                         <TreeView.Leaf
                           className="entryPoint"
-                          kind="small"
+                          kind="medium"
                           type="plus"
-                          title="Add"
+                          title="Market #1"
                           editable={false}
-                          menuItems={devices}
                           popOutMenu
-                          ref={myRef}
+                          menuItems={entities}
                         />
                         <TreeView.Leaf
-                          kind="small"
-                          type="load"
-                          iconUrl={IconLoad}
+                          kind="medium"
+                          type="house"
+                          iconUrl={IconHouse}
                           numberPicker
-                          title="Load"
+                          title="My House"
                           onTitleChange={action('onChange')}
+                          refHook={myRef}
                         >
-                          <Dialog
-                            show
-                            onClose={action('onClick')}
-                            title="Configuration"
-                            style={dialogboxStyle}
+                          <TreeView.Branch
+                            className="treeView__branch--level3"
                           >
-                            hello world
-                          </Dialog>
+                            <TreeView.Leaf
+                              className="entryPoint"
+                              kind="small"
+                              type="plus"
+                              title="Add"
+                              editable={false}
+                              menuItems={devices}
+                              popOutMenu
+                              ref={myRef}
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="load"
+                              iconUrl={IconLoad}
+                              numberPicker
+                              title="Load"
+                              onTitleChange={action('onChange')}
+                            >
+                              <Dialog
+                                show
+                                onClose={action('onClick')}
+                                title="Configuration"
+                                style={dialogboxStyle}
+                              >
+                                hello world
+                              </Dialog>
+                            </TreeView.Leaf>
+                            <TreeView.Leaf
+                              kind="small"
+                              type="light"
+                              iconUrl={IconLight}
+                              numberPicker
+                              title="Lights"
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="battery"
+                              title="Battery Storage"
+                              iconUrl={IconBattery}
+                              numberPicker
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="solar"
+                              iconUrl={IconSolar}
+                              numberPicker
+                              title="solar"
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="tv"
+                              iconUrl={IconTV}
+                              numberPicker
+                              title="TV Set"
+                            />
+                          </TreeView.Branch>
                         </TreeView.Leaf>
                         <TreeView.Leaf
-                          kind="small"
-                          type="light"
-                          iconUrl={IconLight}
+                          kind="medium"
+                          type="house"
+                          title="house"
+                          iconUrl={IconHouse}
                           numberPicker
-                          title="Lights"
+                        >
+                          <TreeView.Branch
+                            className="treeView__branch--level3"
+                          >
+                            <TreeView.Leaf
+                              className="entryPoint"
+                              kind="small"
+                              type="plus"
+                              title="Add"
+                              editable={false}
+                              menuItems={devices}
+                              popOutMenu
+                            />
+                          </TreeView.Branch>
+                        </TreeView.Leaf>
+                        <TreeView.Leaf
+                          kind="medium"
+                          type="celltower"
+                          iconUrl={IconCelltower}
+                          title="Cell Towers"
+                          numberPicker
                         />
                         <TreeView.Leaf
-                          kind="small"
-                          type="battery"
-                          title="Battery Storage"
-                          iconUrl={IconBattery}
+                          kind="medium"
+                          type="generator"
+                          iconUrl={IconGenerator}
                           numberPicker
-                        />
-                        <TreeView.Leaf
-                          kind="small"
-                          type="solar"
-                          iconUrl={IconSolar}
-                          numberPicker
-                          title="solar"
-                        />
-                        <TreeView.Leaf
-                          kind="small"
-                          type="tv"
-                          iconUrl={IconTV}
-                          numberPicker
-                          title="TV Set"
+                          title="Generators"
                         />
                       </TreeView.Branch>
-                    </TreeView.Leaf>
-                    <TreeView.Leaf
-                      kind="medium"
-                      type="house"
-                      title="house"
-                      iconUrl={IconHouse}
-                      numberPicker
-                    >
-                      <TreeView.Branch
-                        className="treeView__branch--level3"
-                      >
+                      <TreeView.Branch className="treeView__branch--level1">
                         <TreeView.Leaf
                           className="entryPoint"
-                          kind="small"
+                          kind="medium"
                           type="plus"
-                          title="Add"
+                          title="Market #2"
                           editable={false}
-                          menuItems={devices}
                           popOutMenu
+                          menuItems={entities}
+                        />
+                        <TreeView.Leaf
+                          kind="medium"
+                          type="house"
+                          iconUrl={IconHouse}
+                          numberPicker
+                          title="My House"
+                          onTitleChange={action('onChange')}
+                          refHook={myRef}
+                        >
+                          <TreeView.Branch
+                            className="treeView__branch--level3"
+                          >
+                            <TreeView.Leaf
+                              className="entryPoint"
+                              kind="small"
+                              type="plus"
+                              title="Add"
+                              editable={false}
+                              menuItems={devices}
+                              popOutMenu
+                              ref={myRef}
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="load"
+                              iconUrl={IconLoad}
+                              numberPicker
+                              title="Load"
+                              onTitleChange={action('onChange')}
+                            >
+                              <Dialog
+                                show
+                                onClose={action('onClick')}
+                                title="Configuration"
+                                style={dialogboxStyle}
+                              >
+                                hello world
+                              </Dialog>
+                            </TreeView.Leaf>
+                            <TreeView.Leaf
+                              kind="small"
+                              type="light"
+                              iconUrl={IconLight}
+                              numberPicker
+                              title="Lights"
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="battery"
+                              title="Battery Storage"
+                              iconUrl={IconBattery}
+                              numberPicker
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="solar"
+                              iconUrl={IconSolar}
+                              numberPicker
+                              title="solar"
+                            />
+                            <TreeView.Leaf
+                              kind="small"
+                              type="tv"
+                              iconUrl={IconTV}
+                              numberPicker
+                              title="TV Set"
+                            />
+                          </TreeView.Branch>
+                        </TreeView.Leaf>
+                        <TreeView.Leaf
+                          kind="medium"
+                          type="house"
+                          title="house"
+                          iconUrl={IconHouse}
+                          numberPicker
+                        >
+                          <TreeView.Branch
+                            className="treeView__branch--level3"
+                          >
+                            <TreeView.Leaf
+                              className="entryPoint"
+                              kind="small"
+                              type="plus"
+                              title="Add"
+                              editable={false}
+                              menuItems={devices}
+                              popOutMenu
+                            />
+                          </TreeView.Branch>
+                        </TreeView.Leaf>
+                        <TreeView.Leaf
+                          kind="medium"
+                          type="celltower"
+                          iconUrl={IconCelltower}
+                          title="Cell Towers"
+                          numberPicker
+                        />
+                        <TreeView.Leaf
+                          kind="medium"
+                          type="generator"
+                          iconUrl={IconGenerator}
+                          numberPicker
+                          title="Generators"
                         />
                       </TreeView.Branch>
                     </TreeView.Leaf>
-                    <TreeView.Leaf
-                      kind="medium"
-                      type="celltower"
-                      iconUrl={IconCelltower}
-                      title="Cell Towers"
-                      numberPicker
-                    />
-                    <TreeView.Leaf
-                      kind="medium"
-                      type="generator"
-                      iconUrl={IconGenerator}
-                      numberPicker
-                      title="Generators"
-                    />
+
                   </TreeView.Branch>
                 </TreeView>
               </section>

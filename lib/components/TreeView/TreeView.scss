@@ -10,8 +10,36 @@
     margin: 20px 0;
     position: relative;
 
+    &--level0 {
+      > .entryPoint > .treeView__leaf__content:after {
+        @include themify($themes) {
+          border-bottom: themed('border');
+        }
+        display: block;
+        content: '';
+        width: 60px;
+        height: 1px;
+        position: absolute;
+        right: -70px;
+        top: 64px;
+      }
+    }
+
     &--level1 {
-      margin-left: 16px;
+      margin-left: 150px;
+      margin-top: -68px;
+      &:not(:last-child):after {
+        @include themify($themes) {
+          border-left: themed('border');
+        }
+        display: block;
+        content: '';
+        width: 1px;
+        height: calc(100% - 180px);
+        position: absolute;
+        left: 50px;
+        top: 130px;
+      }
     }
 
     &--level2 {
@@ -79,9 +107,9 @@
           display: block;
           content: '';
           height: 1px;
-          width: 40px;
+          width: 50px;
           position: absolute;
-          right: -43px;
+          right: -58px;
           top: 37px;
         }
       }
@@ -217,7 +245,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 160px;
+    max-width: 130px;
     position: relative;
 
     .diamond {
