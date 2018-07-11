@@ -221,7 +221,183 @@ storiesOf('D3A/Layouts/Configuration', module)
     )),
   )
   .add(
-    'Page 2 filled',
+    'Page 2 filled two level',
+    withInfo(`
+      Just the layout of the Configuration with a dummy configuration tree
+
+      ~~~js
+      <Layout layout="configurationPage--2">Children</Layout>
+      ~~~
+
+    `)(() => (
+      <ThemeProvider theme="d3a">
+        <Layout layout="wrapper">
+          <Header
+            logoUrl={logo}
+            logoLink="/"
+            logoAlt="D3ASIM"
+          >
+            <UserStatus />
+          </Header>
+
+          <Layout layout="configurationPage" className="content">
+            <Hero
+              titleText="Start your configuration"
+              subtitleText="global settings and foo"
+            />
+            <Layout layout="configurationPage--2">
+              <div className="stepNavigation">
+                <StepButton
+                  label="General Setupo"
+                />
+              </div>
+              <section className="configurationTree">
+                <TreeView className="treeView--left">
+                  <TreeView.Branch>
+                    <TreeView.Leaf
+                      className="entryPoint root"
+                      kind="large"
+                      type="configuration"
+                      iconUrl={IconConfiguration}
+                      title="My Simulation 1"
+                      editable={false}
+                    />
+                  </TreeView.Branch>
+                  <TreeView.Branch className="treeView__branch--level1">
+                    <TreeView.Leaf
+                      className="entryPoint"
+                      kind="medium"
+                      type="plus"
+                      title="Market #1"
+                      editable={false}
+                      popOutMenu
+                      menuItems={entities}
+                    />
+                    <TreeView.Leaf
+                      kind="medium"
+                      type="house"
+                      iconUrl={IconHouse}
+                      numberPicker
+                      title="My House"
+                      onTitleChange={action('onChange')}
+                      refHook={myRef}
+                    >
+                      <TreeView.Branch
+                        className="treeView__branch--level3"
+                      >
+                        <TreeView.Leaf
+                          className="entryPoint"
+                          kind="small"
+                          type="plus"
+                          title="Add"
+                          editable={false}
+                          menuItems={devices}
+                          popOutMenu
+                          ref={myRef}
+                        />
+                        <TreeView.Leaf
+                          kind="small"
+                          type="load"
+                          iconUrl={IconLoad}
+                          numberPicker
+                          title="Load"
+                          onTitleChange={action('onChange')}
+                        >
+                          <Dialog
+                            show
+                            onClose={action('onClick')}
+                            title="Configuration"
+                            style={dialogboxStyle}
+                          >
+                            hello world
+                          </Dialog>
+                        </TreeView.Leaf>
+                        <TreeView.Leaf
+                          kind="small"
+                          type="light"
+                          iconUrl={IconLight}
+                          numberPicker
+                          title="Lights"
+                        />
+                        <TreeView.Leaf
+                          kind="small"
+                          type="battery"
+                          title="Battery Storage"
+                          iconUrl={IconBattery}
+                          numberPicker
+                        />
+                        <TreeView.Leaf
+                          kind="small"
+                          type="solar"
+                          iconUrl={IconSolar}
+                          numberPicker
+                          title="solar"
+                        />
+                        <TreeView.Leaf
+                          kind="small"
+                          type="tv"
+                          iconUrl={IconTV}
+                          numberPicker
+                          title="TV Set"
+                        />
+                      </TreeView.Branch>
+                    </TreeView.Leaf>
+                    <TreeView.Leaf
+                      kind="medium"
+                      type="house"
+                      title="house"
+                      iconUrl={IconHouse}
+                      numberPicker
+                    >
+                      <TreeView.Branch
+                        className="treeView__branch--level3"
+                      >
+                        <TreeView.Leaf
+                          className="entryPoint"
+                          kind="small"
+                          type="plus"
+                          title="Add"
+                          editable={false}
+                          menuItems={devices}
+                          popOutMenu
+                        />
+                      </TreeView.Branch>
+                    </TreeView.Leaf>
+                    <TreeView.Leaf
+                      kind="medium"
+                      type="celltower"
+                      iconUrl={IconCelltower}
+                      title="Cell Towers"
+                      numberPicker
+                    />
+                    <TreeView.Leaf
+                      kind="medium"
+                      type="generator"
+                      iconUrl={IconGenerator}
+                      numberPicker
+                      title="Generators"
+                    />
+                  </TreeView.Branch>
+
+                </TreeView>
+              </section>
+              <section className="configurationPanel">
+                <Card className="interactions">
+                  <Button label="start" />
+                  <Button label="save" />
+                </Card>
+              </section>
+            </Layout>
+          </Layout>
+          <div className="footer">
+            <a href="foo">About</a>
+          </div>
+        </Layout>
+      </ThemeProvider>
+    )),
+  )
+  .add(
+    'Page 2 filled 3 level',
     withInfo(`
       Just the layout of the Configuration with a dummy configuration tree
 
