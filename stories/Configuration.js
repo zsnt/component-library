@@ -3,10 +3,13 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
-import { Diamond, Hero, Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card, StepButton, Form, TextInputField, Label, NumberPicker, Dialog, Select } from '../lib';
+import { Diamond, Hero, Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card, StepButton, Form, TextInputField, Label, NumberPicker, Dialog, Select, ProgressIndicator } from '../lib';
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
+import IconChart from './img/icon_chart.svg';
+import IconGrid from './img/icon_grid.svg'
+import IconRun from './img/icon_run.svg';
 import IconGenerator from './img/icon_generator.svg';
 import IconCelltower from './img/icon_celltower.svg';
 import IconHouse from './img/icon_house.svg';
@@ -15,6 +18,34 @@ import IconBattery from './img/icon_battery.svg';
 import IconLoad from './img/icon_load.svg';
 import IconSolar from './img/icon_solar.svg';
 import IconTV from './img/icon_tv.svg';
+
+const steps = [
+  {
+    callback: action('onClick'),
+    title:'General Setup',
+    state: 'prev',
+    iconUrl: IconConfiguration,
+  },
+  {
+    callback: action('onClick'),
+    title:'Grid Configuration',
+    state: 'current',
+    iconUrl: IconGrid,
+  },
+  {
+    callback: action('onClick'),
+    title:'Run Simulation',
+    state: 'next',
+    iconUrl: IconRun,
+  },
+  {
+    callback: action('onClick'),
+    title:'view Results',
+    state: 'next',
+    iconUrl: IconChart,
+    inactive: true,
+  }
+];
 
 const selectOptions = [
   {
@@ -105,10 +136,8 @@ storiesOf('D3A/Layouts/Configuration', module)
               titleText="Start your configuration"
               subtitleText="global settings and foo"
             />
+            <ProgressIndicator className="progressBar" steps = {steps}/>
             <Layout layout="configurationPage--1">
-              <nav className="stepNavigation">
-                <StepButton />
-              </nav>
               <section className="settingsForm">
                 <Diamond
                   className="settingsForm__diamond"
@@ -173,10 +202,8 @@ storiesOf('D3A/Layouts/Configuration', module)
               titleText="Start your configuration"
               subtitleText="global settings and foo"
             />
+            <ProgressIndicator className="progressBar" steps = {steps}/>
             <Layout layout="configurationPage--2">
-              <div className="stepNavigation">
-                <StepButton />
-              </div>
               <section className="configurationTree">
                 <TreeView className="treeView--left">
                   <TreeView.Branch>
@@ -233,10 +260,8 @@ storiesOf('D3A/Layouts/Configuration', module)
               titleText="Start your configuration"
               subtitleText="global settings and foo"
             />
+            <ProgressIndicator className="progressBar" steps = {steps}/>
             <Layout layout="configurationPage--2">
-              <div className="stepNavigation">
-                <StepButton />
-              </div>
               <section className="configurationTree">
                 <TreeView className="treeView--left">
                   <TreeView.Branch>
@@ -365,12 +390,6 @@ storiesOf('D3A/Layouts/Configuration', module)
                     />
                   </TreeView.Branch>
                 </TreeView>
-              </section>
-              <section className="configurationPanel">
-                <Card className="interactions">
-                  <Button label="start" />
-                  <Button label="save" />
-                </Card>
               </section>
             </Layout>
           </Layout>
