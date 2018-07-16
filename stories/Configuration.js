@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-react-router';
-import { Diamond, Hero, Button, ThemeProvider, Layout, Header, TreeView, UserStatus, Card, StepButton, Form, TextInputField, Label, NumberPicker, Dialog, Select, ProgressIndicator } from '../lib';
+import { Diamond, Hero, ThemeProvider, Layout, Header, TreeView, UserStatus, Form, TextInputField, Label, NumberPicker, Dialog, Select, ProgressIndicator } from '../lib';
 import logo from './img/Logo.png';
 
 import IconConfiguration from './img/icon_configuration.svg';
 import IconChart from './img/icon_chart.svg';
-import IconGrid from './img/icon_grid.svg'
+import IconGrid from './img/icon_grid.svg';
 import IconRun from './img/icon_run.svg';
 import IconGenerator from './img/icon_generator.svg';
 import IconCelltower from './img/icon_celltower.svg';
@@ -22,29 +22,29 @@ import IconTV from './img/icon_tv.svg';
 const steps = [
   {
     callback: action('onClick'),
-    title:'General Setup',
+    title: 'General Setup',
     state: 'prev',
     iconUrl: IconConfiguration,
   },
   {
     callback: action('onClick'),
-    title:'Grid Configuration',
+    title: 'Grid Configuration',
     state: 'current',
     iconUrl: IconGrid,
   },
   {
     callback: action('onClick'),
-    title:'Run Simulation',
+    title: 'Run Simulation',
     state: 'next',
     iconUrl: IconRun,
   },
   {
     callback: action('onClick'),
-    title:'view Results',
+    title: 'view Results',
     state: 'next',
     iconUrl: IconChart,
     inactive: true,
-  }
+  },
 ];
 
 const selectOptions = [
@@ -136,7 +136,7 @@ storiesOf('D3A/Layouts/Configuration', module)
               titleText="Start your configuration"
               subtitleText="global settings and foo"
             />
-            <ProgressIndicator className="progressBar" steps = {steps}/>
+            <ProgressIndicator className="progressBar" steps={steps} />
             <Layout layout="configurationPage--1">
               <section className="settingsForm">
                 <Diamond
