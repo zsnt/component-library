@@ -26,4 +26,8 @@
   &-subtitle {
     @extend %headline-subtitle;
   }
+
+  &-verbund-subtitle {
+    @extend %headline-verbund-subtitle;
+  }
 }

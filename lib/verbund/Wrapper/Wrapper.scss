@@ -1,0 +1,23 @@
+@import '../../styles/themify';
+
+.verbund {
+  @include themify($themes) {
+    background: themed('bgColor');
+    background-blend-mode: multiply, multiply, normal;
+  }
+
+  &-wrapper {
+    padding-top: 75px;
+    min-height: 100vh;
+
+    > div {
+      max-width: 1122px;
+      margin: 0 auto;
+    }
+
+    &-component {
+      padding: 50px;
+      min-height: 0;
+    }
+  }
+}

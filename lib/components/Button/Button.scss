@@ -11,7 +11,7 @@
   border: 0;
   border-radius: 2px;
   cursor: pointer;
-  transition: color 0.1s, background-color 0.1s;
+  transition: color .1s, background-color .1s;
   font-size: $small;
 
   &:hover {
@@ -21,7 +21,7 @@
   }
 
   &[disabled] {
-    opacity: 0.5;
+    opacity: .5;
     cursor: not-allowed;
   }
 
@@ -40,8 +40,8 @@
     }
   }
 
-  &--secondary,
-  &--cta {
+  &--cta,
+  &--secondary {
     @include themify($themes) {
       color: themed('light');
       background-color: themed('black5');
@@ -85,7 +85,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     @include themify($themes) {
       background-color: transparent;
     }
@@ -108,8 +107,8 @@
       }
     }
 
-    &:hover,
-    &:active {
+    &:active,
+    &:hover {
       @include themify($themes) {
         box-shadow: none;
       }
@@ -123,6 +122,29 @@
 
       .button__label {
         text-decoration: underline;
+      }
+    }
+  }
+
+  &--intro {
+    padding: 20px 22px;
+    min-width: 175px;
+    font-size: 16px;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+    @include themify($themes) {
+      background-color: themed('introDark');
+
+      &:hover {
+        background-color: themed('introLight');
+        box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+      }
+
+      &:active {
+        background-color: themed('introLight');
+        box-shadow: none;
       }
     }
   }

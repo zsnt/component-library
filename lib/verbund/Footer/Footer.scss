@@ -1,0 +1,24 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.footer {
+  margin-top: 62px;
+  font-size: $small;
+  font-weight: 300;
+  padding-top: 56px;
+  padding-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.148579);
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+    border-top: 1px solid themed('white10');
+    color: themed('footer-color');
+  }
+
+  &-default {
+    margin-top: 0;
+  }
+
+  &-intro {
+    margin-top: 125px;
+  }
+}
