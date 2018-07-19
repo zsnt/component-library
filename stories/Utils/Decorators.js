@@ -1,6 +1,6 @@
 import React from 'react';
 import StoryRouter from 'storybook-react-router';
-import { ThemeProvider } from 'components';
+import { ThemeProvider } from '../../lib';
 
 export function ThemeDecorator(theme) {
   return story =>
