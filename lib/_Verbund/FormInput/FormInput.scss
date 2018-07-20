@@ -1,0 +1,37 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.form-input {
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 17px;
+  @include themify($themes) {
+    background-color: themed('white10');
+  }
+
+  input {
+    border-radius: 4px;
+    padding: 0 16px;
+    background: transparent;
+    -webkit-appearance: none;
+    line-height: 60px;
+    color: white;
+    font-size: $medium;
+    font-weight: $thin-weight;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    width: 100%;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, .6);
+    }
+  }
+
+  .input__icon {
+    position: absolute;
+    right: 20.5px;
+    height: 100%;
+    top: 0;
+  }
+}

@@ -126,25 +126,58 @@
     }
   }
 
-  &--verbund-primary {
-    padding: 20px 22px;
-    min-width: 175px;
-    font-size: 16px;
-    font-weight: 300;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
-    @include themify($themes) {
-      background-color: themed('introDark');
+  &--verbund {
+    &-primary,
+    &-secondary {
+      border-radius: 4px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+      padding: 0 22px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+      position: relative;
+    }
 
-      &:hover {
-        background-color: themed('introLight');
-        box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+    &-primary {
+      min-width: 175px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 75px;
+      @include themify($themes) {
+        background-color: themed('introDark');
+
+        &:hover {
+          background-color: themed('introLight');
+          box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+        }
+
+        &:active {
+          background-color: themed('introLight');
+          box-shadow: none;
+        }
+      }
+    }
+
+    &-secondary {
+      font-size: 16px;
+      line-height: 60px;
+      width: 100%;
+      @include themify($themes) {
+        border: 1px solid themed('introDark');
+        background-color: themed('white5');
+
+        &:hover {
+          box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+        }
+
+        &:active {
+          box-shadow: none;
+        }
       }
 
-      &:active {
-        background-color: themed('introLight');
-        box-shadow: none;
+      .button__icon {
+        position: absolute;
+        right: 14.23px;
+        height: 100%;
+        top: 0;
       }
     }
   }
