@@ -76,7 +76,7 @@ storiesOf('VERBUND/Pages', module)
             </Section>
             <Button
               label="Anmelden"
-              type="intro"
+              type="verbund-primary"
               onClick={action('clicked')}
             />
             <Footer type="intro">

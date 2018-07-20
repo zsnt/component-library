@@ -7,17 +7,17 @@ import {
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
-storiesOf('VERBUND/Components/Common', module)
+storiesOf('VERBUND/Components/Common/Button', module)
   .addDecorator(ThemeDecorator('verbund'))
   .add(
-    'Button',
+    'primary',
     withInfo(`
         description or documentation about my component, supports markdown
   
         ~~~js
         <Button
           label="Anmelden"
-          type="intro"
+          type="verbund-primary"
           onClick={action('clicked')}
         />
         ~~~
@@ -26,12 +26,14 @@ storiesOf('VERBUND/Components/Common', module)
         <Wrapper>
           <Button
             label="Anmelden"
-            type="intro"
+            type="verbund-primary"
             onClick={action('clicked')}
           />
         </Wrapper>
       ))
-  )
+  );
+storiesOf('VERBUND/Components/Common', module)
+  .addDecorator(ThemeDecorator('verbund'))
   .add(
     'Footer',
     withInfo(`

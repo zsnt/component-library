@@ -97,7 +97,7 @@ storiesOf('VERBUND/Components/Intro/Section', module)
           </Section>
           <Button
             label="Anmelden"
-            type="intro"
+            type="verbund-primary"
             onClick={action('clicked')}
           />
         </Wrapper>
