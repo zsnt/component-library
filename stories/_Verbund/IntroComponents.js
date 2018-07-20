@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import {
-  Wrapper, Section, Button, FormInput, FormTitle,
+  Wrapper, Section, Button, FormInput, FormTitle, FormLink,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 import IconLogin from '../img/icon_login.svg';
@@ -158,6 +158,7 @@ storiesOf('VERBUND/Components/Intro/PaneForm', module)
             onClick={action('clicked')}
             style={{ marginTop: 18 }}
           />
+          <FormLink />
         </Wrapper>
       )),
 );

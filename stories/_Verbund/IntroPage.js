@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import {
   Header, Headline, Button,
-  Wrapper, Section, Footer, RightSlidingPane, FormInput, FormTitle,
+  Wrapper, Section, Footer, RightSlidingPane, FormInput, FormTitle, FormLink,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 import imageFile from '../img/placeholder-2.jpg';
@@ -109,6 +109,7 @@ storiesOf('VERBUND/Pages', module)
                   onClick={action('clicked')}
                   style={{ marginTop: 18 }}
                 />
+                <FormLink />
               </div>
             )
           }
