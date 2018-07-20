@@ -43,7 +43,7 @@ storiesOf('VERBUND/Pages', module)
         </Section>
         <Button
           label="Anmelden"
-          type="intro"
+          type="verbund-primary"
           onClick={action('clicked')}
         />
       </Wrapper>
@@ -58,15 +58,15 @@ storiesOf('VERBUND/Pages', module)
             >
               <Headline type="verbund-subtitle">
                 Mieter Strom Modell
-            </Headline>
+              </Headline>
             </Header>
             <Section type="intro-title">
               Schließlich ist es<br />
               Ihr Strom.
             <Section type="intro-subtitle">
-                Sed posuere consectetur est at lobortis. Integer posuere erat a ante<br />
-                venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibu<br />
-                magnis dis parturient montes, nascetur ridiculus mus.
+              Sed posuere consectetur est at lobortis. Integer posuere erat a ante<br />
+              venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibu<br />
+              magnis dis parturient montes, nascetur ridiculus mus.
             </Section>
               <div className="circles">
                 <div className="circle fill" />
