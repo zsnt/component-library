@@ -1,0 +1,24 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.form-title {
+  width: 100%;
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .25);
+  position: relative;
+  padding-bottom: 12.4px;
+  margin-bottom: 21px;
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+    font-weight: 100;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.32);
+  }
+
+  .title__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.SlidingPaneWrapper {
+  position: relative;
+
+  > div {
+    transition: all .5s;
+  }
+
+  .SlidingPane {
+    position: absolute;
+    background-color: #283339;
+    width: 384px;
+    top: 0;
+    right: -384px;
+    padding: 89.6px 54px;
+    height: 100%;
+    transition: all .6s;
+  }
+
+  .SlidingBody {
+    transform: translateX(0);
+  }
+
+  &.Opened {
+    .SlidingPane {
+      right: 0;
+      transition: all .4s;
+    }
+
+    .SlidingBody {
+      transform: translateX(-384px);
+    }
+  }
+}

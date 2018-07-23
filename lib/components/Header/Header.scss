@@ -3,9 +3,12 @@
 
 .header {
   @include themify($themes) {
-    height: themed('headerHeight');
     border-bottom: themed('border');
+    width: themed('header-width');
+    height: themed('header-height');
+    margin-bottom: themed('header-bottom');
   }
   display: flex;
   justify-content: space-between;
+  position: relative;
 }

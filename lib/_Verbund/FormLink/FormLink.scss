@@ -1,0 +1,17 @@
+@import '../../styles/themify';
+@import '../../styles/base';
+
+.form-link {
+  margin-top: 20.54px;
+
+  div {
+    float: left;
+    color: rgba(255, 255, 255, .6);
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 22px;
+    text-shadow: 2px 2px 4px rgba(0,0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+  }
+}

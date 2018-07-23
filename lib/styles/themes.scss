@@ -45,6 +45,60 @@ $themes: (
     lightGrayBlue: #d3dee3,
 
     // Dimensions
-    headerHeight: 47px,
+    header-width: 100%,
+    header-height: 47px,
+    header-bottom: inherit,
+),
+  verbund: (
+
+    // Brand colors
+    primary: #a666ff, // brand
+    primaryLight: #69459b, // brand lightened
+    primaryDark: #553581, // brand darkened
+    introLight: #10BC8D,
+    introDark: #24A98E,
+    secondary: #35d7c6, // second highlight
+
+    // Background colors
+    bgColor: (radial-gradient(1292.00px at 50% 87.75%, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), linear-gradient(360deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #283B45),
+    cardBg: rgba(0, 0, 0, 0.06),
+    darkBg: #043d53,
+    lightBg: #3a657f,
+    odd: rgba(9, 21, 25, 0.25),
+    formElement: #1d5064,
+    even: #3a657f,
+    line: #7d7d7d,
+    black5: rgba(0, 0, 0, 0.05),
+    white5: rgba(255, 255, 255, 0.05),
+    white10: rgba(255, 255, 255, 0.1),
+
+    positive: #5de668,
+    negative: #961d46,
+    warning: #fde74c,
+
+    // Borders
+    border: (1px solid #7d7d7d),
+    formBorder: (1px solid rgba(255, 255, 255, 0.15)),
+
+    // Shadows
+    boxShadow: (0 10px 15px 0 rgba(0, 0, 0, 0.15)),
+    formShadow: (5px 5px 0 0 rgba(9, 21, 25, 0.25)),
+
+    // Fonts
+    fontFamily: ('Roboto', sans-serif),
+
+    // Textcolors
+    textcolor: #fff,
+    textSubColor: #A8A8A8,
+    link: #a666ff,
+    light: #fff,
+    title: #7d7d7d,
+    lightGrayBlue: #d3dee3,
+    footer-color: #F8F8F8,
+
+    // Dimensions
+    header-width: 253px,
+    header-height: 39.5px,
+    header-bottom: 84.5px,
   ),
 );

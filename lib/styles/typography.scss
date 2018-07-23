@@ -42,3 +42,41 @@
     color: themed('textSubColor');
   }
 }
+
+%headline-verbund-subtitle {
+  @include themify($themes) {
+    color: themed('textSubColor');
+  }
+  font-size: $medium;
+  font-weight: $thin-weight;
+  position: absolute;
+  bottom: $subtitle-offset;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.148579);
+}
+
+%section {
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+  }
+  color: $color-white;
+  font-weight: $thin-weight;
+  position: relative;
+}
+
+%section-intro-title {
+  font-size: $large;
+  line-height: $large-height;
+  font-weight: $thin-weight;
+  padding-top: 49px;
+  padding-bottom: 35.1px;
+  margin-bottom: 58px;
+  text-shadow: 2px 2px 4px rgba(26, 11, 52, 0.3);
+}
+
+%section-intro-subtitle {
+  font-size: $h4;
+  line-height: $h4-height;
+  font-weight: $thin-weight;
+  padding-top: 38.2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
