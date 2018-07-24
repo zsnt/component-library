@@ -1,4 +1,4 @@
-@import '../../styles/themify';
+@import '../../../styles/themify';
 
 .verbund {
   @include themify($themes) {
