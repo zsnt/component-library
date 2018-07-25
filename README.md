@@ -90,4 +90,4 @@ When you pushed the deploy branch the heroku deploy pipeline will automatically 
 ### External Libraries and packages
 The used Icons are from [material.io](https://material.io/tools/icons/)
 
-### Testing automatic publishing w/ newly connected GitHub and NPM user gsydev
+### Testing automatic publishing w/ newly connected GitHub and NPM user gsydev (again)
