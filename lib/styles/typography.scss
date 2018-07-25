@@ -56,6 +56,45 @@
   }
 }
 
+%headline-card-title {
+  font-size: $card-title;
+  line-height: $card-title-height;
+  font-weight: $thin-weight;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
+
+  img {
+    position: relative;
+    margin-left: 13px;
+    top: -4px;
+  }
+
+  .info {
+    font-size: $small;
+    line-height: $card-title-info-height;
+    letter-spacing: .5px;
+    @include themify($themes) {
+      color: themed('textSubColor');
+    }
+  }
+}
+
+%headline-card-text-large {
+  font-size: $card-text-large;
+  font-weight: $thin-weight;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
+
+  .unit {
+    font-size: $card-text-large-unit;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  }
+}
+
 %headline-subtitle {
   @include themify($themes) {
     color: themed('textSubColor');

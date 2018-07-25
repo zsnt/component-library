@@ -27,6 +27,14 @@
     @extend %headline-page-title;
   }
 
+  &-card-title {
+    @extend %headline-card-title;
+  }
+
+  &-card-text-large {
+    @extend %headline-card-text-large;
+  }
+
   &-subtitle {
     @extend %headline-subtitle;
   }

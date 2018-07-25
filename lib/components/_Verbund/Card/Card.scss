@@ -1,0 +1,29 @@
+@import '../../../styles/themify';
+@import '../../../styles/base';
+
+.page-card {
+  border-radius: 4px;
+  padding: $card-padding;
+  @include themify($themes) {
+    background: themed('white5');
+  }
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.page-cards {
+  display: flex;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .page-cards &:not(:last-child) {
+    margin-right: 16px;
+    margin-bottom: 0;
+    width: 50%;
+  }
+}
