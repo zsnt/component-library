@@ -37,6 +37,67 @@
   padding-bottom: 15px;
 }
 
+%headline-page-title {
+  font-size: $page-title;
+  line-height: $page-title-height;
+  font-weight: $thin-weight;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
+
+  .info {
+    font-size: $medium;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.148579);
+    @include themify($themes) {
+      color: themed('textSubColor');
+      line-height: initial;
+    }
+  }
+}
+
+%headline-card-title {
+  font-size: $card-title;
+  line-height: $card-title-height;
+  font-weight: $thin-weight;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
+
+  img {
+    position: relative;
+    margin-left: 13px;
+    top: -4px;
+  }
+
+  .info {
+    font-size: $small;
+    line-height: $card-title-info-height;
+    letter-spacing: .5px;
+    @include themify($themes) {
+      color: themed('textSubColor');
+    }
+  }
+}
+
+%headline-card-text-large {
+  font-size: $card-text-large;
+  font-weight: $thin-weight;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: baseline;
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
+
+  .unit {
+    margin-left: 6.24px;
+    font-size: $card-text-large-unit;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  }
+}
+
 %headline-subtitle {
   @include themify($themes) {
     color: themed('textSubColor');

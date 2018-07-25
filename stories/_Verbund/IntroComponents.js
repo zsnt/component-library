@@ -3,12 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import {
-  Wrapper, Section, Button, FormInput, FormTitle, FormLink,
+  Wrapper, Section, Button, FormInput, FormTitle, FormLink, Icons,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
-import IconLogin from '../img/icon_login.svg';
-import IconEmail from '../img/icon_email.svg';
-import IconPassword from '../img/icon_password.svg';
 
 storiesOf('VERBUND/Components/Intro/Section/Components', module)
   .addDecorator(ThemeDecorator('verbund'))
@@ -115,25 +112,29 @@ storiesOf('VERBUND/Components/Intro/PaneForm', module)
       description or documentation about my component, supports markdown
 
       ~~~js
-      <Section type="intro-title">
-        Schließlich ist es<br />
-        Ihr Strom.
-        <Section type="intro-subtitle">
-          Sed posuere consectetur est at lobortis. Integer posuere erat a ante<br />
-          venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibu<br />
-          magnis dis parturient montes, nascetur ridiculus mus.
-        </Section>
-        <div className="circles">
-          <div className="circle fill" />
-          <div className="circle" />
-          <div className="circle" />
-        </div>
-      </Section>
-      <Button
-        label="Anmelden"
-        type="intro"
-        onClick={action('clicked')}
-      />
+      <Wrapper>
+        <FormTitle />
+        <FormInput
+          label="E-Mail"
+          type="default"
+          onChange={action('changed')}
+          icon={Icons.email}
+        />
+        <FormInput
+          label="Password"
+          type="default"
+          onChange={action('changed')}
+          icon={Icons.password}
+        />
+        <Button
+          label="Anmelden"
+          type="verbund-secondary"
+          icon={Icons.login}
+          onClick={action('clicked')}
+          style={{ marginTop: 18 }}
+        />
+        <FormLink />
+      </Wrapper>
       ~~~
 
     `)(() => (
@@ -143,18 +144,18 @@ storiesOf('VERBUND/Components/Intro/PaneForm', module)
             label="E-Mail"
             type="default"
             onChange={action('changed')}
-            icon={IconEmail}
+            icon={Icons.email}
           />
           <FormInput
             label="Password"
             type="default"
             onChange={action('changed')}
-            icon={IconPassword}
+            icon={Icons.password}
           />
           <Button
             label="Anmelden"
             type="verbund-secondary"
-            icon={IconLogin}
+            icon={Icons.login}
             onClick={action('clicked')}
             style={{ marginTop: 18 }}
           />

@@ -9,17 +9,9 @@ import {
   Wrapper,
   Section,
   Footer,
-  RightSlidingPane,
-  FormInput,
-  FormTitle,
-  FormLink,
+  Icons,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
-import imageFile from '../img/placeholder-2.jpg';
-import logo from '../img/Verbund/Logo.svg';
-import IconLogin from '../img/icon_login.svg';
-import IconEmail from '../img/icon_email.svg';
-import IconPassword from '../img/icon_password.svg';
 
 storiesOf('VERBUND/Pages', module)
   .addDecorator(ThemeDecorator('verbund'))
@@ -30,33 +22,24 @@ storiesOf('VERBUND/Pages', module)
 
       ~~~js
       <Wrapper layout>
-        <Header
-          logoUrl={logo}
-          logoAlt="Verbund"
-        >
-          <Headline type="verbund-subtitle">
-            Mieter Strom Modell
-            </Headline>
+        <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
+          <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
         </Header>
         <Section type="intro-title">
-          Schließlich ist est ccc<br />
+          Schließlich ist es<br />
           Ihr Strom.
-            <Section type="intro-subtitle">
+          <Section type="intro-subtitle">
             Sed posuere consectetur est at lobortis. Integer posuere erat a ante<br />
             venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibu<br />
             magnis dis parturient montes, nascetur ridiculus mus.
-            </Section>
+          </Section>
           <div className="circles">
             <div className="circle fill" />
             <div className="circle" />
             <div className="circle" />
           </div>
         </Section>
-        <Button
-          label="Anmelden"
-          type="verbund-primary"
-          onClick={action('clicked')}
-        />
+        <Button label="Anmelden" type="verbund-primary" onClick={action('clicked')} />
         <Footer type="intro">
           <div>© VERBUND AG 2018</div>
         </Footer>
@@ -65,7 +48,7 @@ storiesOf('VERBUND/Pages', module)
 
     `)(() => (
       <Wrapper layout>
-        <Header logoUrl={logo} logoAlt="Verbund">
+        <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
           <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
         </Header>
         <Section type="intro-title">

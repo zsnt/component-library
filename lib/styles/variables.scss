@@ -21,11 +21,27 @@ $color-generator: #388574;
 
 /* VERBUND THEME */
 
-// Sizings
+// Font Size
 $large: 68px;
+$page-title: 44px;
+$page-title-info: 14px;
+$card-title: 24px;
+$card-text-large: 56px;
+$card-text-large-unit: 23px;
+
+// Font Line Height
 $large-height: 77px;
 $h4-height: 33px;
+$page-title-height: 55px;
+$card-title-height: 32px;
+$card-title-info-height: 22px;
+$card-text-large-unit-height: 32px;
+
+// Font Weight
 $thin-weight: 100;
+
+// Paddings
+$card-padding: 20px;
 
 // Base Colors
 $color-white: white;
