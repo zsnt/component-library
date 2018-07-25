@@ -37,6 +37,25 @@
   padding-bottom: 15px;
 }
 
+%headline-page-title {
+  font-size: $page-title;
+  line-height: $page-title-height;
+  font-weight: $thin-weight;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  @include themify($themes) {
+    color: themed('textcolor');
+  }
+
+  .info {
+    font-size: $medium;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.148579);
+    @include themify($themes) {
+      color: themed('textSubColor');
+      line-height: initial;
+    }
+  }
+}
+
 %headline-subtitle {
   @include themify($themes) {
     color: themed('textSubColor');

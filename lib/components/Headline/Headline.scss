@@ -23,6 +23,10 @@
     @extend %headline-title;
   }
 
+  &-page-title {
+    @extend %headline-page-title;
+  }
+
   &-subtitle {
     @extend %headline-subtitle;
   }

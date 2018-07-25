@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import {
+  Headline,
   Wrapper, Button, Footer, FormInput, FormTitle,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
@@ -155,6 +156,26 @@ storiesOf('VERBUND/Components/Common/Title', module)
       `)(() => (
         <Wrapper>
           <FormTitle />
+        </Wrapper>
+      ))
+  )
+  .add(
+    'Page Title',
+    withInfo(`
+        description or documentation about my component, supports markdown
+  
+        ~~~js
+        <Headline type="page-title">
+          Übersicht Ihrer Aktivitäten in den letzten 30 Tagen
+        </Headline>
+        ~~~
+  
+      `)(() => (
+        <Wrapper>
+          <Headline type="page-title">
+            Übersicht Ihrer Aktivitäten in den letzten 30 Tagen
+            <div className="info">01.01.2017 - 31.01.2017</div>
+          </Headline>
         </Wrapper>
       ))
   );
