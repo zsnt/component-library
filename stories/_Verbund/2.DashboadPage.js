@@ -1,0 +1,176 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { action } from '@storybook/addon-actions';
+import {
+  Header,
+  Headline,
+  Button,
+  Wrapper,
+  Footer,
+  Icon, Icons,
+  PageCard, PageCards, PageCardBox,
+} from '../../lib';
+import { ThemeDecorator } from '../Utils';
+
+storiesOf('VERBUND/Pages', module)
+  .addDecorator(ThemeDecorator('verbund'))
+  .add(
+    '2. Dashboard',
+    withInfo(`
+      description or documentation about my component, supports markdown
+
+      ~~~js
+      <Wrapper layout>
+        <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
+          <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
+        </Header>
+        <PageCards>
+          <PageCards>
+            <PageCard>
+              <Headline type="card-title">
+                Verbrauch
+              <div className="info">Anteil PV gegenüber Lieferanten</div>
+              </Headline>
+            </PageCard>
+            <PageCard>
+              <Headline type="card-title">
+                Ersparnis
+              <div className="info">Ersparnis gegenüber Lieferanten</div>
+              </Headline>
+            </PageCard>
+          </PageCards>
+          <PageCard>
+            <PageCardBox>
+              <Headline type="card-title">
+                IhrPV-Anteil<img src={Icons.infoCircle} />
+                <div className="info">Ohne Handel verfügbare Menge an PV Energie</div>
+              </Headline>
+              <Headline type="card-text-large">
+                1.900<div className="unit">kWh</div>
+              </Headline>
+            </PageCardBox>
+            <PageCardBox>
+              <Headline type="card-title">
+                Ihr Verbrauch<img src={Icons.infoCircle} />
+                <div className="info">Ihr tatsächlicher PV-Energie Konsum</div>
+              </Headline>
+              <Headline type="card-text-large">
+                450<div className="unit">kWh</div>
+              </Headline>
+            </PageCardBox>
+            <PageCardBox>
+              <Headline type="card-title">
+                Ihr Kontigent<img src={Icons.infoCircle} />
+                <div className="info">Ihr aktuell verbleibendes Kontingent</div>
+              </Headline>
+              <Headline type="card-text-large">
+                1.200<div className="unit">kWh</div>
+              </Headline>
+            </PageCardBox>
+            <div style={{ textAlign: 'center', paddingTop: 30, paddingBottom: 16 }}>
+              <Button
+                label="Strom anbieten"
+                type="verbund-primary"
+                onClick={action('clicked')}
+              />
+            </div>
+          </PageCard>
+        </PageCards>
+        <PageCards>
+          <PageCard>
+            <Headline type="card-title">
+              Wochen-Übersicht
+            <div className="info">Maecenas faucibus mollis interdum.</div>
+            </Headline>
+          </PageCard>
+          <PageCard>
+            <Headline type="card-title">
+              Tages-Übersicht
+            <div className="info">Maecenas faucibus mollis interdum.</div>
+            </Headline>
+          </PageCard>
+        </PageCards>
+        <Footer>
+          <div>© VERBUND AG 2018</div>
+        </Footer>
+      </Wrapper>
+      ~~~
+
+    `)(() => (
+        <Wrapper layout>
+          <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
+            <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
+          </Header>
+          <PageCards>
+            <PageCards>
+              <PageCard>
+                <Headline type="card-title">
+                  Verbrauch
+                <div className="info">Anteil PV gegenüber Lieferanten</div>
+                </Headline>
+              </PageCard>
+              <PageCard>
+                <Headline type="card-title">
+                  Ersparnis
+                <div className="info">Ersparnis gegenüber Lieferanten</div>
+                </Headline>
+              </PageCard>
+            </PageCards>
+            <PageCard>
+              <PageCardBox>
+                <Headline type="card-title">
+                  IhrPV-Anteil<img src={Icons.infoCircle} />
+                  <div className="info">Ohne Handel verfügbare Menge an PV Energie</div>
+                </Headline>
+                <Headline type="card-text-large">
+                  1.900<div className="unit">kWh</div>
+                </Headline>
+              </PageCardBox>
+              <PageCardBox>
+                <Headline type="card-title">
+                  Ihr Verbrauch<img src={Icons.infoCircle} />
+                  <div className="info">Ihr tatsächlicher PV-Energie Konsum</div>
+                </Headline>
+                <Headline type="card-text-large">
+                  450<div className="unit">kWh</div>
+                </Headline>
+              </PageCardBox>
+              <PageCardBox>
+                <Headline type="card-title">
+                  Ihr Kontigent<img src={Icons.infoCircle} />
+                  <div className="info">Ihr aktuell verbleibendes Kontingent</div>
+                </Headline>
+                <Headline type="card-text-large">
+                  1.200<div className="unit">kWh</div>
+                </Headline>
+              </PageCardBox>
+              <div style={{ textAlign: 'center', paddingTop: 30, paddingBottom: 16 }}>
+                <Button
+                  label="Strom anbieten"
+                  type="verbund-primary"
+                  onClick={action('clicked')}
+                />
+              </div>
+            </PageCard>
+          </PageCards>
+          <PageCards>
+            <PageCard>
+              <Headline type="card-title">
+                Wochen-Übersicht
+              <div className="info">Maecenas faucibus mollis interdum.</div>
+              </Headline>
+            </PageCard>
+            <PageCard>
+              <Headline type="card-title">
+                Tages-Übersicht
+              <div className="info">Maecenas faucibus mollis interdum.</div>
+              </Headline>
+            </PageCard>
+          </PageCards>
+          <Footer>
+            <div>© VERBUND AG 2018</div>
+          </Footer>
+        </Wrapper>
+      )),
+);

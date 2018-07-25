@@ -5,7 +5,8 @@ import { action } from '@storybook/addon-actions';
 import {
   Headline,
   Wrapper, Button, Footer, FormInput, FormTitle,
-  Icon, PageCard, PageCards, Icons,
+  Icon, Icons,
+  PageCard, PageCards, PageCardBox,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
@@ -67,11 +68,14 @@ storiesOf('VERBUND/Components/Common/Button', module)
         description or documentation about my component, supports markdown
   
         ~~~js
-        <Button
-          label="Anmelden"
-          type="verbund-secondary"
-          onClick={action('clicked')}
-        />
+        <Wrapper>
+          <Button
+            label="Anmelden"
+            type="verbund-secondary"
+            icon={Icons.login}
+            onClick={action('clicked')}
+          />
+        </Wrapper>
         ~~~
   
       `)(() => (
@@ -79,7 +83,7 @@ storiesOf('VERBUND/Components/Common/Button', module)
           <Button
             label="Anmelden"
             type="verbund-secondary"
-            icon={IconLogin}
+            icon={Icons.login}
             onClick={action('clicked')}
           />
         </Wrapper>
@@ -115,7 +119,14 @@ storiesOf('VERBUND/Components/Common/Card', module)
       description or documentation about my component, supports markdown
 
       ~~~js
-      <FormTitle label="Konto" />
+      <Wrapper>
+        <PageCard>
+          <Headline type="card-title">
+            Verbrauch
+          <div className="info">Anteil PV gegenüber Lieferanten</div>
+          </Headline>
+        </PageCard>
+      </Wrapper >
       ~~~
 
     `)(() => (
@@ -135,11 +146,78 @@ storiesOf('VERBUND/Components/Common/Card', module)
       description or documentation about my component, supports markdown
 
       ~~~js
-      <FormTitle label="Konto" />
+      <Wrapper layout>
+        <PageCards>
+          <PageCards>
+            <PageCard>
+              <Headline type="card-title">
+                Verbrauch
+                <div className="info">Anteil PV gegenüber Lieferanten</div>
+              </Headline>
+            </PageCard>
+            <PageCard>
+              <Headline type="card-title">
+                Ersparnis
+                <div className="info">Ersparnis gegenüber Lieferanten</div>
+              </Headline>
+            </PageCard>
+          </PageCards>
+          <PageCard>
+            <PageCardBox>
+              <Headline type="card-title">
+                IhrPV-Anteil<img src={Icons.infoCircle} />
+                <div className="info">Ohne Handel verfügbare Menge an PV Energie</div>
+              </Headline>
+              <Headline type="card-text-large">
+                1.900<div className="unit">kWh</div>
+              </Headline>
+            </PageCardBox>
+            <PageCardBox>
+              <Headline type="card-title">
+                Ihr Verbrauch<img src={Icons.infoCircle} />
+                <div className="info">Ihr tatsächlicher PV-Energie Konsum</div>
+              </Headline>
+              <Headline type="card-text-large">
+                450<div className="unit">kWh</div>
+              </Headline>
+            </PageCardBox>
+            <PageCardBox>
+              <Headline type="card-title">
+                Ihr Kontigent<img src={Icons.infoCircle} />
+                <div className="info">Ihr aktuell verbleibendes Kontingent</div>
+              </Headline>
+              <Headline type="card-text-large">
+                1.200<div className="unit">kWh</div>
+              </Headline>
+            </PageCardBox>
+            <div style={{ textAlign: 'center', paddingTop: 30, paddingBottom: 16 }}>
+              <Button
+                label="Strom anbieten"
+                type="verbund-primary"
+                onClick={action('clicked')}
+              />
+            </div>
+          </PageCard>
+        </PageCards>
+        <PageCards>
+          <PageCard>
+            <Headline type="card-title">
+              Wochen-Übersicht
+              <div className="info">Maecenas faucibus mollis interdum.</div>
+            </Headline>
+          </PageCard>
+          <PageCard>
+            <Headline type="card-title">
+              Tages-Übersicht
+              <div className="info">Maecenas faucibus mollis interdum.</div>
+            </Headline>
+          </PageCard>
+        </PageCards>
+      </Wrapper>
       ~~~
 
     `)(() => (
-        <Wrapper>
+        <Wrapper layout>
           <PageCards>
             <PageCards>
               <PageCard>
@@ -156,18 +234,40 @@ storiesOf('VERBUND/Components/Common/Card', module)
               </PageCard>
             </PageCards>
             <PageCard>
-              <Headline type="card-title">
-                IhrPV-Anteil<img src={Icons.infoCircle} />
-                <div className="info">Ohne Handel verfügbare Menge an PV Energie</div>
-              </Headline>
-              <Headline type="card-title">
-                Ihr Verbrauch<img src={Icons.infoCircle} />
-                <div className="info">Ihr tatsächlicher PV-Energie Konsum</div>
-              </Headline>
-              <Headline type="card-title">
-                Ihr Kontigent<img src={Icons.infoCircle} />
-                <div className="info">Ihr aktuell verbleibendes Kontingent</div>
-              </Headline>
+              <PageCardBox>
+                <Headline type="card-title">
+                  IhrPV-Anteil<img src={Icons.infoCircle} />
+                  <div className="info">Ohne Handel verfügbare Menge an PV Energie</div>
+                </Headline>
+                <Headline type="card-text-large">
+                  1.900<div className="unit">kWh</div>
+                </Headline>
+              </PageCardBox>
+              <PageCardBox>
+                <Headline type="card-title">
+                  Ihr Verbrauch<img src={Icons.infoCircle} />
+                  <div className="info">Ihr tatsächlicher PV-Energie Konsum</div>
+                </Headline>
+                <Headline type="card-text-large">
+                  450<div className="unit">kWh</div>
+                </Headline>
+              </PageCardBox>
+              <PageCardBox>
+                <Headline type="card-title">
+                  Ihr Kontigent<img src={Icons.infoCircle} />
+                  <div className="info">Ihr aktuell verbleibendes Kontingent</div>
+                </Headline>
+                <Headline type="card-text-large">
+                  1.200<div className="unit">kWh</div>
+                </Headline>
+              </PageCardBox>
+              <div style={{ textAlign: 'center', paddingTop: 30, paddingBottom: 16 }}>
+                <Button
+                  label="Strom anbieten"
+                  type="verbund-primary"
+                  onClick={action('clicked')}
+                />
+              </div>
             </PageCard>
           </PageCards>
           <PageCards>
@@ -219,12 +319,20 @@ storiesOf('VERBUND/Components/Common/Input', module)
         description or documentation about my component, supports markdown
   
         ~~~js
-        <FormInput
-          label="E-Mail"
-          type="default"
-          onChange={action('changed')}
-          icon={IconEmail}
-        />
+        <Wrapper>
+          <FormInput
+            label="E-Mail"
+            type="default"
+            onChange={action('changed')}
+            icon={Icons.email}
+          />
+          <FormInput
+            label="Password"
+            type="default"
+            onChange={action('changed')}
+            icon={Icons.password}
+          />
+        </Wrapper>
         ~~~
   
       `)(() => (
@@ -233,13 +341,13 @@ storiesOf('VERBUND/Components/Common/Input', module)
             label="E-Mail"
             type="default"
             onChange={action('changed')}
-            icon={IconEmail}
+            icon={Icons.email}
           />
           <FormInput
             label="Password"
             type="default"
             onChange={action('changed')}
-            icon={IconPassword}
+            icon={Icons.password}
           />
         </Wrapper>
       ))

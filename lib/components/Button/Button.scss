@@ -140,7 +140,7 @@
       min-width: 175px;
       font-size: 16px;
       font-weight: 300;
-      line-height: 75px;
+      line-height: 60px;
       @include themify($themes) {
         background-color: themed('introDark');
 
