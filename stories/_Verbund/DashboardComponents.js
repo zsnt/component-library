@@ -69,14 +69,12 @@ storiesOf('VERBUND/Components/Dashboard', module)
       description or documentation about my component, supports markdown
 
       ~~~js
-      <Wrapper>
-        <PageCardItem value={'1.200'}>
-          <Headline type="card-title">
-            Ihr Kontigent<img src={Icons.infoCircle} />
-            <div className="info">Ihr aktuell verbleibendes Kontingent</div>
-          </Headline>
-        </PageCardItem>
-      </Wrapper >
+      <PageCardItem value={'1.200'}>
+        <Headline type="card-title">
+          Ihr Kontigent<img src={Icons.infoCircle} />
+          <div className="info">Ihr aktuell verbleibendes Kontingent</div>
+        </Headline>
+      </PageCardItem>
       ~~~
 
     `)(() => (
