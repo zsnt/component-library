@@ -10,6 +10,7 @@ import {
   Footer,
   Icon, Icons,
   PageCard, PageCards, PageCardBox, PageCardItem,
+  DonutChart,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
@@ -214,6 +215,35 @@ storiesOf('VERBUND/Components/Dashboard', module)
               </Headline>
             </PageCard>
           </PageCards>
+        </Wrapper>
+      ))
+  );
+
+storiesOf('VERBUND/Components/Dashboard/Charts', module)
+  .addDecorator(ThemeDecorator('verbund'))
+  .add(
+    'Donut',
+    withInfo(`
+        description or documentation about my component, supports markdown
+  
+        ~~~js
+        <Wrapper>
+          <DonutChart />
+          <DonutChart data={[{
+            name: 'Einsparung', value: 45
+          }]} />
+        </Wrapper>
+        ~~~
+  
+      `)(() => (
+        <Wrapper>
+          <DonutChart data={[
+            { name: 'Lieferant', value: 75 },
+            { name: 'Photovoltaik', value: 25 },
+          ]} />
+          <DonutChart data={[{
+            name: 'Einsparung', value: 45
+          }]} />
         </Wrapper>
       ))
   );

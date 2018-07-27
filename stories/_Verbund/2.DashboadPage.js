@@ -10,6 +10,7 @@ import {
   Footer,
   Icon, Icons,
   PageCard, PageCards, PageCardBox, PageCardItem,
+  DonutChart,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
@@ -98,14 +99,21 @@ storiesOf('VERBUND/Pages', module)
               <PageCard>
                 <Headline type="card-title">
                   Verbrauch
-                <div className="info">Anteil PV gegenüber Lieferanten</div>
+                  <div className="info">Anteil PV gegenüber Lieferanten</div>
                 </Headline>
+                <DonutChart data={[
+                  { name: 'Lieferant', value: 75 },
+                  { name: 'Photovoltaik', value: 25 },
+                ]} />
               </PageCard>
               <PageCard>
                 <Headline type="card-title">
                   Ersparnis
-                <div className="info">Ersparnis gegenüber Lieferanten</div>
+                  <div className="info">Ersparnis gegenüber Lieferanten</div>
                 </Headline>
+                <DonutChart data={[{
+                  name: 'Einsparung', value: 45
+                }]} />
               </PageCard>
             </PageCards>
             <PageCard>
