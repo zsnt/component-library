@@ -1,0 +1,43 @@
+@import '../../../styles/themify';
+@import '../../../styles/base';
+
+.donut-chart {
+  width: 100%;
+  max-width: 226px;
+  margin: 30px auto 0;
+  min-height: 150px;
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+  }
+
+  text {
+    font-weight: 100;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+    @include themify($themes) {
+      font-family: themed('fontFamily');
+    }
+  }
+
+  path.recharts-curve.recharts-pie-label-line {
+    display: none;
+  }
+
+  .colors {
+    display: flex;
+
+    .data-color {
+      display: flex;
+      margin-right: 20px;
+      align-items: center;
+      color: rgba(255, 255, 255, .3);
+      font-size: $chart-info;
+
+      .color {
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
