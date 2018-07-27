@@ -228,7 +228,10 @@ storiesOf('VERBUND/Components/Dashboard/Charts', module)
   
         ~~~js
         <Wrapper>
-          <DonutChart />
+          <DonutChart data={[
+            { name: 'Lieferant', value: 75 },
+            { name: 'Photovoltaik', value: 25 },
+          ]} />
           <DonutChart data={[{
             name: 'Einsparung', value: 45
           }]} />
