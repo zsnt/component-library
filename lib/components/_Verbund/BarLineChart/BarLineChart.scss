@@ -6,6 +6,7 @@
   max-width: 513px;
   margin: 20px auto 0;
   min-height: 150px;
+  position: relative;
   @include themify($themes) {
     font-family: themed('fontFamily');
   }
@@ -18,25 +19,43 @@
     }
   }
 
-  path.recharts-curve.recharts-pie-label-line {
-    display: none;
+  .xAxis {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6.5%;
+
+    .AxisLabel {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 10px;
+    }
   }
 
-  .colors {
-    display: flex;
+  .Colors {
+    position: absolute;
+    right: 5.5%;
+    top: -50px;
 
-    .data-color {
+    .Color {
       display: flex;
-      margin-right: 20px;
       align-items: center;
-      color: rgba(255, 255, 255, .3);
-      font-size: $chart-info;
+      margin-top: 4px;
 
-      .color {
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        margin-right: 5px;
+      .Back {
+        width: 50px;
+        height: 7px;
+      }
+
+      .Key {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 10px;
+        margin-right: 10px;
+      }
+
+      &.Line {
+        float: right;
+        .Back {
+          height: 2px;
+        }
       }
     }
   }

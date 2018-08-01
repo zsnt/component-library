@@ -14,6 +14,8 @@ import {
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
+import { BarLineChartData } from './__mocks__/BarLineChartData';
+
 storiesOf('VERBUND/Components/Dashboard', module)
   .addDecorator(ThemeDecorator('verbund'))
   .add(
@@ -269,37 +271,7 @@ storiesOf('VERBUND/Components/Dashboard/Charts', module)
   
       `)(() => (
         <Wrapper>
-          <BarLineChart data={[
-            { name: '01 Jan', volumen: 59, preis: 80 },
-            { name: '02 Jan', volumen: 86, preis: 96 },
-            { name: '03 Jan', volumen: 97, preis: 78 },
-            { name: '04 Jan', volumen: 14, preis: 0 },
-            { name: '05 Jan', volumen: 70, preis: 10 },
-            { name: '06 Jan', volumen: 60, preis: 68 },
-            { name: '07 Jan', volumen: 14, preis: 50 },
-            { name: '08 Jan', volumen: 34, preis: 50 },
-            { name: '09 Jan', volumen: 44, preis: 65 },
-            { name: '10 Jan', volumen: 59, preis: 80 },
-            { name: '11 Jan', volumen: 59, preis: 80 },
-            { name: '12 Jan', volumen: 86, preis: 96 },
-            { name: '13 Jan', volumen: 97, preis: 78 },
-            { name: '14 Jan', volumen: 14, preis: 0 },
-            { name: '15 Jan', volumen: 70, preis: 10 },
-            { name: '16 Jan', volumen: 60, preis: 68 },
-            { name: '17 Jan', volumen: 14, preis: 50 },
-            { name: '18 Jan', volumen: 34, preis: 50 },
-            { name: '19 Jan', volumen: 44, preis: 65 },
-            { name: '20 Jan', volumen: 59, preis: 80 },
-            { name: '21 Jan', volumen: 59, preis: 80 },
-            { name: '22 Jan', volumen: 86, preis: 96 },
-            { name: '23 Jan', volumen: 97, preis: 78 },
-            { name: '24 Jan', volumen: 14, preis: 0 },
-            { name: '25 Jan', volumen: 70, preis: 10 },
-            { name: '26 Jan', volumen: 60, preis: 68 },
-            { name: '27 Jan', volumen: 14, preis: 50 },
-            { name: '28 Jan', volumen: 34, preis: 50 },
-            { name: '29 Jan', volumen: 44, preis: 65 },
-          ]} />
+          <BarLineChart data={BarLineChartData.date} />
         </Wrapper>
       ))
   );

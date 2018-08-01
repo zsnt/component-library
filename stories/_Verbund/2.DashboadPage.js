@@ -10,9 +10,11 @@ import {
   Footer,
   Icon, Icons,
   PageCard, PageCards, PageCardBox, PageCardItem,
-  DonutChart,
+  DonutChart, BarLineChart,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
+
+import { BarLineChartData } from './__mocks__/BarLineChartData';
 
 storiesOf('VERBUND/Pages', module)
   .addDecorator(ThemeDecorator('verbund'))
@@ -155,14 +157,16 @@ storiesOf('VERBUND/Pages', module)
             <PageCard>
               <Headline type="card-title">
                 Wochen-Übersicht
-              <div className="info">Maecenas faucibus mollis interdum.</div>
+                <div className="info">Maecenas faucibus mollis interdum.</div>
               </Headline>
+              <BarLineChart data={BarLineChartData.date} />
             </PageCard>
             <PageCard>
               <Headline type="card-title">
                 Tages-Übersicht
-              <div className="info">Maecenas faucibus mollis interdum.</div>
+                <div className="info">Maecenas faucibus mollis interdum.</div>
               </Headline>
+              <BarLineChart data={BarLineChartData.hour} />
             </PageCard>
           </PageCards>
           <Footer>
