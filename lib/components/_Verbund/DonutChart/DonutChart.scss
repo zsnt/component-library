@@ -1,6 +1,10 @@
 @import '../../../styles/themify';
 @import '../../../styles/base';
 
+svg {
+  width: 100%;
+}
+
 .donut-chart {
   width: 100%;
   max-width: 226px;
@@ -8,6 +12,10 @@
   min-height: 150px;
   @include themify($themes) {
     font-family: themed('fontFamily');
+  }
+
+  .recharts-wrapper {
+    width: 100% !important;
   }
 
   text {
@@ -27,10 +35,13 @@
 
     .data-color {
       display: flex;
-      margin-right: 20px;
       align-items: center;
       color: rgba(255, 255, 255, .3);
       font-size: $chart-info;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
 
       .color {
         border-radius: 50%;

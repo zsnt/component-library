@@ -1,0 +1,62 @@
+@import '../../../styles/themify';
+@import '../../../styles/base';
+
+.bar-line-chart {
+  width: 100%;
+  max-width: 513px;
+  margin: 20px auto 0;
+  min-height: 150px;
+  position: relative;
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+  }
+
+  text {
+    font-weight: 100;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+    @include themify($themes) {
+      font-family: themed('fontFamily');
+    }
+  }
+
+  .xAxis {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6.5%;
+
+    .AxisLabel {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 10px;
+    }
+  }
+
+  .Colors {
+    position: absolute;
+    right: 5.5%;
+    top: -50px;
+
+    .Color {
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+
+      .Back {
+        width: 50px;
+        height: 7px;
+      }
+
+      .Key {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 10px;
+        margin-right: 10px;
+      }
+
+      &.Line {
+        float: right;
+        .Back {
+          height: 2px;
+        }
+      }
+    }
+  }
+}

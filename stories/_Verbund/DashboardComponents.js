@@ -10,9 +10,11 @@ import {
   Footer,
   Icon, Icons,
   PageCard, PageCards, PageCardBox, PageCardItem,
-  DonutChart,
+  DonutChart, BarLineChart,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
+
+import { BarLineChartData } from './__mocks__/BarLineChartData';
 
 storiesOf('VERBUND/Components/Dashboard', module)
   .addDecorator(ThemeDecorator('verbund'))
@@ -247,6 +249,23 @@ storiesOf('VERBUND/Components/Dashboard/Charts', module)
           <DonutChart data={[{
             name: 'Einsparung', value: 45
           }]} />
+        </Wrapper>
+      ))
+  )
+  .add(
+    'BarLine',
+    withInfo(`
+        description or documentation about my component, supports markdown
+  
+        ~~~js
+        <Wrapper>
+          <BarLineChart data={BarLineChartData.date} />
+        </Wrapper>
+        ~~~
+  
+      `)(() => (
+        <Wrapper>
+          <BarLineChart data={BarLineChartData.date} />
         </Wrapper>
       ))
   );
