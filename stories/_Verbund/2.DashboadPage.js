@@ -82,15 +82,17 @@ storiesOf('VERBUND/Pages', module)
           <PageCard>
             <Headline type="card-title">
               Wochen-Übersicht
-            <div className="info">Maecenas faucibus mollis interdum.</div>
+              <div className="info">Maecenas faucibus mollis interdum.</div>
             </Headline>
-          </PageCard>
+            <BarLineChart data={BarLineChartData.date} />
+            </PageCard>
           <PageCard>
             <Headline type="card-title">
               Tages-Übersicht
-            <div className="info">Maecenas faucibus mollis interdum.</div>
+              <div className="info">Maecenas faucibus mollis interdum.</div>
             </Headline>
-          </PageCard>
+            <BarLineChart data={BarLineChartData.hour} />
+            </PageCard>
         </PageCards>
         <Footer>
           <div>© VERBUND AG 2018</div>
