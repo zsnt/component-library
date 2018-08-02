@@ -8,8 +8,8 @@ import {
   Button,
   Wrapper,
   Footer,
-  Icon, Icons,
-  PageCard, PageCards, PageCardBox, PageCardItem,
+  Icons,
+  PageCard, PageCards,
   DonutChart, BarLineChart,
   Group, DropDown,
 } from '../../lib';
@@ -163,7 +163,7 @@ storiesOf('VERBUND/Pages', module)
             </PageCard>
           </PageCards>
           <Group>
-            <DropDown type={'list'} label={'Aktiver User'} value={'Administrator'} />
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} />
             <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} />
           </Group>
           <Footer type={'default'}>
