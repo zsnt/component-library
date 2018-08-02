@@ -5,6 +5,7 @@
   @include themify($themes) {
     color: themed('textcolor');
     font-family: themed('fontFamily');
+    font-weight: $thin-weight;
   }
   display: inline-block;
   padding: 12px 22px;
