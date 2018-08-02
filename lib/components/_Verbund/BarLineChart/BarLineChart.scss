@@ -3,7 +3,6 @@
 
 .bar-line-chart {
   width: 100%;
-  max-width: 513px;
   margin: 20px auto 0;
   min-height: 150px;
   position: relative;
@@ -30,9 +29,22 @@
     }
   }
 
+  .Title {
+    position: absolute;
+    right: 22px;
+    text-align: center;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+
+    color: white;
+    font-size: $chart-info;
+    font-weight: $thin-weight;
+    opacity: .5;
+  }
+
   .Colors {
     position: absolute;
-    right: 5.5%;
+    right: 25px;
     top: -50px;
 
     .Color {
@@ -53,10 +65,15 @@
 
       &.Line {
         float: right;
+
         .Back {
           height: 2px;
         }
       }
     }
   }
+}
+
+g.recharts-cartesian-grid-vertical line:first-child {
+  display: none;
 }

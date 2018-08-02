@@ -7,14 +7,14 @@ svg {
 
 .donut-chart {
   width: 100%;
-  max-width: 226px;
-  margin: 30px auto 0;
-  min-height: 150px;
   @include themify($themes) {
     font-family: themed('fontFamily');
   }
 
   .recharts-wrapper {
+    max-width: 269px;
+    margin: 30px auto 0;
+    min-height: 150px;
     width: 100% !important;
   }
 
@@ -48,6 +48,7 @@ svg {
         width: 10px;
         height: 10px;
         margin-right: 5px;
+        margin-top: -1px;
       }
     }
   }

@@ -1,0 +1,72 @@
+@import '../../../styles/themify';
+@import '../../../styles/base';
+
+.dropdown {
+  * {
+    @include themify($themes) {
+      font-family: themed('fontFamily');
+    }
+    font-weight: $thin-weight;
+  }
+
+  .label {
+    font-size: $h4;
+    font-weight: $thin-weight;
+    line-height: $card-title-info-height;
+    color: white;
+    margin-bottom: 11.6px;
+  }
+
+  > .actions {
+    line-height: 45px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+    box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
+    min-width: 175px;
+    position: relative;
+    cursor: pointer;
+
+    font-size: $medium;
+    color: #ADADAD;
+
+    &:hover {
+      color: white;
+      box-shadow: 0 38px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    &.open {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 15px;
+      top: calc(50% - 4px);
+    }
+
+    .list {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50px;
+      line-height: 35px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 4px;
+      box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
+      min-width: 175px;
+      color: #ADADAD;
+      background: #25363f;
+
+      .action {
+        padding: 0 16px;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

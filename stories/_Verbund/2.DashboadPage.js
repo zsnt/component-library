@@ -28,6 +28,17 @@ storiesOf('VERBUND/Pages', module)
         <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
           <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
         </Header>
+        <Button
+          className="settings"
+          label="EInstellungen"
+          type="verbund-secondary"
+          icon={Icons.settings}
+          onClick={action('clicked')}
+        />
+        <Headline type="page-title">
+          Übersicht Ihrer Aktivitäten in den letzten 30 Tagen
+          <div className="info">01.01.2017 - 31.01.2017</div>
+        </Headline>
         <PageCards>
           <PageCards>
             <PageCard>
@@ -84,15 +95,15 @@ storiesOf('VERBUND/Pages', module)
               Wochen-Übersicht
               <div className="info">Maecenas faucibus mollis interdum.</div>
             </Headline>
-            <BarLineChart data={BarLineChartData.date} />
-            </PageCard>
+            <BarLineChart data={BarLineChartData.hour} keys={{ line: 'preis' }} />
+          </PageCard>
           <PageCard>
             <Headline type="card-title">
               Tages-Übersicht
               <div className="info">Maecenas faucibus mollis interdum.</div>
             </Headline>
-            <BarLineChart data={BarLineChartData.hour} />
-            </PageCard>
+            <BarLineChart data={BarLineChartData.date} />
+          </PageCard>
         </PageCards>
         <Footer>
           <div>© VERBUND AG 2018</div>
@@ -105,6 +116,17 @@ storiesOf('VERBUND/Pages', module)
           <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
             <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
           </Header>
+          <Button
+            className="settings"
+            label="EInstellungen"
+            type="verbund-secondary"
+            icon={Icons.settings}
+            onClick={action('clicked')}
+          />
+          <Headline type="page-title">
+            Übersicht Ihrer Aktivitäten in den letzten 30 Tagen
+            <div className="info">01.01.2017 - 31.01.2017</div>
+          </Headline>
           <PageCards>
             <PageCards>
               <PageCard>
@@ -161,14 +183,14 @@ storiesOf('VERBUND/Pages', module)
                 Wochen-Übersicht
                 <div className="info">Maecenas faucibus mollis interdum.</div>
               </Headline>
-              <BarLineChart data={BarLineChartData.date} />
+              <BarLineChart data={BarLineChartData.hour} keys={{ line: 'preis' }} />
             </PageCard>
             <PageCard>
               <Headline type="card-title">
                 Tages-Übersicht
                 <div className="info">Maecenas faucibus mollis interdum.</div>
               </Headline>
-              <BarLineChart data={BarLineChartData.hour} />
+              <BarLineChart data={BarLineChartData.date} />
             </PageCard>
           </PageCards>
           <Footer>

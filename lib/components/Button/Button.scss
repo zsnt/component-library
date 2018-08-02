@@ -5,6 +5,7 @@
   @include themify($themes) {
     color: themed('textcolor');
     font-family: themed('fontFamily');
+    font-weight: $thin-weight;
   }
   display: inline-block;
   padding: 12px 22px;
@@ -13,6 +14,21 @@
   cursor: pointer;
   transition: color .1s, background-color .1s;
   font-size: $small;
+
+  &.settings {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 175px;
+    line-height: $page-title;
+    text-align: left;
+    font-size: $medium;
+    color: rgba(255, 255, 255, .73);
+
+    &:hover {
+      color: white;
+    }
+  }
 
   &:hover {
     @include themify($themes) {

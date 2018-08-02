@@ -42,6 +42,7 @@
   line-height: $page-title-height;
   font-weight: $thin-weight;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  padding-bottom: 37px;
   @include themify($themes) {
     color: themed('textcolor');
   }
