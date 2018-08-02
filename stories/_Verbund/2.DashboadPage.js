@@ -105,6 +105,17 @@ storiesOf('VERBUND/Pages', module)
           <Header logoUrl={Icons.verbundLogo} logoAlt="Verbund">
             <Headline type="verbund-subtitle">Mieter Strom Modell</Headline>
           </Header>
+          <Button
+            className="settings"
+            label="EInstellungen"
+            type="verbund-secondary"
+            icon={Icons.settings}
+            onClick={action('clicked')}
+          />
+          <Headline type="page-title">
+            Übersicht Ihrer Aktivitäten in den letzten 30 Tagen
+            <div className="info">01.01.2017 - 31.01.2017</div>
+          </Headline>
           <PageCards>
             <PageCards>
               <PageCard>

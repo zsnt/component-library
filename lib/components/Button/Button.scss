@@ -15,6 +15,21 @@
   transition: color .1s, background-color .1s;
   font-size: $small;
 
+  &.settings {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 175px;
+    line-height: $page-title;
+    text-align: left;
+    font-size: $medium;
+    color: rgba(255, 255, 255, .73);
+
+    &:hover {
+      color: white;
+    }
+  }
+
   &:hover {
     @include themify($themes) {
       box-shadow: themed('formShadow');
