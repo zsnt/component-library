@@ -30,6 +30,19 @@
     }
   }
 
+  .Title {
+    position: absolute;
+    right: 6%;
+    text-align: center;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+
+    color: white;
+    font-size: $chart-info;
+    font-weight: $thin-weight;
+    opacity: .5;
+  }
+
   .Colors {
     position: absolute;
     right: 5.5%;
@@ -53,10 +66,15 @@
 
       &.Line {
         float: right;
+
         .Back {
           height: 2px;
         }
       }
     }
   }
+}
+
+g.recharts-cartesian-grid-vertical line:first-child {
+  display: none;
 }
