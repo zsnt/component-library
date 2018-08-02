@@ -1,0 +1,14 @@
+@import '../../../styles/themify';
+@import '../../../styles/base';
+
+.group {
+  margin-top: 46px;
+  padding-top: 24px;
+  padding-bottom: 39px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.148579);
+  @include themify($themes) {
+    font-family: themed('fontFamily');
+    border-top: 1px solid themed('white10');
+    color: themed('footer-color');
+  }
+}

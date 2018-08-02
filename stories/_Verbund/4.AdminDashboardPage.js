@@ -11,6 +11,7 @@ import {
   Icon, Icons,
   PageCard, PageCards, PageCardBox, PageCardItem,
   DonutChart, BarLineChart,
+  Group,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
@@ -90,7 +91,11 @@ storiesOf('VERBUND/Pages', module)
               <BarLineChart data={BarLineChartData.date} long showAllXAxis />
             </PageCard>
           </PageCards>
-          <Footer>
+          <Group>
+            <div>User</div>
+            <div>User</div>
+          </Group>
+          <Footer type={'default'}>
             <div>© VERBUND AG 2018</div>
           </Footer>
         </Wrapper>
