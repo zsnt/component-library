@@ -77,3 +77,11 @@
 g.recharts-cartesian-grid-vertical line:first-child {
   display: none;
 }
+
+.custom-tooltip {
+  min-width: 80px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}

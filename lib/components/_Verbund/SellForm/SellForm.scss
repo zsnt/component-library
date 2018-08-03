@@ -1,0 +1,209 @@
+@import '../../../styles/themify';
+@import '../../../styles/base';
+
+.sell-form {
+  margin-top: 6px;
+  max-width: 554.63px;
+  width: 100%;
+  position: relative;
+
+  * {
+    @include themify($themes) {
+      font-family: themed('fontFamily');
+      font-weight: $thin-weight;
+    }
+    transition: all .3s;
+  }
+
+  .title {
+    margin-bottom: 17.33px;
+    font-size: $card-title;
+    line-height: $card-title-height;
+    color: white;
+  }
+
+  .input-group {
+    margin-top: 16.3px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &.no-footer {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-top: 24px;
+
+      .inputs > *:not(.slider-input) {
+        margin-bottom: 0;
+      }
+
+      .button {
+        line-height: 73px;
+      }
+    }
+
+    .footer-info {
+      color: rgba(168, 168, 168, 0.4);
+      letter-spacing: .5px;
+      font-size: 12px;
+      height: 22px;
+    }
+
+    .inputs {
+      display: flex;
+
+      > * {
+        width: calc(50% - 8.5px);
+
+        &:not(:first-child) {
+          margin-left: 17px;
+        }
+
+        &:not(.slider-input) {
+          margin-bottom: 13px;
+        }
+      }
+    }
+
+    .slider-input {
+      width: 100%;
+      height: 62px;
+      position: relative;
+
+      .slider {
+        width: 100%;
+        height: 30px;
+
+        .handle {
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          background: #24A98E;
+          margin-left: 0;
+          touch-action: manipulation;
+        }
+      }
+
+      .marks {
+        position: absolute;
+        width: 100%;
+        top: 37px;
+
+        > div {
+          font-size: $medium;
+          color: #a8a8a8;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+
+          &.value {
+            position: absolute;
+            top: 0;
+            text-align: center;
+            width: 50px;
+          }
+
+          &.max {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+
+      .ticks {
+        position: absolute;
+        width: 100%;
+        top: 15px;
+        display: flex;
+        border-top: 1px solid #535353;
+
+        .tick {
+          border-right: 1px solid #535353;
+          height: 10px;
+        }
+      }
+    }
+
+    .range-input {
+      line-height: 58px;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 4px;
+      box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
+      min-width: 175px;
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+
+      > div {
+        min-width: 78px;
+        box-shadow: 0 19px 24px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      > .value {
+        width: 100%;
+        height: 58px;
+        background: rgba(255, 255, 255, 0.035);
+        border-left: 1px solid rgba(255, 255, 255, 0.35);
+        border-right: 1px solid rgba(255, 255, 255, 0.35);
+
+        font-size: $card-title;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .output {
+          line-height: initial;
+          height: $card-title-height;
+        }
+
+        .info {
+          font-size: $small;
+          color: #a8a8a8;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          line-height: $medium;
+        }
+      }
+
+      .minus,
+      .plus {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          background: #24A98E;
+          width: 12px;
+          height: 2px;
+          left: calc(50% - 5px);
+          top: calc(50% - 1px);
+        }
+      }
+
+      .plus {
+        &:after {
+          content: '';
+          position: absolute;
+          background: #24A98E;
+          height: 12px;
+          width: 2px;
+          top: calc(50% - 6px);
+          left: 50%;
+        }
+      }
+    }
+
+    .dropdown .actions {
+      line-height: 58px;
+      padding: 0 24px;
+
+      img {
+        top: calc(50% - 5px);
+        width: 12px;
+        right: 24px;
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ import {
   Icon, Icons,
   PageCard, PageCards, PageCardBox, PageCardItem,
   DonutChart, BarLineChart,
+  Group, DropDown,
 } from '../../lib';
 import { ThemeDecorator } from '../Utils';
 
@@ -217,6 +218,29 @@ storiesOf('VERBUND/Components/Dashboard', module)
               </Headline>
             </PageCard>
           </PageCards>
+        </Wrapper>
+      ))
+  )
+  .add(
+    'Group',
+    withInfo(`
+        description or documentation about my component, supports markdown
+  
+        ~~~js
+        <Wrapper>
+          <Group>
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} />
+            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} />
+          </Group>
+        </Wrapper>
+        ~~~
+  
+      `)(() => (
+        <Wrapper>
+          <Group>
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} />
+            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} />
+          </Group>
         </Wrapper>
       ))
   );
