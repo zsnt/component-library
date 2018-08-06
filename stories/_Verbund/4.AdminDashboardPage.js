@@ -163,8 +163,8 @@ storiesOf('VERBUND/Pages', module)
             </PageCard>
           </PageCards>
           <Group>
-            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} />
-            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} />
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} handleChange={action('changed')} />
+            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} handleClick={action('clicked')} />
           </Group>
           <Footer type={'default'}>
             <div>© VERBUND AG 2018</div>

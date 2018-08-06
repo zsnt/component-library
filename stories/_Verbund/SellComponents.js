@@ -79,7 +79,7 @@ storiesOf('VERBUND/Components/Sell', module)
       <Wrapper>
         <SellForm>
           <InputGroup title={'Wieviel % Ihres Kontigents möchten Sie anbieten?'}>
-            <DropDown type={'list'} value={'stunden'} />
+            <DropDown type={'list'} value={'stunden'} handleChange={action('changed')} />
           </InputGroup>
         </SellForm>
       </Wrapper>
@@ -89,7 +89,7 @@ storiesOf('VERBUND/Components/Sell', module)
         <Wrapper>
           <SellForm>
             <InputGroup title={'Wieviel % Ihres Kontigents möchten Sie anbieten?'}>
-              <DropDown type={'list'} value={'stunden'} />
+              <DropDown type={'list'} value={'stunden'} handleChange={action('changed')} />
             </InputGroup>
           </SellForm>
         </Wrapper>
@@ -151,7 +151,7 @@ storiesOf('VERBUND/Components/Sell', module)
             </InputGroup>
             <InputGroup title={'Über welchen Zeitraum ist ihr Angebot gültig?'}>
               <RangeInput />
-              <DropDown type={'list'} value={'stunden'} />
+              <DropDown type={'list'} value={'stunden'} handleChange={action('changed')} />
             </InputGroup>
             <InputGroup title={'Zu welchem Preis möchten Sie handeln?'} footer={'Preise in EUR pro kWh'}>
               <RangeInput value={1264} suffix={'€'} info={'Verkauf'} comma={true} />
@@ -180,7 +180,7 @@ storiesOf('VERBUND/Components/Sell', module)
             </InputGroup>
             <InputGroup title={'Über welchen Zeitraum ist ihr Angebot gültig?'}>
               <RangeInput />
-              <DropDown type={'list'} value={'stunden'} />
+              <DropDown type={'list'} value={'stunden'} handleChange={action('changed')} />
             </InputGroup>
             <InputGroup title={'Zu welchem Preis möchten Sie handeln?'} footer={'Preise in EUR pro kWh'}>
               <RangeInput value={1264} suffix={'€'} info={'Verkauf'} comma={true} />
