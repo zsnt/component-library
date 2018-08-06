@@ -22,7 +22,7 @@
     padding: 0 16px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 4px;
-    box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
     min-width: 175px;
     position: relative;
     cursor: pointer;
@@ -32,7 +32,7 @@
 
     &:hover {
       color: white;
-      box-shadow: 0 38px 24px rgba(0, 0, 0, 0.1);
+      // box-shadow: 0 38px 24px rgba(0, 0, 0, 0.1);
     }
 
     &.open {
@@ -55,7 +55,7 @@
       line-height: 35px;
       border: 1px solid rgba(255, 255, 255, 0.35);
       border-radius: 4px;
-      box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
+      // box-shadow: 0 30px 24px rgba(0, 0, 0, 0.1);
       min-width: 175px;
       color: #ADADAD;
       background: #25363f;
