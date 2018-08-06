@@ -229,8 +229,8 @@ storiesOf('VERBUND/Components/Dashboard', module)
         ~~~js
         <Wrapper>
           <Group>
-            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} handleChange={action('changed')} />
-            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} handleClick={action('clicked')} />
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} onChange={action('changed')} />
+            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} onClick={action('clicked')} />
           </Group>
         </Wrapper>
         ~~~
@@ -238,8 +238,8 @@ storiesOf('VERBUND/Components/Dashboard', module)
       `)(() => (
         <Wrapper>
           <Group>
-            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} handleChange={action('changed')} />
-            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} handleClick={action('clicked')} />
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} onChange={action('changed')} />
+            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} onClick={action('clicked')} />
           </Group>
         </Wrapper>
       ))
