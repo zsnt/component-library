@@ -45,7 +45,7 @@ storiesOf('VERBUND/Pages', module)
           </InputGroup>
           <InputGroup title={'Über welchen Zeitraum ist ihr Angebot gültig?'}>
             <RangeInput />
-            <DropDown type={'list'} value={'stunden'} />
+            <DropDown type={'list'} value={'stunden'} onChange={action('changed')} />
           </InputGroup>
           <InputGroup title={'Zu welchem Preis möchten Sie handeln?'} footer={'Preise in EUR pro kWh'}>
             <RangeInput value={1264} suffix={'€'} info={'Verkauf'} comma={true} />
@@ -91,7 +91,7 @@ storiesOf('VERBUND/Pages', module)
             </InputGroup>
             <InputGroup title={'Über welchen Zeitraum ist ihr Angebot gültig?'}>
               <RangeInput />
-              <DropDown type={'list'} value={'stunden'} />
+              <DropDown type={'list'} value={'stunden'} onChange={action('changed')} />
             </InputGroup>
             <InputGroup title={'Zu welchem Preis möchten Sie handeln?'} footer={'Preise in EUR pro kWh'}>
               <RangeInput value={1264} suffix={'€'} info={'Verkauf'} comma={true} />
@@ -114,4 +114,4 @@ storiesOf('VERBUND/Pages', module)
           </Footer>
         </Wrapper>
       )),
-);
+  );

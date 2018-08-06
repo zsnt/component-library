@@ -89,8 +89,8 @@ storiesOf('VERBUND/Pages', module)
           </PageCard>
         </PageCards>
         <Group>
-          <DropDown type={'list'} label={'Aktiver User'} value={'Administrator'} />
-          <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} />
+          <DropDown type={'list'} label={'Aktiver User'} value={'Administrator'} onChange={action('changed')} />
+          <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} onClick={action('clicked')} />
         </Group>
         <Footer type={'default'}>
           <div>© VERBUND AG 2018</div>
@@ -163,8 +163,8 @@ storiesOf('VERBUND/Pages', module)
             </PageCard>
           </PageCards>
           <Group>
-            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} />
-            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} />
+            <DropDown type={'list'} label={'Aktiver User'} value={'administrator'} onChange={action('changed')} />
+            <DropDown type={'flat'} label={'Daten-Export'} value={'Download .CSV'} onClick={action('clicked')} />
           </Group>
           <Footer type={'default'}>
             <div>© VERBUND AG 2018</div>
