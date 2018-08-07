@@ -48,7 +48,7 @@ storiesOf('VERBUND/Pages', module)
             <DropDown type={'list'} value={'stunden'} onChange={action('changed')} />
           </InputGroup>
           <InputGroup title={'Zu welchem Preis möchten Sie handeln?'} footer={'Preise in EUR pro kWh'}>
-            <RangeInput value={1264} min={0} step={5} suffix={'€'} info={'Verkauf'} comma={true} />
+            <RangeInput value={1264} min={0} suffix={'€'} info={'Verkauf'} comma={true} />
           </InputGroup>
           <InputGroup className={'no-footer'}>
             <Button
@@ -94,7 +94,7 @@ storiesOf('VERBUND/Pages', module)
               <DropDown type={'list'} value={'stunden'} onChange={action('changed')} />
             </InputGroup>
             <InputGroup title={'Zu welchem Preis möchten Sie handeln?'} footer={'Preise in EUR pro kWh'}>
-              <RangeInput value={1264} min={0} step={5} suffix={'€'} info={'Verkauf'} comma={true} />
+              <RangeInput value={1264} min={0} suffix={'€'} info={'Verkauf'} comma={true} />
             </InputGroup>
             <InputGroup className={'no-footer'}>
               <Button
