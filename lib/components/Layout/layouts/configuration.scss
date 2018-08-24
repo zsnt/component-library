@@ -9,6 +9,7 @@
       grid-template-columns: repeat(12, minmax(auto, 100px));
       grid-template-areas:
       '. . . hero hero hero hero hero hero . . .'
+      '. . . progress progress progress progress progress progress . . .'
       'confs confs confs confs confs confs confs confs confs confs confs confs';
     }
 
@@ -19,7 +20,7 @@
       grid-row-gap: 20px;
       grid-template-columns: repeat(12, minmax(auto, 100px));
       grid-template-areas:
-      'nav nav . . .  form form . . . . .';
+      '. . . . .  form form . . . . .';
     }
 
     .configurationPage--2 {
@@ -29,7 +30,7 @@
       grid-row-gap: 20px;
       grid-template-columns: repeat(12, minmax(auto, 100px));
       grid-template-areas:
-      'nav nav tree tree tree tree tree tree tree tree panel panel';
+      'tree tree tree tree tree tree tree tree tree tree tree tree';
     }
   }
 
@@ -50,6 +51,9 @@
 
   .stepNavigation {
     grid-area: nav;
+  }
+  .progressBar {
+    grid-area: progress;
   }
 
   .interactions {

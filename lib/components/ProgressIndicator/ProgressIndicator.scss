@@ -1,0 +1,69 @@
+@import '../../styles/themify';
+
+.progressIndicator {
+  display: flex;
+  flex-direction: row;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    flex-grow: 1;
+
+    &:before {
+      @include themify($themes) {
+        border-top: themed('border');
+      }
+      position: relative;
+      display: block;
+      content: '';
+      height: 1px;
+      width: 100%;
+      top: 40px;
+    }
+
+    .diamond--indicator {
+      @include themify($themes) {
+        background-color: themed('lightBg');
+      }
+    }
+
+    &--prev {
+      .diamond--indicator {
+        @include themify($themes) {
+          background-color: themed('secondary');
+        }
+      }
+    }
+
+    &--current {
+      .diamond--indicator {
+        border: solid 3px;
+        @include themify($themes) {
+          border-color: themed('secondary');
+        }
+      }
+    }
+
+    &--disabled {
+      .diamond--indicator {
+        @include themify($themes) {
+          background-color: themed('title');
+        }
+        &:hover {
+          border: 0;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+  }
+
+  &__title {
+    max-width: 100px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+}
